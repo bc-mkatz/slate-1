@@ -791,6 +791,15 @@ header {
     position: relative;
 }
 
+// Rule added 10/7/16 to left-align BC logo at top left, in desktop viewport only:
+@media (min-width:940px) {
+    .top-bar .name img, [top-bar] .name img {
+        position: fixed;
+        top: 26px;
+        left: 40px;
+    }
+}
+
 .topBar-container {
   background-color: #4B71FC;
 
