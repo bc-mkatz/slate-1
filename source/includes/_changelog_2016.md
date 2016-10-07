@@ -1,15 +1,25 @@
 # <span class="jumptarget"> 2016 </span>
 
 
+## <span class="jumptarget"> October </span>
+
+### Stencil Cornerstone 1.3.4 released
+
+Version 1.3.4 of Stencil's default Cornerstone theme is now available. This maintenance release standardizes the IE11 and Edge browsers' display behavior with out-of-stock product options/SKUs.
+
+For details, please see the [Cornerstone 1.3.x release notes](https://stencil.bigcommerce.com/docs/release-notes-cornerstone-13-theme#134).
+
+Once once you have pulled the latest code from the [Stencil repo](https://github.com/bigcommerce/stencil), you can access this version by checking out its tag, using: <NOBR>`git checkout v1.3.4`</nobr>
+
 ## <span class="jumptarget"> September </span>
 
 ### Stencil Cornerstone 1.3.3 released
 
-Version 1.3.3 of Stencil's default Cornerstone theme is now available. This maintenance release standardizes the alignment of payment buttons, and standardizes the IE11 and Edge browsers' display behavior for out-of-stock product options/SKUs.
+Version 1.3.3 of Stencil's default Cornerstone theme is now available. This maintenance release standardizes the alignment of payment buttons, and provides a workaround for the IE11 and Edge browsers' display behavior with out-of-stock product options/SKUs.
 
 For details, please see the [Cornerstone 1.3.x release notes](https://stencil.bigcommerce.com/docs/release-notes-cornerstone-13-theme#133).
 
-Once once you have pulled the latest code from the [Stencil repo](https://github.com/bigcommerce/stencil), you can access this version by checking out its tag, using: `git checkout v1.3.3`
+Once once you have pulled the latest code from the [Stencil repo](https://github.com/bigcommerce/stencil), you can access this version by checking out its tag, using: <NOBR>`git checkout v1.3.3`</nobr>
 
 ### Shipment webhooks added
 

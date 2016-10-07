@@ -110,4 +110,4 @@ Includes are referenced within template files as follows:
 %%Include.http://www.example.com/remote_file.html%%
 %%Include.https://www.example.com/secure_remote_file.html%%</pre>
 
-Notes: Included external links will not follow redirects (http status code 301, 302). If a redirect is encountered, it will not include the content.
+Notes: Included external links will not follow redirects (http status code 301 or 302). So if a redirect is encountered, it will not include the content.
