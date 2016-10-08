@@ -41,9 +41,9 @@ The body of a JSON request is simply an object containing a set of key-value pai
 
 ### <span class="jumptarget"> Response Structure</span>
 
-Responses are structured similarly to requests. If a request returns a single object then the response will contain a single object containing the fields for that resource:
+Responses are structured similarly to requests. If a request returns a single object, then the response will contain a single object, containing the fields for that resource.
 
-The response will contain links to any sub-resource – for example, `images` on the product below:
+The response will also contain links to any sub-resource – for example, `images` on the product below:
 
 ```json
 {
@@ -236,7 +236,7 @@ XML has a content type of `application/xml`. All XML transactions begin with the
 
 ### <span class="jumptarget"> Request Structure</span>
 
-The body of an XML request should first contain an element that is named according to the resource in singular form, such as product for the products resource:
+The body of an XML request should first contain an element that is named according to the resource, in singular form, such as `product` for the `products` resource:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -245,7 +245,7 @@ The body of an XML request should first contain an element that is named accordi
 
 ```
 
-The resource element should then contain a set of elements that match the fields described in that resources' documentation:
+The resource element should then contain a set of elements that match the fields described in that resource's documentation:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -259,18 +259,22 @@ The resource element should then contain a set of elements that match the fields
 
 ### <span class="jumptarget"> Response Structure</span>
 
-To receive an XML response, the request URI should include a .xml extension:
+To receive an XML response, the request URI should include an .xml extension, as shown here:
 
-`GET /customers/1.xml`
+```
+GET /customers/1.xml
+```
+
+Here is a corresponding response:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <customer>
   <id>1</id>
   <company>BigCommerce<company>
-  <first_name>Philip</first_name>
-  <last_name>Muir</last_name>
-  <email>phil.muir@bigcommerce.com</email>
+  <first_name>Mister</first_name>
+  <last_name>Big</last_name>
+  <email>mister.big@bigcommerce.com</email>
   <phone></phone>
   <date_created>Tue, 16 Aug 2011 23:15:07 +0000</date_created>
   <date_modified>Tue, 16 Aug 2011 23:16:37 +0000</date_modified>
@@ -285,7 +289,7 @@ To receive an XML response, the request URI should include a .xml extension:
 
 ```
 
-If the request returns more than one result, then the response will consist of an element named according to the resource in plural form, which contains a set of objects for each result:
+If the request returns more than one result, then the response will consist of an element named according to the resource, in plural form, which contains a set of objects for each result:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -293,9 +297,9 @@ If the request returns more than one result, then the response will consist of a
   <customer>
     <id>1</id>
     <company>BigCommerce</company>
-    <first_name>Philip</first_name>
-    <last_name>Muir</last_name>
-    <email>phil.muir@bigcommerce.com</email>
+    <first_name>Mister</first_name>
+    <last_name>Big</last_name>
+    <email>mister.big@bigcommerce.com</email>
     <phone></phone>
     <date_created>Tue, 16 Aug 2011 23:15:07 +0000</date_created>
     <date_modified>Tue, 16 Aug 2011 23:16:37 +0000</date_modified>
