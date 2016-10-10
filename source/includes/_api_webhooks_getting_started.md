@@ -145,7 +145,7 @@ Following the creation of a webhook, it can take up to one minute for BigCommerc
 
 In the callback, we send a light payload with only minimum details regarding the event that's been triggered. This gives you maximum flexibility as to how you want to handle the notification in your application. For instance, if you subscribe to the `store/product/update` event, we'll send you the product ID when it's been updated, and you might want to handle it by fetching the product via a request to the [Products resource](/api/v2/#get-a-product).
 
-An example payload follows.
+An example payload follows:
 
 ```
 {"store_id":11111,"producer":"stores/abcde","scope":"store/order/statusUpdated","data":{"type":"order","id":173331},"hash":"3f9ea420af83450d7ef9f78b08c8af25b2213637"}
