@@ -27,7 +27,7 @@ If the user name and/or API token are invalid or missing, the app will get a `40
 To get an API token, complete the following steps.
 
 1.  Log into the store.
-2.  Click **Setup & Tools**.
+2.  Click **Advanced Settings**.
 3.  Select **Legacy API Accounts**.
 4.  Click **Create a Legacy API Account**.
 5.  Type the name of the user in the **Username** box.
@@ -41,7 +41,7 @@ To get an API token, complete the following steps.
 To revoke app access to a store, complete the following steps.
 
 1.  Log into the store.
-2.  Click **Setup & Tools**.
+2.  Click **Advanced Settings**.
 3.  Select **Legacy API Accounts**.
 4.  Click the gears icon in the **Action** column and select **Edit**.
 5.  Click the **Generate New Token** button.
@@ -55,7 +55,7 @@ To revoke app access to a store, complete the following steps.
 To change the API token that an app is using to access a store, complete the following steps.
 
 1.  Log into the store.
-2.  Click **Setup & Tools**.
+2.  Click **Advanced Settings**.
 3.  Select **Legacy API Accounts**.
 4.  Click the gears icon in the **Action** column and select **Edit**.
 5.  Click the **Generate New Token** button.
