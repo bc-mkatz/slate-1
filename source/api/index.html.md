@@ -20,8 +20,8 @@ includes:
   - api_req_headers
   - api_response_headers
   - api_media_types
-  - api_webhooks_getting_started
   - api_clients
+  - api_webhooks_getting_started
   - api_root_oauth
   - api_registration
   - api_callback

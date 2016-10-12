@@ -22,7 +22,7 @@ toc_footers:
   - <a href="/">Home</a>
   - <a href="/api/">API - Basics</a>
   - <a href="/themes/">Themes</a>
-  - <a href="https://stencil.bigcommerce.com/docs/" target="_blank"> &nbsp;  Stencil Themes</a>
+  - <a href="//stencil.bigcommerce.com/docs/"> &nbsp;  Stencil Themes</a>
   - <a href="/themes/blueprint/"> &nbsp; Blueprint Themes</a>
   - <a href="/themes/blueprint/layouts/"> &nbsp; &nbsp; Layouts</a>
   - <a href="/themes/blueprint/panels/"> &nbsp; &nbsp; Panels</a>
