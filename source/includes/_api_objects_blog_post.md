@@ -4,7 +4,7 @@ Store Content APIs help merchants edit and publish blog posts and Web pages, imp
 
 ## <span class="jumptarget"> Blog Posts </span>
 
-A content entry in the store’s blog
+A content entry in the store’s blog.
 
 ### <span class="jumptarget"> Blog Posts Object – Properties </span>
 
