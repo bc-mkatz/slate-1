@@ -10,11 +10,14 @@ A Store Information object represents an individual store's profile and metadata
 | --- | --- | --- |
 | id | string | Unique store identifier. |
 | domain | string | Primary domain name. |
-| secure_URL | string | The store's current HTTPS URL. |
-| name | string | The store's name. |
+| secure_URL | string | Store's current HTTPS URL. |
+| name | string | Store's name. |
+| first_name | string | Primary contact's first name (as defined during the store sign-up process). |
+| last_name | string | Primary contact's last name (as defined during the store sign-up process). |
 | address | string | Display address. |
+| country | string | Country where the store is located (as defined during the store sign-up process). |
 | phone | string | Display phone number. |
-| admin_email | string | Email address of the store administrator. |
+| admin_email | string | Email address of the store administrator (primary contact). |
 | order_email | string | Email address for orders and fulfillment. |
 | timezone | object | An object that defines the store's time zone, following conventions of the PHP `date` function. (For&#160;details, please see: <a href="http://php.net/manual/en/function.date.php" target="_blank">http://php.net/manual/en/function.date.php</a>.) This object contains the following elements:<br> `name`: a string identifying the time zone, in the format: <NOBR>`<Continent-name>/<City-name>`.</nobr><br> `raw_offset`: a negative or positive number, identifying the offset from UTC/GMT, in seconds, during winter/standard time.<br> `dst_offset`: -/+ (number) offset from UTC/GMT, in seconds, during summer/daylight saving time.<br> `dst_correction`: a boolean indicating whether this time zone observes daylight saving time.<br> `date_format` is a nested object, which contains the following internal elements:<br> * `display`: string that defines dates' display format, in the pattern: <NOBR>`M jS Y`;</nobr> <br> * `export`: string that defines the CSV export format for orders, customers, and products, in the pattern: <NOBR>`M jS Y`;</nobr> <br> * `extended_display`: string that defines dates' extended-display format, in the pattern: <NOBR>`M jS Y @ g:i A`.</nobr> |
 | language | string | Default language code. |
@@ -31,6 +34,7 @@ A Store Information object represents an individual store's profile and metadata
 | dimension_thousands_token | string | The symbol used to denote thousands. |
 | plan_name | string | Name of the BigCommerce plan to which this store is subscribed. |
 | plan_level | string | Level of the BigCommerce plan to which this store is subscribed. |
+| industry | string | Industry, or vertical category, in which the business operates. (As selected from drop-down list during the store sign-up process.) |
 | logo | object |
 | is_price_entered_with_tax | boolean | A Boolean value that indicates whether or not prices are entered with tax. |
 | active_comparison_modules | array |  |

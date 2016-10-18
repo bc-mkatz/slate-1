@@ -23,10 +23,24 @@ Example JSON returned in the response:
   "domain": "sandbox.mybigcommerce.com",
   "secure_url": "https://store-abc123.mybigcommerce.com",
   "name": "My Sandbox Store",
-  "address": "555 Test Way, Quality City, CA 94109, USA",
+  "first_name": "Sylvester",
+  "last_name": "Biggs",
+  "address": "555 Test Way\nQuality City, CA 94109\nUSA",
+  "country": "United States",
   "phone": "567-098-9274",
   "admin_email": "admin@bigcommerce.com",
   "order_email": "order@bigcommerce.com",
+  "timezone": {
+    "name": "America/Vancouver",
+    "raw_offset": -28800,
+    "dst_offset": -25200,
+    "dst_correction": true,
+    "date_format": {
+      "display": "M jS Y",
+      "export": "M jS Y",
+      "extended_display": "M jS Y @ g:i A"
+    }
+  },
   "language": "en",
   "currency": "USD",
   "currency_symbol": "$",
@@ -39,7 +53,9 @@ Example JSON returned in the response:
   "dimension_decimal_places": "2",
   "dimension_decimal_token": ".",
   "dimension_thousands_token": ",",
-  "plan_name": "Employee Sandbox",
+  "plan_name": "15 Day Free Trial",
+  "plan_level": "Trial",
+  "industry": "Books/Music/Video",
   "logo": {
     "url": "http://cdn6.bigcommerce.com/s-cl1xgr/product_images/sandbox_logo_lp_1410899221__28020.jpg",
     "mobile_url": false
