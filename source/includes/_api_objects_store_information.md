@@ -17,7 +17,7 @@ A Store Information object represents an individual store's profile and metadata
 | address | string | Display address. |
 | country | string | Country where the store is located (as defined during the store sign-up process). |
 | phone | string | Display phone number. |
-| admin_email | string | Email address of the store administrator (primary contact). |
+| admin_email | string | Email address of the store administrator/owner. |
 | order_email | string | Email address for orders and fulfillment. |
 | timezone | object | An object that defines the store's time zone, following conventions of the PHP `date` function. (For&#160;details, please see: <a href="http://php.net/manual/en/function.date.php" target="_blank">http://php.net/manual/en/function.date.php</a>.) This object contains the following elements:<br> `name`: a string identifying the time zone, in the format: <NOBR>`<Continent-name>/<City-name>`.</nobr><br> `raw_offset`: a negative or positive number, identifying the offset from UTC/GMT, in seconds, during winter/standard time.<br> `dst_offset`: -/+ (number) offset from UTC/GMT, in seconds, during summer/daylight saving time.<br> `dst_correction`: a boolean indicating whether this time zone observes daylight saving time.<br> `date_format` is a nested object, which contains the following internal elements:<br> * `display`: string that defines dates' display format, in the pattern: <NOBR>`M jS Y`;</nobr> <br> * `export`: string that defines the CSV export format for orders, customers, and products, in the pattern: <NOBR>`M jS Y`;</nobr> <br> * `extended_display`: string that defines dates' extended-display format, in the pattern: <NOBR>`M jS Y @ g:i A`.</nobr> |
 | language | string | Default language code. |
