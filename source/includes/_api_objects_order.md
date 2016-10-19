@@ -41,7 +41,7 @@ The Order object contains a record of the purchase agreement between a shopper a
 | items_total | int | The total number of items in the order. |
 | items_shipped | int | The number of items that have been shipped. |
 | payment_method | string | The payment method for this order. Can be one of the following: Manual, Credit Card, cash, Test Payment Gateway, ... . |
-| payment_provider_id | string | The ID of the payment provider, if a payment provider was used. |
+| payment_provider_id | string | The external Transaction ID/Payment ID within this order's payment provider (if a payment provider was used). |
 | payment_status | enum | A read-only value. Do not attempt to modify or set this value in a POST or PUT operation. |
 | refunded_amount | decimal | The amount refunded from this transaction. |
 | order_is_digital | boolean | Whether this is an order for digital products. |

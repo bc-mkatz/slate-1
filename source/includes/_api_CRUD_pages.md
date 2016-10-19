@@ -6,38 +6,21 @@
 
 ### <span class="jumptarget"> List Pages </span>
 
-Gets the collection of pages. (Default sorting is by published_date, from most-recent to earliest.)
+Gets the collection of pages. (Default sorting is by auto-generated ID. This usually generates an order of oldest-to-newest)
 
 *   OAuth
  `GET /stores/{store_hash}/v2/pages/`
 *   Basic Auth
  `GET /api/v2/pages`
 
-#### <span class="jumptarget"> Filters </span>
-
-Filter parameters can be added to the URL query string to select specific pages in the collection.
-
-**[Lawrence: Need filters. The struck-out text below is copied/pasted from the Blog Posts API docs. Thanks.]**
-
-<strike>
-| Parameter | Type | Example |
-| --- | --- | --- |
-| is_published | string | /stores/{store_hash}/v2/blog/posts?is_published={value} |
-| url | string | /stores/{store_hash}/v2/blog/posts?url={value} |
-</strike>
-
 #### <span class="jumptarget"> Pagination </span>
 
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 pages are returned by default.
+Parameters can be added to the URL query string to paginate the collection. If a limit isn’t provided, up to 50 pages are returned by default.
 
-**[Lawrence: Need paginators. The struck-out text below is copied/pasted from the Blog Posts API docs. Thanks.]**
-
-<strike>
 | Parameter | Type | Example |
 | --- | --- | --- |
-| Page | int | /stores/{store_hash}/v2/blog/posts?page={number} |
-| Limit | int | /stores/{store_hash}/v2/blog/posts?limit={count} |
-</strike>
+| Page | int | /stores/{store_hash}/v2/pages?page={number} |
+| Limit | int | /stores/{store_hash}/v2/pages?limit={count} |
 
 #### <span class="jumptarget"> Response </span>
 
@@ -113,8 +96,22 @@ Example JSON returned in the response:
     "has_mobile_version": false,
     "mobile_body": "",
     "url": "/contact-us/"
+  },
+  {
+  "id": 5,
+  "name": "Raw Test Page",
+  "body": "<html><head><title>Raw Page</title></head><body>This page type can store raw HTML</body></html>",
+  "is_visible": true,
+  "parent_id": 0,
+  "sort_order": 3,
+  "type": "raw",
+  "is_homepage": false,
+  "is_customers_only": false,
+  "search_keywords": "",
+  "has_mobile_version": true,
+  "mobile_body": "<html><head><title>Page</title></head><body>Mobile Content can be raw as well</body></html>",
+  "url": "/Raw-Body-Test-Page/"
   }
-
 ]
 ```
 
@@ -153,27 +150,18 @@ Creates a new page.
 *   Basic Auth
 `POST /api/v2/pages`
 
-**[Lawrence: Sorry, but I need everything for this one – any read-only properties, any required properties, and any usage notes; plus, a sample Request body and (ideally) a sample JSON Response. Struck-out text below is copied/pasted from Blog Posts API. Thanks.]**
-
-<strike>
 #### <span class="jumptarget"> Read-only Properties </span>
 
-The following properties of the page are read-only. If one or more of these properties are included in the request, it will be rejected.
+The following property of the page is read-only. If it is included in the request, the request will be rejected:
 
 *   id
-*   preview_url
-*   summary
 
 #### <span class="jumptarget"> Requirements </span>
 
-The following properties of the page are required. The request won’t be fulfilled unless these properties are valid.
+The following properties of the page are required. The request won’t be fulfilled unless these properties are valid:
 
-*   title
-*   body
-
-#### <span class="jumptarget"> Notes </span>
-
-??
+*   name
+*   type
 
 #### <span class="jumptarget"> Request </span>
 
@@ -181,18 +169,26 @@ Example request object:
 
 ```json
 {
-  "title": "A Sample Blog Post",
-  "body": "<p>This is a blog post.</p>",
-  "author": "Author Name",
-  "thumbnail_path": "http://cdn.example.com/sample-post.jpg",
-  "is_published": true,
-  "tags": [
-    "Blog",
-    "Example"
-  ]
+  "name": "404 Page for Cats",
+  "type": "page",
+  "is_visible": false,
+  "is_homepage": false,
+  "is_customers_only": false,
+  "body": "Sorry! You can not haz cheeseburger."
 }
 ```
-</strike>
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
+**[Lawrence: Sorry, still need a Response for this:]**
+
+```json
+{
+??
+}
+```
 
 ### <span class="jumptarget"> Delete a Page </span>
 
@@ -202,23 +198,3 @@ Deletes a page.
 `DELETE /stores/{store_hash}/v2/pages/{id}`
 *   Basic Auth
 `DELETE /api/v2/pages/{id}`
-
-### <span class="jumptarget"> Delete Multiple Pages </span>
-
-Deletes multiple pages in the collection.
-
-*   OAuth
-`DELETE /stores/{store_hash}/v2/pages`
-*   Basic Auth
-`DELETE /api/v2/blog/pages/`
-
-#### Pagination </span>
-
-**[Lawrence: This section is copied/adapted from the Blog Posts API docs. Kindly correct this to the way  this endpoint is actually paginated. Thanks.]**
-
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 pages are returned by default.
-
-| Parameter | Type | Example |
-| --- | --- | --- |
-| Page | int | /api/v2/pages?page={number} |
-| Limit | int | /api/v2/pages?limit={count} |

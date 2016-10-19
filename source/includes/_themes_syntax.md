@@ -4,7 +4,7 @@ Each of the layout, panel, and snippet files in a theme uses variables (also cal
 
 Template variables are enclosed within `%%` markers. These types of variables are available for use in templates: global variables, string variables, panel references, snippet references, and file includes.
 
-### <span class="jumptarget"> Global Variables </span>
+### <span class="jumptarget"> Global-Variables References </span>
 
 Global variables are used to render dynamic content into a template. Global variables are referenced using the following syntax:
 
