@@ -160,8 +160,15 @@ The following property of the page is read-only. If it is included in the reques
 
 The following properties of the page are required. The request won’t be fulfilled unless these properties are valid:
 
-*   name
 *   type
+*   name
+*   link (for a page of `type: link`)
+*   feed (for a page of `type: rss_feed`)
+*   body (for a page of `type: raw`)
+
+#### <span class="jumptarget"> Notes </span>
+
+Although the `is_homepage` property is writeable, setting it to `true` does not (currently) reset other instances of this property. When setting this property, please keep this known issue in mind.
 
 #### <span class="jumptarget"> Request </span>
 
@@ -169,12 +176,17 @@ Example request object:
 
 ```json
 {
-  "name": "404 Page for Cats",
-  "type": "page",
-  "is_visible": false,
-  "is_homepage": false,
-  "is_customers_only": false,
-  "body": "Sorry! You can not haz cheeseburger."
+   "type": "raw",
+   "name": "404 Page for Cats",
+   "url": "/404-meow/",
+   "body": "<html><head><title>Hairball! Not Found</title></head><body>Sorry! You can not haz cheeseburger.</body></html>",
+   "mobile_body": "",
+   "has_mobile_version": false,
+   "is_visible": true,
+   "is_homepage": false,
+   "is_customers_only": false,
+   "sort_order": 12,
+   "search_keywords": "dead, missing, broken"
 }
 ```
 
@@ -182,11 +194,21 @@ Example request object:
 
 Example JSON returned in the response:
 
-**[Lawrence: Sorry, still need a Response for this:]**
-
 ```json
 {
-??
+ "id": 12,
+ "name": "404 Page for Cats",
+ "body": "<html><head><title>Hairball! Not Found</title></head><body>Sorry! You can not haz cheeseburger.</body></html>",
+ "is_visible": true,
+ "parent_id": 0,
+ "sort_order": 12,
+ "type": "raw",
+ "is_homepage": false,
+ "is_customers_only": false,
+ "search_keywords": "dead, missing, broken",
+ "has_mobile_version": false,
+ "mobile_body": "",
+ "url": "/404-meow/"
 }
 ```
 

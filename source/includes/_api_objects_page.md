@@ -8,7 +8,7 @@ A static Web page on the storefront.
 | --- | --- | --- |
 | id | int | Unique ID of this Web page. |
 | parent_id | int | ID of any parent Web page. |
-| type | enum | Enum identifying this page's type, with the following possible values:<br> `page`: free-text page;<br> `link`: link to another Web address;<br> `rss_feed`: syndicated content from an RSS feed;<br> `contact_form`: a contact form;<br> `raw`: a page that allows for raw HTML to be entered into the body.|
+| type | enum | Enum identifying this page's type, with the following possible values:<br> `page`: free-text page;<br> `link`: link to another Web address;<br> `rss_feed`: syndicated content from an RSS feed;<br> `contact_form`: a contact form;<br> `raw`: a page that allows for raw HTML to be entered into the body. (Note: No template is used when rendering the page.) |
 | contact_fields | object | Where the page's type is a contact form: object whose members are the fields enabled (in the control panel) for storefront display. Possible members are:<br> `fullname`: full name of the customer submitting the form;<br> `phone`: customer's phone number, as submitted on the form;<br> `companyname`: customer's submitted company name;<br> `orderno`: customer's submitted order number;<br> `rma`: customer's submitted RMA (Return Merchandise Authorization) number. |
 | email | string | Where the page's type is a contact form: email address that receives messages sent via the form.|
 | name | string | Page name, as displayed on the storefront. |
