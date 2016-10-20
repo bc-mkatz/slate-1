@@ -56,6 +56,8 @@ includes:
   - api_objects_blog_post
   - api_CRUD_blog_posts
   - api_CRUD_blog_tags
+  - api_objects_page
+  - api_CRUD_pages
   - api_objects_redirect
   - api_CRUD_redirects
   - api_objects_customer

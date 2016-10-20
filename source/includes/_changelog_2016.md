@@ -3,6 +3,25 @@
 
 ## <span class="jumptarget"> October </span>
 
+### Web Pages API Added
+
+BigCommerce has added a new Store Content > Pages API. This allows your apps to create, access, and delete Web [static] pages on a storefront. For details, please see the <a href="/api/v2/#pages" target="_blank">Pages API documentation</a>.
+
+### Email Templates/Variables: New Documentation
+
+For Blueprint Themes, a new <a href="/themes/blueprint/#email-templates" target="_blank">Email Templates</a> documentation section lists the variables available in each email template.
+
+### Store Information API Refreshed with New Fields
+
+The Store Information API has four new fields, which handle information gathered during store signup:
+
+- `first_name` of store's primary contact.
+- `last_name` of store's primary contact.
+- `industry` in which store operates.
+- `country` where store is located.
+
+For usage details, please see the <a href="/api/v2/#store-information-reference" target="_blank">Store Information API documentation</a>.
+
 ### Stencil Cornerstone 1.3.4 released
 
 Version 1.3.4 of Stencil's default Cornerstone theme is now available. This maintenance release standardizes the IE11 and Edge browsers' display behavior with out-of-stock product options/SKUs.
