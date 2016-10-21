@@ -6,6 +6,7 @@
 |||
 |---|---|
 | %%GLOBAL_BillingAddress%% |
+| %%GLOBAL_CustomerEmail%% |
 | %%GLOBAL_HideBillingPhone%% |
 | %%GLOBAL_STYLE_PATH%% |
 | %%GLOBAL_BillingPhone%% |
