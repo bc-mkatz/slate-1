@@ -3,6 +3,17 @@
 
 ## <span class="jumptarget"> October </span>
 
+### Category Webhooks Added
+
+We have added the following new webhooks, which your apps can use to create and manage product categories: 
+
+- `store/category/*`
+- `store/category/created`
+- `store/category/updated`
+- `store/category/deleted`
+
+These additions are now listed in our webhooks [documentation](/api/#webhooks-overview).
+
 ### Web Pages API Added
 
 BigCommerce has added a new Store Content > Pages API. This allows your apps to create, access, and delete Web [static] pages on a storefront. For details, please see the <a href="/api/v2/#pages" target="_blank">Pages API documentation</a>.

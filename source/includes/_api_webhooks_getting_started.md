@@ -67,7 +67,7 @@ An `HTTP 201` response indicates that the webhook was set successfully.
 
 Please see the [hooks resource](/api/v2/#list-hooks) and [webhook object](/api/v2/#webhook-object-properties) sections for more details.
 
-#### <span class="jumptarget" id="webhook-list"> List of Webhook Events </span>
+### <span class="jumptarget" id="webhook-list"> List of Webhook Events </span>
 
 <html>
 <ul>
@@ -94,7 +94,14 @@ Please see the [hooks resource](/api/v2/#list-hooks) and [webhook object](/api/v
 	<li>store/product/inventory/updated</li>
 	<li>store/product/inventory/order/updated</li>
 	</ul>  
-	
+
+<li> store/category/* </li>
+	<ul>
+	<li>store/category/created</li>
+	<li>store/category/updated</li>
+	<li>store/category/deleted</li>
+	</ul>  
+
 <li> store/sku/* </li>
 	<ul>
 	<li>store/sku/created</li>
