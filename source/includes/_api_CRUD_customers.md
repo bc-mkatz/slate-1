@@ -157,6 +157,7 @@ The following properties of the customer are read-only. If one or more of these 
 *   date_modified
 *   accepts_marketing
 *   addresses
+*   form_fields
 
 #### <span class="jumptarget"> Requirements </span>
 
