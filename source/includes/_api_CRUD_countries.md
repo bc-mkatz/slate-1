@@ -31,6 +31,11 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | Page | int | /api/v2/countries?page={number} |
 | Limit | int | /api/v2/countries?limit={count} |
 
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 [
   {
@@ -65,6 +70,10 @@ Gets a country.
 *   Basic Auth
 >`GET /api/v2/countries/{id}`
 
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 {
   "id": 226,
@@ -86,6 +95,10 @@ Gets a count of countries.
 >`GET /stores/{store_hash}/v2/countries/count`
 *   Basic Auth
 >`GET /api/v2/countries/count`
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
 
 ```json
 {

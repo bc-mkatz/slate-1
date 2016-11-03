@@ -44,6 +44,10 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | Limit | int | /api/v2/customers?limit={count} |
 
 
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 [
   {
@@ -99,6 +103,10 @@ Gets a customer.
 *   Basic Auth
 >`GET /api/v2/customers/{id}`
 
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 {
   "id": 1,
@@ -131,6 +139,10 @@ Gets a count of customers.
 >`GET /stores/{store_hash}/v2/customers/count`
 *   Basic Auth
 >`GET /api/v2/customers/count`
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
 
 ```json
 {
@@ -177,7 +189,11 @@ When the `_authentication` object is not supplied with an update request, then t
 
 To manually update a customer password in the same way as the control panel, supply a value for the password field:
 
-```curl
+#### <span class="jumptarget"> Request </span>
+
+Example request object:
+
+```json
 {
     "_authentication": {
         "password": "12w69Y217PYR96J"
@@ -189,7 +205,11 @@ To manually update a customer password in the same way as the control panel, sup
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
 
-```curl
+#### <span class="jumptarget"> Request </span>
+
+Example request object:
+
+```json
 {
     "_authentication": {
        "password": "12w69Y217PYR96J",
@@ -202,7 +222,11 @@ An additional optional `password_confirmation` field can also be sent, providing
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
 
-```curl
+#### <span class="jumptarget"> Request </span>
+
+Example request object:
+
+```json
 {
     "_authentication": {
         "force_reset": true
@@ -243,7 +267,11 @@ When the `_authentication` object is not supplied with an update request, then t
 
 To manually update a customer password in the same way as the control panel, supply a value for the `password` field:
 
-```curl
+#### <span class="jumptarget"> Request </span>
+
+Example request object:
+
+```json
 {
     "_authentication": {
         "password": "12w69Y217PYR96J"
@@ -255,7 +283,11 @@ To manually update a customer password in the same way as the control panel, sup
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
 
-```curl
+#### <span class="jumptarget"> Request </span>
+
+Example request object:
+
+```json
 {
     "_authentication": {
        "password": "12w69Y217PYR96J"
@@ -268,7 +300,11 @@ An additional optional `password_confirmation` field can also be sent, providing
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
 
-```curl
+#### <span class="jumptarget"> Request </span>
+
+Example request object:
+
+```json
 {
     "_authentication": {
         "force_reset": true

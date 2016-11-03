@@ -35,6 +35,11 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | Page | int | /api/v2/coupons?page={number} |
 | Limit | int | /api/v2/coupons?limit={count} |
 
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 [
   {
@@ -173,6 +178,10 @@ Gets a coupon.
 *   Basic Auth
 ">`GET /api/v2/coupons/{id}`
 
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 {
   "id": 1,
@@ -206,6 +215,10 @@ Gets a count of the number of coupons in the store.
 *   Basic Auth
 >`GET /api/v2/coupons/count`
 
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 {
   "count": 65
@@ -223,14 +236,14 @@ Creates a new coupon.
 
 #### <span class="jumptarget"> Read-only Properties </span>
 
-The following properties of the coupon are read-only. If one or more of these properties are included in the request, it will be rejected.
+The following properties of the coupon are read-only. If one or more of these properties are included in the request, it will be rejected:
 
 *   id
 *   num_uses
 
 #### <span class="jumptarget"> Requirements </span>
 
-The following properties of the coupon are required. The request won’t be fulfilled unless these properties are valid.
+The following properties of the coupon are required. The request won’t be fulfilled unless these properties are valid:
 
 *   name
 *   code
@@ -299,14 +312,21 @@ Updates an existing coupon.
 
 #### <span class="jumptarget"> Read-only Properties </span>
 
-The following properties of the coupon are read-only. If one or more of these properties are included in the request, it will be rejected.
+The following properties of the coupon are read-only. If one or more of these properties are included in the request, it will be rejected:
 
 *   id
 *   num_uses
 
 #### <span class="jumptarget"> Requirements </span>
 
-The following properties of the coupon are required. The request won’t be fulfilled unless these properties are valid.
+The following property of the coupon is required. If it is not included in the `PUT` request, its existing value on the coupon will be silently overwritten:
+
+*   applies_to
+
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
 
 ```json
 {
@@ -331,6 +351,7 @@ The following properties of the coupon are required. The request won’t be fulf
   "shipping_methods": null
 }
 ```
+
 ### <span class="jumptarget"> Delete a Coupon </span>
 
 Deletes a coupon.
