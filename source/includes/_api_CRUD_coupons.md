@@ -319,9 +319,11 @@ The following properties of the coupon are read-only. If one or more of these pr
 
 #### <span class="jumptarget"> Requirements </span>
 
-The following property of the coupon is required. If it is not included in the `PUT` request, its existing value on the coupon will be silently overwritten:
+The following property of the coupon is required. If it is not included in the `PUT` request, its existing value on the coupon will be cleared:
 
 *   applies_to
+
+Note that if the `applies_to` value is cleared, you can restore it to the coupon by reapplying the `applies_to` value in a new PUT request.
 
 
 #### <span class="jumptarget"> Response </span>
