@@ -34,7 +34,7 @@ Filter parameters can be added to the URL query string to select specific custom
 | max_date_modified | dateTime or date | /api/v2/customers?max_date_modified={value} |
 | tax_exempt_category | date | /api/v2/customers?tax_exempt_category={value} |
 
-### <span class="jumptarget"> Pagination </span>
+#### <span class="jumptarget"> Pagination </span>
 
 Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 customers are returned by default.
 
@@ -189,10 +189,6 @@ When the `_authentication` object is not supplied with an update request, then t
 
 To manually update a customer password in the same way as the control panel, supply a value for the password field:
 
-#### <span class="jumptarget"> Request </span>
-
-Example request object:
-
 ```json
 {
     "_authentication": {
@@ -204,10 +200,6 @@ Example request object:
 #### <span class="jumptarget"> Confirming Passwords </span>
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
-
-#### <span class="jumptarget"> Request </span>
-
-Example request object:
 
 ```json
 {
@@ -221,10 +213,6 @@ Example request object:
 #### <span class="jumptarget"> Forcing Password Resets </span>
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
-
-#### <span class="jumptarget"> Request </span>
-
-Example request object:
 
 ```json
 {
@@ -267,10 +255,6 @@ When the `_authentication` object is not supplied with an update request, then t
 
 To manually update a customer password in the same way as the control panel, supply a value for the `password` field:
 
-#### <span class="jumptarget"> Request </span>
-
-Example request object:
-
 ```json
 {
     "_authentication": {
@@ -282,10 +266,6 @@ Example request object:
 #### <span class="jumptarget"> Confirming Passwords </span>
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
-
-#### <span class="jumptarget"> Request </span>
-
-Example request object:
 
 ```json
 {
@@ -299,10 +279,6 @@ Example request object:
 #### <span class="jumptarget"> Forcing Password Resets </span>
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
-
-#### <span class="jumptarget"> Request </span>
-
-Example request object:
 
 ```json
 {

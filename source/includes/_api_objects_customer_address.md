@@ -2,7 +2,7 @@
 
 Postal address belonging to a customer.
 
-### <span class="jumptarget"> Customer Addresss Object - Properties </span>
+### <span class="jumptarget"> Customer Address Object – Properties </span>
 
 | Name | Type | Description |
 | --- | --- | --- |
