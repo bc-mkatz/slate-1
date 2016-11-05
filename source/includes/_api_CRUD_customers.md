@@ -34,7 +34,7 @@ Filter parameters can be added to the URL query string to select specific custom
 | max_date_modified | dateTime or date | /api/v2/customers?max_date_modified={value} |
 | tax_exempt_category | date | /api/v2/customers?tax_exempt_category={value} |
 
-### <span class="jumptarget"> Pagination </span>
+#### <span class="jumptarget"> Pagination </span>
 
 Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn’t provided, up to 50 customers are returned by default.
 
@@ -43,6 +43,10 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | Page | int | /api/v2/customers?page={number} |
 | Limit | int | /api/v2/customers?limit={count} |
 
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
 
 ```json
 [
@@ -99,6 +103,10 @@ Gets a customer.
 *   Basic Auth
 >`GET /api/v2/customers/{id}`
 
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 {
   "id": 1,
@@ -131,6 +139,10 @@ Gets a count of customers.
 >`GET /stores/{store_hash}/v2/customers/count`
 *   Basic Auth
 >`GET /api/v2/customers/count`
+
+#### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
 
 ```json
 {
@@ -177,7 +189,7 @@ When the `_authentication` object is not supplied with an update request, then t
 
 To manually update a customer password in the same way as the control panel, supply a value for the password field:
 
-```curl
+```json
 {
     "_authentication": {
         "password": "12w69Y217PYR96J"
@@ -189,7 +201,7 @@ To manually update a customer password in the same way as the control panel, sup
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
 
-```curl
+```json
 {
     "_authentication": {
        "password": "12w69Y217PYR96J",
@@ -202,7 +214,7 @@ An additional optional `password_confirmation` field can also be sent, providing
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
 
-```curl
+```json
 {
     "_authentication": {
         "force_reset": true
@@ -243,7 +255,7 @@ When the `_authentication` object is not supplied with an update request, then t
 
 To manually update a customer password in the same way as the control panel, supply a value for the `password` field:
 
-```curl
+```json
 {
     "_authentication": {
         "password": "12w69Y217PYR96J"
@@ -255,7 +267,7 @@ To manually update a customer password in the same way as the control panel, sup
 
 An additional optional `password_confirmation` field can also be sent, providing password confirmation as a service:
 
-```curl
+```json
 {
     "_authentication": {
        "password": "12w69Y217PYR96J"
@@ -268,7 +280,7 @@ An additional optional `password_confirmation` field can also be sent, providing
 
 To force a customer to reset their password upon their next login attempt, give the `force_reset` field a value of true, as shown here:
 
-```curl
+```json
 {
     "_authentication": {
         "force_reset": true

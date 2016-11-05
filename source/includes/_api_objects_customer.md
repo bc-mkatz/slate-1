@@ -30,6 +30,8 @@ Identity and account details for customers shopping on Bigcommerce stores.
 
 ### <span class="jumptarget"> Customer Events </span>
 
+The following customer events are available:
+
 #### <span class="jumptarget"> Customer Created </span>
 
 `store/customer/created`
