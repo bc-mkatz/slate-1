@@ -1090,7 +1090,9 @@
             // to the token.
             if (key !== token) {
               var diff = Math.max(3, key.length - token.length)
-              similarityBoost = 1 / Math.log(diff)
+              /** similarityBoost = 1 / Math.log(diff) */
+              /** Try 11/8/15: Divide boost by 10, to help boolean (implicit AND) keyword combo's show: */
+              similarityBoost = 0.1 / Math.log(diff)
             }
 
             // calculate the query tf-idf score for this token
