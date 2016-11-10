@@ -60,6 +60,8 @@ includes:
   - api_CRUD_pages
   - api_objects_redirect
   - api_CRUD_redirects
+  - api_objects_currency
+  - api_CRUD_currencies
   - api_objects_customer
   - api_CRUD_customers
   - api_objects_customer_address
