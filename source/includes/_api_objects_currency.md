@@ -13,7 +13,7 @@ The Currency object and endpoints manage alternate currency display options on t
 | country_iso2 | string | 2-letter [ISO Alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code for this currency's country. |
 | currency_code | string | 3-letter [ISO 4217 code](http://www.xe.com/iso4217.php) for this currency. |
 | currency_exchange_rate | float | Amount of this currency that is equivalent to one U.S. dollar. |
-| auto_update | boolean | (Description to follow.) |
+| auto_update | boolean | Specifies whether to use the [XE Currency Converter](http://www.xe.com/currencyconverter/) service to update the currency conversion. A value of `false` specifies a static conversion value. |
 | location | string | Specifies whether this currency's symbol appears to the "left" or "right" of the numeric amount. |
 | token | string | Symbol for this currency. |
 | decimal_token | string | Symbol used as the decimal separator in this currency. |
