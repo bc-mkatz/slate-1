@@ -7,7 +7,7 @@ The Currency object and endpoints manage alternate currency display options on t
 | Name | Type | Description |
 |---|---|---|
 | id | int | The ID of the currency. Read-only. |
-| is_default | boolean | Specifies whether this is the store's default currency display format. Read-only. | 
+| is_default | boolean | Specifies whether this is the store's default currency display format. Read-only. (To change the store's default currency via the BigCommerce control panel, please see [this support article](https://support.bigcommerce.com/articles/Public/Managing-Currencies/?q=currency&l=en_US&fs=Search&pn=1#default).) | 
 | date_created | date | Date on which this currency was created on the store. |
 | date_modified | date | Date on which this currency was last modified on the store. |
 | country_iso2 | string | 2-letter [ISO Alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code for this currency's country. |
