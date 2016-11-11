@@ -16,7 +16,7 @@ Category or product discounts that can be applied to orders for customers who en
 | amount | decimal | The amount is a decimal field which can either be the monetary discount to be applied to an order or a percentage discount to be applied to an order. The type of this field is determined by the coupon type. |
 | min_purchase | decimal | This is a decimal field which specifies the minimum value an order must have before the coupon can be applied to it. |
 | expires | date | This is a date field which specifies when a coupon expires. Coupons need not have an expiry date as you can also control expiry via max_uses and max_uses_per_customer. The date field must be formatted as per RFC-2822. |
-| enabled | boolean | True, if coupon is enabled. False otherwise. |
+| enabled | boolean | This field's value is `true` if the coupon is enabled, otherwise `false`. |
 | code | string | The coupon code which customers will use to receive their discounts. Must be Unique. |
 | applies_to | object | This object provides ability to restrict a coupon to an entity type (category/product) and ability to restrict a coupon specific categories/products, where 0 is all categories/products. |
 | num_uses | int | Number of times this coupon has been used. This is a readonly field and can't be changed via PUT or POST. |
