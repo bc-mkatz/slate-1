@@ -1,6 +1,13 @@
 # <span class="jumptarget"> 2016 </span>
 
 
+## <span class="jumptarget"> November </span>
+
+### Currency API Added
+
+BigCommerce has added a new Currency API. This allows your apps to manage alternate currency display options on a storefront. For details, please see the <a href="/api/v2/#currency-reference" target="_blank">Pages API documentation</a>.
+
+
 ## <span class="jumptarget"> October </span>
 
 ### Category Webhooks Added
