@@ -7,22 +7,6 @@ Retrieves currency display options.
 *   Basic Auth
 `GET /api/v2/currencies`
 
-### <span class="jumptarget"> Filters </span>
-
-Filter parameters can be added to the URL query string to select specific currencies in the collection.
-
-| Parameter    | Type   | Example                                        |
-| ------------ | ------ | ---------------------------------------------- |
-| min_id     | int    | /api/v2/currencies?min_id={value}     |
-| max_id     | int    | /api/v2/currencies?max_id={value}     |
-
-Parameters can be added to the URL query string to paginate the collection. The maximum limit is 250. If a limit isn't provided, up to 50 currencies are returned by default.
-
-| Parameter | Type | Example                                   |
-| --------- | ---- | ----------------------------------------- |
-| page    | int  | /api/v2/currencies?page={number} |
-| limit   | int  | /api/v2/currencies?limit={count} |
-
 ### <span class="jumptarget"> Response </span>
 
 Example JSON returned in the response:
@@ -33,13 +17,13 @@ Example JSON returned in the response:
         "currency": [
           {
             "id": 3,
-            "is_default": "False",
+            "is_default": "false",
             "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
             "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-            "country_iso2": "AU"
+            "country_iso2": "AU",
             "currency_code": "AUD",
             "currency_exchange_rate": "1.3885600000",
-            "auto_update": "False",
+            "auto_update": "false",
             "location": "left",
             "token": "$",
             "decimal_token": ".",
@@ -48,13 +32,13 @@ Example JSON returned in the response:
           },
           {
             "id": 4,
-            "is_default": "False",
+            "is_default": "false",
             "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
             "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-            "country_iso2": "US"
+            "country_iso2": "US",
             "currency_code": "USD",
             "currency_exchange_rate": "1.0000000000",
-            "auto_update": "False",
+            "auto_update": "false",
             "location": "left",
             "token": "$",
             "decimal_token": ".",
@@ -63,13 +47,13 @@ Example JSON returned in the response:
           },
           {
             "id": 5,
-            "is_default": "False",
+            "is_default": "false",
             "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
             "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-            "country_iso2": "CA"
+            "country_iso2": "CA",
             "currency_code": "CAD",
             "currency_exchange_rate": "0.7500000000",
-            "auto_update": "False",
+            "auto_update": "false",
             "location": "left",
             "token": "$",
             "decimal_token": ".",
@@ -97,13 +81,13 @@ Example JSON returned in the response:
 ```json
 {
     "id": 3,
-    "is_default": "False",
+    "is_default": "false",
     "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
     "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-    "country_iso2": "AU"
+    "country_iso2": "AU",
     "currency_code": "AUD",
     "currency_exchange_rate": "1.3885600000",
-    "auto_update": "False",
+    "auto_update": "false",
     "location": "left",
     "token": "$",
     "decimal_token": ".",
@@ -130,6 +114,10 @@ The following properties of the currency are read-only. If one or more of these 
 * date_created
 * date_modified
 
+#### <span class="jumptarget"> Notes </span>
+
+The `is_default` property cannot be set programmatically. To change the store's default currency via the BigCommerce control panel, please see [this support article](https://support.bigcommerce.com/articles/Public/Managing-Currencies/?q=currency&l=en_US&fs=Search&pn=1#default).
+
 
 ### <span class="jumptarget"> Requirements </span>
 
@@ -152,10 +140,10 @@ Example request object:
 
 ```json
 {
-    "country_iso2": "AU"
+    "country_iso2": "AU",
     "currency_code": "AUD",
     "currency_exchange_rate": "1.3885600000",
-    "auto_update": "False",
+    "auto_update": "false",
     "location": "left",
     "token": "$",
     "decimal_token": ".",
@@ -190,10 +178,10 @@ Example request object:
 
 ```json
 {
-    "country_iso2": "AU"
+    "country_iso2": "AU",
     "currency_code": "AUD",
     "currency_exchange_rate": "1.3885600000",
-    "auto_update": "False",
+    "auto_update": "false",
     "location": "left",
     "token": "$",
     "decimal_token": ".",
