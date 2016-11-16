@@ -17,6 +17,7 @@ includes:
   - themes_global_variables
   - themes_lng_variables
   - themes_variables_email
+  - themes_checkout_styling
 
 
 toc_footers:
