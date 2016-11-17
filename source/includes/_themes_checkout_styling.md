@@ -1,10 +1,6 @@
 # <span class="jumptarget"> Checkout Styling</span>
 
-To support stores that enable BigCommerce's Optimized One-Page Checkout feature, you can customize the Optimized Checkout page's styling within your theme. You do this by adding custom CSS to the `optimized-checkout-webdav.css` template file that we provide. You can download the template as a .zip file <a href="/assets/optimized-checkout-webdav.css.zip">here</a>, or copy the CSS [below](uco-css-skeleton).
-
-## <span class="jumptarget"> Deploying Custom CSS </span>
-
-To deploy your custom CSS to a BigCommerce store, you will need to upload your `optimized-checkout-webdav.css` file (once customized) via WebDAV. For a general overview of the process, please see [this support article](https://support.bigcommerce.com/articles/Public/Accessing-and-Customizing-Template-Files/). For details on interacting with WebDAV, please see [this article](https://support.bigcommerce.com/articles/Public/Connecting-to-WebDav).
+To support stores that enable BigCommerce's Optimized One-Page Checkout feature, you can customize the Optimized Checkout page's styling within your theme. You do this by adding custom CSS to the `optimized-checkout-webdav.css` template file that we provide. You can download the template as a <a href="/assets/optimized-checkout-webdav.css.zip">.zip file here</a>, or copy the CSS [below](uco-css-skeleton).
 
 ## <span class="jumptarget"> Customization Options/Restrictions </span>
 
@@ -25,7 +21,17 @@ Within the CSS file, to set up Optimized Checkout's responsive features, you sho
     }
 ```
 
-## <span class="jumptarget"> Classes Provided </span>
+For other customization options, please see the class descriptions [below](#uco-classes).
+
+## <span class="jumptarget"> Deploying Custom CSS </span>
+
+To deploy your custom CSS to a BigCommerce store, you will need to upload your `optimized-checkout-webdav.css` file (once customized) via WebDAV. 
+
+For a general overview of the process, please see [this support article](https://support.bigcommerce.com/articles/Public/Accessing-and-Customizing-Template-Files/). Place your customized `optimized-checkout-webdav.css` file directly within WebDAV's `/content/` folder.
+
+For details on interacting with WebDAV, please see [this article](https://support.bigcommerce.com/articles/Public/Connecting-to-WebDav).
+
+## <span class="jumptarget" id="uco-classes"> Classes Provided </span>
 
 Below is a summary of the classes provided in the template CSS, with corresponding page elements that they style. (These class names and mappings are subject to change, so please see the inline comments embedded in the file itself.)
 
@@ -263,11 +269,3 @@ a {
 }
 ```
 
-<!-- Here is a placeholder link to open the 
-<a href="/assets/optimized-checkout-webdav.css" target="_blank">template file</a> in a new tab/window.
-
-Here is a placeholder link to force-download the 
-<a href="/assets/optimized-checkout-webdav.css" download="optimized-checkout-webdav.css">template file</a>.
-
-Here is a placeholder link to force-download the 
-<a href="/assets/optimized-checkout-webdav.css.zip" download="optimized-checkout-webdav.css.zip">template file</a> as a .zip file. -->
