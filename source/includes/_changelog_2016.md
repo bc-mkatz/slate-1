@@ -3,6 +3,11 @@
 
 ## <span class="jumptarget"> November </span>
 
+### Optimized Checkout Styling
+
+To support stores that enable BigCommerce's Optimized One-Page Checkout feature, we have added <a href="/themes/blueprint/#checkout-styling" target="_blank">new documentation</a> on using custom CSS to style a Blueprint theme's Optimized Checkout page. Linked to the same documentation is a template CSS file that you can customize for this purpose.
+
+
 ### Web Pages API Updated
 
 We have corrected the behavior of the Store Content > <a href="/api/v2/#pages" target="_blank">Pages API</a>'s `is_homepage` property. Any API call that sets this writable property to `true` will now unset other instances of the property, ensuring that a store will have only one designated home page.
