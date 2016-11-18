@@ -166,10 +166,6 @@ The following properties of the page are required. The request won’t be fulfil
 *   feed (for a page of `type: rss_feed`)
 *   body (for a page of `type: raw`)
 
-#### <span class="jumptarget"> Notes </span>
-
-Although the `is_homepage` property is writeable, setting it to `true` does not (currently) reset other instances of this property. When setting this property, please keep this known issue in mind.
-
 #### <span class="jumptarget"> Request </span>
 
 Example request object:

@@ -3,9 +3,14 @@
 
 ## <span class="jumptarget"> November </span>
 
+### Web Pages API Updated
+
+We have corrected the behavior of the Store Content > <a href="/api/v2/#pages" target="_blank">Pages API</a>'s `is_homepage` property. Any API call that sets this writable property to `true` will now unset other instances of the property, ensuring that a store will have only one designated home page.
+
+
 ### Currency API Added
 
-BigCommerce has added a new Currency API. This allows your apps to manage alternate currency display options on a storefront. For details, please see the <a href="/api/v2/#currency-reference" target="_blank">Pages API documentation</a>.
+BigCommerce has added a new Currency API. This allows your apps to manage alternate currency display options on a storefront. For details, please see the <a href="/api/v2/#currency-reference" target="_blank">Currency API documentation</a>.
 
 
 ## <span class="jumptarget"> October </span>
