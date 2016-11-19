@@ -3,6 +3,8 @@
 
 ## <span class="jumptarget"> November </span>
 
+<!-- If announcing Apple Pay here, link to: https://support.bigcommerce.com/articles/Public/Integrating-the-Apple-Pay-button/ -->
+
 ### Optimized Checkout Styling
 
 To support stores that enable BigCommerce's Optimized One-Page Checkout feature, we have added <a href="/themes/blueprint/#checkout-styling" target="_blank">new documentation</a> on using custom CSS to style a Blueprint theme's Optimized Checkout page. Linked to the same documentation is a template CSS file that you can customize for this purpose.
