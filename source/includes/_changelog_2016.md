@@ -3,9 +3,27 @@
 
 ## <span class="jumptarget"> November </span>
 
+### Stencil Cornerstone 1.4.0 Theme Released
+
+Version 1.4.0 of Stencil's default Cornerstone theme is now available. This release adds support for Apple Pay, for BigCommerce Optimized One-Page Checkout, and for other new features. For details, please see the [Cornerstone 1.4.x release notes](https://stencil.bigcommerce.com/docs/cornerstone-14x-theme-release-notes). We have updated the Stencil <span class="inline-code"><a href="https://stencil.bigcommerce.com/docs/configjson-reference">config.json</a></span> and <span class="inline-code"><a href="https://stencil.bigcommerce.com/schemajson-metadata-for-theme-editor">schema.json</a></span> documentation to cover new options exposed in this Cornerstone refresh. We have also added [this new, Stencil-specific documentation](https://stencil.bigcommerce.com/docs/optimized-checkout-customization) on customizing the Optimized Checkout page.
+
+### Apple Pay Support and Styling 
+
+BigCommerce themes now support Apple Pay, on Apple-supported software/device combinations. For setup requirements and procedures, and options for styling the Apple Pay button, please see [this support article](https://support.bigcommerce.com/articles/Public/Integrating-the-Apple-Pay-button/).
+
+### Optimized Checkout Styling
+
+To support Blueprint-based stores that enable BigCommerce's Optimized One-Page Checkout feature, we have added <a href="/themes/blueprint/#checkout-styling" target="_blank">new documentation</a> on using custom CSS to style a Blueprint theme's Optimized Checkout page. Linked to the same documentation is a template CSS file that you can customize for this purpose.
+
+
+### Web Pages API Updated
+
+We have corrected the behavior of the Store Content > <a href="/api/v2/#pages" target="_blank">Pages API</a>'s `is_homepage` property. Any API call that sets this writable property to `true` will now unset other instances of the property, ensuring that a store will have only one designated home page.
+
+
 ### Currency API Added
 
-BigCommerce has added a new Currency API. This allows your apps to manage alternate currency display options on a storefront. For details, please see the <a href="/api/v2/#currency-reference" target="_blank">Pages API documentation</a>.
+BigCommerce has added a new Currency API. This allows your apps to manage alternate currency display options on a storefront. For details, please see the <a href="/api/v2/#currency-reference" target="_blank">Currency API documentation</a>.
 
 
 ## <span class="jumptarget"> October </span>
