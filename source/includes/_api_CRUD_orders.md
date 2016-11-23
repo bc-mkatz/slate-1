@@ -313,7 +313,7 @@ You can create overrides for calculated values such as product prices, subtotal 
 #### <span class="jumptarget"> Order Products </span>
 
 *   Existing products can be added to the order with a reference to their `product_id`.
-*   Custom products can be added to the order using the [`products array`](#order-products-array).
+*   Custom products can be added to the order using the [`products` array](#order-products-array).
 *   If price is not specified, it will automatically pick up the price from the store’s product catalog. However, you can override this via `price_inc_tax` and `price_ex_tax`.
 *   If `price_inc_tax` and `price_ex_tax` are specified, price and rulesets are ignored, and the `price_inc_tax` or `price_ex_tax` are written to `base_price` according to the store settings.
 *   When the store is subscribed to Avalara Premium, a value of `API Tax Override` is written to the Order Tax object's `name` field.
