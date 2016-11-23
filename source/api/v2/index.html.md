@@ -9,6 +9,7 @@ includes:
   - api_CRUD_orders_coupons
   - api_objects_order_message
   - api_CRUD_orders_messages
+  - api_order_products_array
   - api_objects_order_product
   - api_CRUD_orders_products
   - api_objects_order_shipping_address
