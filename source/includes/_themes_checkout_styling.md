@@ -1,6 +1,6 @@
 # <span class="jumptarget"> Checkout Styling</span>
 
-To support stores that enable BigCommerce's Optimized One-Page Checkout feature, you can customize the Optimized Checkout page's styling within your theme. You do this by adding custom CSS to the `optimized-checkout-webdav.css` template file that we provide. You can download the template as a <a href="/assets/optimized-checkout-webdav.css.zip">.zip file here</a>, or copy the CSS [below](uco-css-skeleton).
+To support stores that enable BigCommerce's Optimized One-Page Checkout feature, you can customize the Optimized Checkout page's styling within your theme. You do this by adding custom CSS to the `optimized-checkout-webdav.css` template file that we provide. You can download the template as a <a href="/assets/optimized-checkout-webdav.css.zip">.zip file here</a>, or copy the CSS [below](#uco-css-skeleton).
 
 ## <span class="jumptarget"> Customization Options/Restrictions </span>
 
