@@ -3,6 +3,10 @@
 
 ## <span class="jumptarget"> November </span>
 
+### Newsletter Subscribers API (v3) Added
+
+Our v3 API now includes endpoints that your apps can use to manage store newsletters' subscribers. For details, please see the [readme](https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md#subsc-ref) on the v3 API's repo.
+
 ### Stencil Cornerstone 1.4.0 Theme Released
 
 Version 1.4.0 of Stencil's default Cornerstone theme is now available. This release adds support for Apple Pay, for BigCommerce Optimized One-Page Checkout, and for other new features. For details, please see the [Cornerstone 1.4.x release notes](https://stencil.bigcommerce.com/docs/cornerstone-14x-theme-release-notes). We have updated the Stencil <span class="inline-code"><a href="https://stencil.bigcommerce.com/docs/configjson-reference">config.json</a></span> and <span class="inline-code"><a href="https://stencil.bigcommerce.com/schemajson-metadata-for-theme-editor">schema.json</a></span> documentation to cover new options exposed in this Cornerstone refresh. We have also added [this new, Stencil-specific documentation](https://stencil.bigcommerce.com/docs/optimized-checkout-customization) on customizing the Optimized Checkout page.
