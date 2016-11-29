@@ -10,39 +10,54 @@ Here are your first steps to get started:
 
 ## <span class="jumptarget"> 1. Join the Technology Partner Program </span>
 
-Before you begin, you'll need a sandbox store. BigCommerce offers app developers free sandbox stores through its Technology Partner Program. To get your sandbox store, <a href="https://www.bigcommerce.com/partners/signup" target="_blank">apply to become a BigCommerce Technology Partner</a>. To be approved as a partner, you will need:
+Before you'll be ready to submit an app for the BigCommerce Marketplace, you must become an official Partner. BigCommerce offers app developers free sandbox stores through its Technology Partner Program. You can <a href="https://www.bigcommerce.com/partners/signup" target="_blank">apply for a technology partnership here</a>. To be approved as a partner, you will need:
 
 * A website.
-* The ability to support users of your app.
-* A PayPal account – if you want to get paid for referring people to BigCommerce (optional).
+* Intent to offer your app publicly.
+* Ability to support users of your app.
+* Evidence of expertise in app development.
 
-NOTE: The email address you use in this form must be the same email address as you use to log into your sandbox store, and to log into <a href="//devtools.bigcommerce.com" target="_blank">My&#160;Apps</a>.
+<aside class="notice">
+<span class="aside-notice-hd">Notes</span><br>
+  <ul>
+	<li>If you are an existing BigCommerce partner, you do <em>not</em> need to re-apply for the Technology Partner Program.</li>
+	<li>The email address you use in the partnership application form must be the same email address as you use to log into your sandbox store, and to log into <a href="//devtools.bigcommerce.com" target="_blank">My&#160;Apps</a>.</li>
+  </ul>
+</aside>
 
-Once approved, you will receive one or more emails containing:
+Once approved, you will receive one or more emails containing your partner credentials and next steps. Your Partner Username and ID will be required to submit your app for <a href="https://developer.bigcommerce.com/" target="_blank">App Store</a> consideration.
 
-* **Your Partner ID**: required to submit an app for <a href="https://www.bigcommerce.com/apps/" target="_blank">App Store</a> consideration.
-* **Temporary Partner Portal credentials**: change your password immediately after logging in.
+<aside class="notice">
+<span class="aside-notice-hd">Note</span>
+<br><br>
+ If you do not receive these credentials by email, contact <a href="mailto:appstore@bigcommerce.com">appstore@bigcommerce.com</a>.
+</aside>
 
-NOTE: If you do not receive your Partner ID by email, contact [partnersupport@bigcommerce.com](mailto:partnersupport@bigcommerce.com).
 
 ## <span class="jumptarget"> 2. Get a Sandbox Store </span>
 
-To get into your sandbox store, log into the Partner Portal, then click **Create a Trial Store**. When you log into your store, use the same email that you used when applying to become a Technology Partner.
+To open your sandbox store, log into the Partner Portal, then click **Create a Trial Store**. When you log into your store, use the same email that you used when applying to become a Technology Partner.
 
 NOTE: Although the **Create a Trial Store** option's name indicates that the store might be temporary, it is actually permanent.
 
-## <span class="jumptarget">3. Get Your Keys </span>
 
-This step works differently for OAuth versus Basic-Auth apps:
+## <span class="jumptarget">3. Create your Draft App </span>
 
-### <span class="jumptarget"> OAuth Apps </span>
+Once you’re ready to start on your app, navigate to the Developer Portal home page, click the **My Apps** link, and log in using the same email address you've used for your sandbox store.
 
-OAuth apps (also known as <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> or public apps) can be listed in the App Store for easy installation in all BigCommerce stores. They use OAuth to obtain an access token and communicate with the central BigCommerce API endpoint. Building a public app is the recommended approach in almost all cases. Before you start, we suggest reviewing the [App Store acceptance requirements](#app-store-approval-requirements). To start making API requests, you'll need a [Client ID and Client Secret](#app-registration), and an [OAuth token](#app-installation-and-update-sequence).
+The **My Apps** page is where you will add, edit, and manage any of your BigCommerce Single-Click Apps. Start by clicking **Create an app now**, and initiating <a href="https://developer.bigcommerce.com/api/registration">registration of your app</a> - you can always come back to edit this later!
 
-### <span class="jumptarget"> Basic-Auth Apps </span>
+Once your draft app is created, you will be able to install and test it privately in your sandbox store.
+ 
+<aside class="notice">
+<span class="aside-notice-hd">Note</span>
+	<br><br>
+To access your draft app in the store, the email address that use for your sandbox store’s Owner user must be identical to the address that you use for the BigCommerce Developer Portal. </ul>
+</aside>
 
-Basic Auth apps require the manual creation of an API token for each store, and are most useful for custom integrations for a single BigCommerce store. They use HTTP Basic Authentication, and communicate directly with the store's API endpoints. From the control panel of your sandbox store, you can [get the base path, user ID, and API token](#building-basic-auth-apps) that you need to start making calls.
-  
+## <span class="jumptarget"> 4. Submit Your App </span>
+
+Once your app is fully functional and meets all of BigCommerce’s <a href="#app-store-approval-requirements">approval requirements</a>, submit the app from **My Apps**. We will get back to you as soon as we have reviewed your submission.
 
 ## <span class="jumptarget"> About Client Libraries </span>
 
