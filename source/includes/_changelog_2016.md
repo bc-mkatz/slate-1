@@ -3,7 +3,7 @@
 
 ## <span class="jumptarget"> November </span>
 
-### Newsletter Subscribers API (v3) Added
+### Newsletter Subscriber API (v3) Added
 
 Our v3 API now includes endpoints that your apps can use to manage store newsletters' subscribers. For details, please see the [readme](https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md#subsc-ref) on the v3 API's repo.
 
