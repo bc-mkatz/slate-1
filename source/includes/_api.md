@@ -25,7 +25,7 @@ Before you'll be ready to submit an app for the BigCommerce Marketplace, you mus
   </ul>
 </aside>
 
-Once approved, you will receive one or more emails containing your partner credentials and next steps. Your Partner Username and ID will be required to submit your app for <a href="https://developer.bigcommerce.com/" target="_blank">App Store</a> consideration.
+Once approved, you will receive one or more emails containing your partner credentials and next steps. Your Partner username and ID will be required to submit your app for <a href="https://developer.bigcommerce.com/" target="_blank">App Store</a> consideration.
 
 <aside class="notice">
 <span class="aside-notice-hd">Note</span>
