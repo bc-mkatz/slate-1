@@ -1,14 +1,22 @@
 ## <span class="jumptarget" id="approval"> App Store Approval Requirements </span>
 
-Our submission guidelines aim to protect the merchant experience, and to provide enough structure for you to develop apps efficiently and effectively:
+Our submission guidelines aim to protect the merchant experience, and to provide enough structure for you to develop apps efficiently and effectively.
+
+Before submitting your app, please be sure to carefully review it against the following requirements, to avoid having your app rejected and needing to re-submit it:
+
+### <span class="jumptarget" id="approval"> App Approval Requirements </span>
 
 *   Apps must perform as described.
 
-*   All information supplied as part of the app submission process must be genuine and accurate.
+*   All information supplied in the app submission process must be genuine and accurate.
 
 *   Apps must provide pricing information – including pricing for starting a new service, and the cost of services after the free trial.
 
 *   All API requests must be made using OAuth authentication.
+
+*   Apps must be compatible with both the <a href="/themes/blueprint/" target="_blank">Blueprint theme framework</a> and the <a href="https://stencil.bigcommerce.com/docs/" target="_blank">Stencil theme framework</a>, for any storefront components.
+
+* Apps must include contact information should a merchant need support on the app. Any relevant reference docs or media should also be included or linked.
 
 *   Apps must be production-ready and free of defects.
 <aside class="warning">
@@ -16,7 +24,7 @@ Our submission guidelines aim to protect the merchant experience, and to provide
 Install and test your app thoroughly prior to submission. Be sure to install and run your app inside of your sandbox store, as a draft area to conduct your tests.
 </aside>
 
-*   Apps must function properly on all [supported browsers](#supported-browsers), and must conform to the [user interface constraints](#ui-constraints) – including P3P policies as necessary, and no mixed content.
+*   Apps must function properly on all [supported browsers](#supported-browsers), and must conform to the [user-interface constraints](#ui-constraints) – including P3P policies as necessary, and no mixed content.
 
 *   The entire app should operate within the iframe that opens when the user clicks on your app icon in the control panel's launch bar. Exceptions may be made for apps that need to authenticate to other services using OAuth – as long as they open a new tab to do so.
 
