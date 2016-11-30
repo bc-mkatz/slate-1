@@ -5,7 +5,7 @@ Apps in the App Store that use Basic Authentication are deprecated, and will be 
 
 <aside class="notice">
 <span class="aside-notice-hd">Private Apps Exempted</span><br><br>
-Private apps <em>not</em> in the App Store can continue to use Basic Authentication, and are not subject to a sunset. We do not currently provide a means of keeping OAuth apps private.
+Private apps <em>not</em> in the App Store can continue to use Basic Authentication, and are not subject to a sunset. We do not currently provide a means of keeping OAuth apps private, other than creating them as Draft apps for your stores only.
 </aside>
 
 
@@ -17,7 +17,7 @@ Other benefits of updating include:
 
 *   Ability to set and receive [webhook](#webhooks-overview) callbacks.
 
-*   Privileged access to new capabilities.
+*   Privileged access to new capabilities, such as multi-user support and streamlined permissions updates.
 
 ### <span class="jumptarget"> How to Migrate </span>
 
@@ -28,6 +28,7 @@ To update your public Basic Authentication app to an OAuth app, you will need to
 3.  Update your app so that it can process the [signed payloads](#processing-the-signed-payload) that BigCommerce sends when a merchant loads your app.
 4.  [Change your base paths](#base-paths).
 5.  Update your app to observe the [OAuth rate limits](#rate-limits_oauth).
+6.  Prepare your app's UI to run within the BigCommerce iframe, once installed.
 
 ### <span class="jumptarget id="base-paths"> Change Your Base Paths </span>
 
