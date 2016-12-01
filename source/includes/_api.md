@@ -52,7 +52,7 @@ Once your draft app is created, you will be able to install and test it privatel
 <aside class="notice">
 <span class="aside-notice-hd">Note</span>
 	<br><br>
-To access your draft app in the store, the email address that use for your sandbox store’s Owner user must be identical to the address that you use for the BigCommerce Developer Portal. </ul>
+To access your draft app in the store, the email address used for your sandbox store’s Owner user must be identical to the address that you use for the BigCommerce Developer Portal. </ul>
 </aside>
 
 ## <span class="jumptarget"> 4. Submit Your App </span>
