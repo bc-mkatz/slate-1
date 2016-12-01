@@ -6,7 +6,14 @@ OAuth apps (also known as public apps or <a href="https://www.bigcommerce.com/si
 
 Building an OAuth app is the recommended approach in almost all cases. BigCommerce plans to deprecate the alternative Basic Auth mechanism that currently supports [private apps](/api/#building-basic-auth-apps) for individual stores.
 
-Before you start, we suggest reviewing the [App Store acceptance requirements](#app-store-approval-requirements). To start making API requests, you'll need a [Client ID and Client&#160;Secret](#app-registration), and an [OAuth token](#app-installation-and-update-sequence). 
+Before you start building an app for the App Store, we suggest reviewing the [App Store acceptance requirements](#app-store-approval-requirements). To start making API requests, you'll need a [Client ID and Client&#160;Secret](#app-registration), and an [OAuth token](#app-installation-and-update-sequence). 
+
+
+<aside class="notice">
+<span class="aside-notice-hd">Draft App Option</span><br><br>
+You can also create a “Draft” version of a Single-Click App, for use only in your store. You don't need to submit this Draft app for publishing in the App Store.
+</aside>
+
 
 ### <span class="jumptarget"> API Endpoint </span>
 
@@ -42,5 +49,6 @@ This callback function will run when the user explicitly logs out of the BigComm
 
 ### <span class="jumptarget"> Monetizing Your App </span>
 
-If you want to charge merchants for your app, please note that BigCommerce expects you to handle the billing aspects of the transaction. Your app needs to take care of collecting the fee from the merchant. Under the standard contract, within thirty days of collecting this revenue, you must send BigCommerce 20% and retain the remaining 80% for yourself. Reporting should be sent monthly to <a href = "mailto:partnerpayments@bigcommerce.com">partnerpayments@bigcommerce.com</a>.
+If you want to charge merchants for your app, please note that BigCommerce expects you to handle the billing aspects of the transaction. Your app needs to take care of collecting the fee from the merchant. 
 
+Under the standard contract, within 30 days of collecting this revenue, you must send BigCommerce 20% and retain the remaining 80% for yourself. Once your app is published, a mandatory revenue-share reporting form will be sent to the primary contact on your partner account, at the beginning of each month.

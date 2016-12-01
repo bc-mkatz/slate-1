@@ -94,7 +94,6 @@ includes:
   - api_browsers
   - api_status_codes
   - api_data_types
-  - api_faqs
 
 toc_footers:
   - <a href="/">Home</a>
