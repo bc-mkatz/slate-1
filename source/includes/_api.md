@@ -29,8 +29,11 @@ Once approved, you will receive one or more emails containing your partner crede
 
 <aside class="notice">
 <span class="aside-notice-hd">Note</span>
-<br><br>
- If you do not receive these credentials by email, contact <a href="mailto:appstore@bigcommerce.com">appstore@bigcommerce.com</a>.
+<br>
+  <ul>
+	<li>If you do not receive these credentials by email, please contact <a href="mailto:appstore@bigcommerce.com">appstore@bigcommerce.com</a>.
+	</li>
+  </ul>
 </aside>
 
 
