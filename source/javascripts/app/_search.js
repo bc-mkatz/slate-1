@@ -44,11 +44,10 @@
     if (event.keyCode === 27) this.value = '';
 
     if (this.value) {
-      if (this.value.length > 2) {
-        var results = index.search(this.value).filter(function(r) {
-          return r.score > 0.0001;
-        });
-      }
+      var results = index.search(this.value).filter(function(r) {
+        return r.score > 0.0001;
+      });
+
 
       if (results.length) {
         searchResults.empty();
@@ -68,7 +67,7 @@
   }
 
   function highlight() {
-    if (this.value) content.highlight(this.value, highlightOpts);
+    if (this.value.length > 2) content.highlight(this.value, highlightOpts);
   }
 
   function unhighlight() {
