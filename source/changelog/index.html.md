@@ -17,9 +17,6 @@ toc_footers:
   - <a href="http://goo.gl/forms/380FmYFlaJ05CL3q2" target="_blank">Sign Up for the Developer Newsletter</a>
   - <a href="http://github.com/tripit/slate" target="_blank">Site Built with Slate</a>
 
-
-
-search: true
 ---
 
 # Changelog
