@@ -48,6 +48,7 @@
         return r.score > 0.0001;
       });
 
+
       if (results.length) {
         searchResults.empty();
         $.each(results, function (index, result) {
@@ -66,7 +67,7 @@
   }
 
   function highlight() {
-    if (this.value) content.highlight(this.value, highlightOpts);
+    if (this.value.length > 2) content.highlight(this.value, highlightOpts);
   }
 
   function unhighlight() {
