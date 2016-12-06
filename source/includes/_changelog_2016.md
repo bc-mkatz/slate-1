@@ -1,6 +1,14 @@
 # <span class="jumptarget"> 2016 </span>
 
 
+
+## <span class="jumptarget"> December </span>
+
+### Stencil Cornerstone 1.4.1 Theme Released
+
+Version [1.4.1](/docs/cornerstone-14x-theme-release-notes#141) of Stencil's default Cornerstone theme is now available. This release corrects a bug that allowed JavaScript to execute in a Cornerstone storefront's search box. For the PR #/commit # to apply this fix, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>
+
+
 ## <span class="jumptarget"> November </span>
 
 ### Newsletter Subscriber API (v3) Added
