@@ -1,0 +1,5 @@
+default: &default
+  strategy: 'deploy_sh'
+targets:
+  production:
+    <<: *default
