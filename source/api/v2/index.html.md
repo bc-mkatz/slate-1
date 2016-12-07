@@ -70,6 +70,7 @@ includes:
   - api_objects_customer_group
   - api_CRUD_customer_groups
   - api_customer_login
+  - api_current_customer
   - api_objects_country
   - api_CRUD_countries
   - api_objects_country_state
