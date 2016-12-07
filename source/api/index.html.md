@@ -39,6 +39,9 @@ includes:
   - api_rate_limits_basic
   - api_guides_curl_quickstart
   - api_guides_oauth_transition
+  - api_storefront_apps_root
+  - api_customer_login
+  - api_current_customer
   - api_browsers.md
   - api_status_codes
   - api_data_types
