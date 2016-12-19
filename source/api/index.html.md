@@ -3,8 +3,8 @@ title: BigCommerce API Documentation
 layout: "apitwocolumn"
 
 language_tabs:
-  - php
-  - shell
+  - json--request
+  - json--response
 
 toc_footers:
   - <a href="/">Home</a>
