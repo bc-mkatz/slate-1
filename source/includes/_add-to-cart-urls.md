@@ -1,8 +1,8 @@
 ## <span class="jumptarget"> Add-to-Cart URLs </span>
 
-Your apps can use a product's or variant's <a href="https://support.bigcommerce.com/articles/Public/Product-SKUs" target="_blank">SKU</a> to create custom product URLs in order that perform specific actions, like:
+Your apps can use a product's or variant's <a href="https://support.bigcommerce.com/articles/Public/Product-SKUs" target="_blank">SKU</a> to create custom product URLs in order to perform specific actions, like:
 
-* Select a specific SKU (product or variant) on a product details page.
+* Pre-select a specific SKU’s product-option values when loading a product detail page.
 * Add a specific SKU to the cart.
 * Add a specific SKU to the cart and go directly to checkout.
 * Add a specific SKU to the cart, go directly to checkout, and include a source parameter for analytics and conversion tracking.

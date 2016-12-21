@@ -42,6 +42,7 @@ includes:
   - api_storefront_apps_root
   - api_customer_login
   - api_current_customer
+  - add-to-cart-urls
   - api_browsers.md
   - api_status_codes
   - api_data_types
