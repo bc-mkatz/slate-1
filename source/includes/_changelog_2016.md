@@ -4,9 +4,22 @@
 
 ## <span class="jumptarget"> December </span>
 
+
+### Stencil Documentation Additions
+
+The Stencil themes documentation has been updated with: 
+
+* Several new examples of [adding custom JavaScript](https://stencil.bigcommerce.com/docs/js-api) to a Stencil theme – whether your own JavaScript, or third-party modules.
+
+* Instructions on [using and updating a theme's icons](https://stencil.bigcommerce.com/docs/updating-icons).
+
+* Instructions on enabling and styling the [Apple Pay button](https://stencil.bigcommerce.com/docs/apple-pay-styling) as a checkout alternative.
+
+
+
 ### Stencil Cornerstone 1.4.1 Theme Released
 
-Version [1.4.1](/docs/cornerstone-14x-theme-release-notes#141) of Stencil's default Cornerstone theme is now available. This release corrects a bug that allowed JavaScript to execute in a Cornerstone storefront's search box. For the PR #/commit # to apply this fix, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>
+Version [1.4.1](https://stencil.bigcommerce.com/docs/cornerstone-14x-theme-release-notes#141) of Stencil's default Cornerstone theme is now available. This release corrects a bug that allowed JavaScript to execute in a Cornerstone storefront's search box. For the PR #/commit # to apply this fix, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>
 
 
 ## <span class="jumptarget"> November </span>
