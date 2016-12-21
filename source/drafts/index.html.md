@@ -12,6 +12,7 @@ toc_footers:
   - <a href="http://github.com/tripit/slate" target="_blank">Site Built with Slate</a>
 
 includes:
+  - add-to-cart-urls
   - v3-catalog
 
 search: true
