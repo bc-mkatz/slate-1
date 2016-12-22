@@ -12,6 +12,8 @@ toc_footers:
   - <a href="http://github.com/tripit/slate" target="_blank">Site Built with Slate</a>
 
 includes:
+  - api_objects_shipping_zone
+  - api_CRUD_shipping_zones
   - v3-catalog
 
 search: true
