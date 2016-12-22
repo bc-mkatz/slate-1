@@ -1,11 +1,9 @@
-## <span class="jumptarget"> List Currencies </span>
+## <span class="jumptarget"> List Shipping Zones </span>
 
-Retrieves currency display options.
+Gets all shipping zones.
 
 *   OAuth
-`GET /stores/{store_hash}/v2/currencies`  
-*   Basic Auth
-`GET /api/v2/currencies`
+`GET /api/v2/shipping/zones`  
 
 ### <span class="jumptarget"> Response </span>
 
