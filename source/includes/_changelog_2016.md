@@ -5,6 +5,11 @@
 ## <span class="jumptarget"> December </span>
 
 
+### Stencil Product > Ratings Count
+
+Stencil themes' [Common Product Card Model](https://stencil.bigcommerce.com/docs/common-product-card-model) now includes a `ratings` property, representing the number of customer reviews that contributed to a product's `rating` value.
+
+
 ### Stencil Documentation Additions
 
 The Stencil themes documentation has been updated with: 
