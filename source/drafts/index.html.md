@@ -14,6 +14,8 @@ toc_footers:
 includes:
   - api_objects_shipping_zone
   - api_CRUD_shipping_zones
+  - api_objects_shipping_method_2017
+  - api_CRUD_shipping_methods_2017
   - v3-catalog
 
 search: true
