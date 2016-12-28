@@ -180,6 +180,5 @@ Deletes a specified shipping zone. (If successful, this will typically return a 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * id
-* 
 
 
