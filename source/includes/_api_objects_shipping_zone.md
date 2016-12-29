@@ -1,4 +1,4 @@
-# <span class="jumptarget"> Shipping Zone Reference </span>
+# <span class="jumptarget"> Shipping Zones Reference </span>
 
 The Shipping Zone object and endpoints manage shipping zones within countries.
 

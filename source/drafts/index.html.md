@@ -21,5 +21,5 @@ includes:
 search: true
 ---
 
-# <span class="jumptarget"> Shipping Zone Reference </span>
+# <span class="jumptarget"> Shipping Zones Reference </span>
 
