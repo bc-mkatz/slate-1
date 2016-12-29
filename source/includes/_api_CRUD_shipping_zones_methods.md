@@ -9,7 +9,7 @@ Gets all configured shipping methods, by zone ID. (Default sorting is by shippin
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
-* [zone] id
+* zone_id
 
 ### <span class="jumptarget"> Response </span>
 
@@ -63,14 +63,14 @@ Example JSON returned in the response:
 Gets a shipping method, specified by zone ID and method ID.
 
 *   OAuth
->`GET {store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`GET {store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
-* [zone] id
-* [method] id
+* zone_id
+* method_id
 
 ### <span class="jumptarget"> Response </span>
 
@@ -102,7 +102,7 @@ Creates a new method in the specificed shipping zone.
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
-* [zone] id
+* zone_id
 
 ### <span class="jumptarget"> Request </span>
 
@@ -146,14 +146,14 @@ Example JSON returned in the response:
 Updates an existing shipping method.
 
 *   OAuth
-`{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+`{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
-* [zone] id
-* [method] id
+* zone_id
+* method_id
 
 ### <span class="jumptarget"> Request </span>
 
@@ -200,5 +200,5 @@ Deletes a specified shipping method. (If successful, this will typically return 
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
-* [zone] id
-* [method] id
+* zone_id
+* method_id
