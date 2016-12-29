@@ -311,10 +311,6 @@ The following properties of the shipment are read-only. If one or more of these 
 *   billing_address
 *   shipping_address
 
-#### <span class="jumptarget"> Requirements </span>
-
-The following properties of the shipment are required. The request won’t be fulfilled unless these properties are valid.
-
 #### <span class="jumptarget"> Request </span>
 
 Example request object:

@@ -32,12 +32,21 @@ Parameters can be added to the URL query string to paginate the collection. The 
 | Page | int | /api/v2/shipping/methods?page={number} |
 | Limit | int | /api/v2/shipping/methods?limit={count} |
 
+### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
 ```json
 [
   {
     "id": 1,
     "name": "Australia Post",
     "method_name": "shipping_auspost"
+  },
+  {
+    "id": 2,
+    "name": "Canada Post",
+    "method_name": "shipping_canpost"
   }
 ]
 ```
@@ -50,6 +59,10 @@ Gets a shipping method.
 >`GET /stores/{store_hash}/v2/shipping/methods/{id}`
 *   Basic Auth
 >`GET /api/v2/shipping/methods/{id}`
+
+### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
 
 ```json
 {

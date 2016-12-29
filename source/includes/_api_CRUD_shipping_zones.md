@@ -10,67 +10,64 @@ Gets all shipping zones.
 Example JSON returned in the response:
 
 ```json
-    {
-      "currencies": {
-        "currency": [
-          {
-            "id": 3,
-            "is_default": "false",
-            "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
-            "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-            "country_iso2": "AU",
-            "currency_code": "AUD",
-            "currency_exchange_rate": "1.3885600000",
-            "auto_update": "false",
-            "location": "left",
-            "token": "$",
-            "decimal_token": ".",
-            "thousands_token": ",",
-            "decimal_places": 2
-          },
-          {
-            "id": 4,
-            "is_default": "false",
-            "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
-            "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-            "country_iso2": "US",
-            "currency_code": "USD",
-            "currency_exchange_rate": "1.0000000000",
-            "auto_update": "false",
-            "location": "left",
-            "token": "$",
-            "decimal_token": ".",
-            "thousands_token": ",",
-            "decimal_places": 2
-          },
-          {
-            "id": 5,
-            "is_default": "false",
-            "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
-            "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-            "country_iso2": "CA",
-            "currency_code": "CAD",
-            "currency_exchange_rate": "0.7500000000",
-            "auto_update": "false",
-            "location": "left",
-            "token": "$",
-            "decimal_token": ".",
-            "thousands_token": ",",
-            "decimal_places": 2
-          }
-        ]
+[
+  {
+    "id": 1,
+    "name": "United States",
+    "type": "country",
+    "locations": [
+      {
+        "id": 2,
+        "country_iso2": "US"
       }
-    }
+    ],
+    "free_shipping": {
+      "enabled": true,
+      "minimum_sub_total": "10.0000",
+      "exclude_fixed_shipping_products": false
+    },
+    "handling_fees": {
+      "fixed_surcharge": "0.0000",
+      "display_separately": true
+    },
+    "enabled": true
+  },
+  {
+    "id": 2,
+    "name": "Australia",
+    "type": "country",
+    "locations": [
+      {
+        "id": 3,
+        "country_iso2": "AU"
+      }
+    ],
+    "free_shipping": {
+      "enabled": false,
+      "minimum_sub_total": "0.0000",
+      "exclude_fixed_shipping_products": false
+    },
+    "handling_fees": {
+      "fixed_surcharge": "0.0000",
+      "display_separately": true
+    },
+    "enabled": true
+  }
+]
 ```
   
-## <span class="jumptarget"> Get a Currency </span>
+## <span class="jumptarget"> Get a Shipping Zone </span>
 
-Retrieves a specified currency.
+Retrieves a specified shipping zone by zone ID.
 
 *   OAuth
-`GET /stores/{store_hash}/v2/currencies/{id}`
-*   Basic Auth
-`GET /api/v2/currencies/{id}`
+`GET /api/v2/shipping/zones/{id}`
+
+### <span class="jumptarget"> Requirements </span>
+
+The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
+
+* id
 
 ### <span class="jumptarget"> Response </span>
 
@@ -78,97 +75,69 @@ Example JSON returned in the response:
 
 ```json
 {
-    "id": 3,
-    "is_default": "false",
-    "date_created": "Thu, 11 Sep 2014 17:10:12 +0000",
-    "date_modified": "Thu, 08 Jan 2015 15:12:48 +0000",
-    "country_iso2": "AU",
-    "currency_code": "AUD",
-    "currency_exchange_rate": "1.3885600000",
-    "auto_update": "false",
-    "location": "left",
-    "token": "$",
-    "decimal_token": ".",
-    "thousands_token": ",",
-    "decimal_places": 2
+  "id": 1,
+  "name": "United States",
+  "type": "country",
+  "locations": [
+    {
+      "id": 2,
+      "country_iso2": "US"
+    }
+  ],
+  "free_shipping": {
+    "enabled": true,
+    "minimum_sub_total": "10.0000",
+    "exclude_fixed_shipping_products": false
+  },
+  "handling_fees": {
+    "fixed_surcharge": "0.0000",
+    "display_separately": true
+  },
+  "enabled": true
 }
 ```
 
-## <span class="jumptarget"> Create a Currency </span>
+## <span class="jumptarget"> Create a Shipping Zone </span>
 
-Creates a new currency.
+Creates a new shipping zone.
 
 *   OAuth
-`POST /stores/{store_hash}/v2/currencies`
-*   Basic Auth
-`POST /api/v2/currencies`
+`POST /api/v2/shipping/zones`
 
-### <span class="jumptarget"> Read-only Properties </span>
 
-The following properties of the currency are read-only. If one or more of these properties are included in the request, it will be rejected:
+### <span class="jumptarget"> Request </span>
 
-* id
-* is_default
-* date_created
-* date_modified
+Example request object:
 
-#### <span class="jumptarget"> Notes </span>
+```json
+{
+ "name": "testzone12345",
+ "type" : "state",
+ "locations": [
+   {
+     "country_iso2": "US",
+     "state_iso2": "NM"
+   }
+   ],
+ "handling_fees": {
+   "fixed_surcharge" : 12.00,
+   "display_separately" : true
+ }
+}
+```
 
-The `is_default` property cannot be set programmatically. To change the store's default currency via the BigCommerce control panel, please see [this support article](https://support.bigcommerce.com/articles/Public/Managing-Currencies/?q=currency&l=en_US&fs=Search&pn=1#default).
+## <span class="jumptarget"> Update a Shipping Zone </span>
 
+Updates an existing shipping zone.
+
+*   OAuth
+`PUT /api/v2/shipping/zones/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
-The following properties of the currency are required. The request won't be fulfilled unless these properties are valid.
-
-* country_iso2
-* currency_code
-* currency_exchange_rate
-* auto_update
-* location
-* token
-* decimal_token
-* thousands_token
-* decimal_places
-
-
-### <span class="jumptarget"> Request </span>
-
-Example request object:
-
-```json
-{
-    "country_iso2": "AU",
-    "currency_code": "AUD",
-    "currency_exchange_rate": "1.3885600000",
-    "auto_update": "false",
-    "location": "left",
-    "token": "$",
-    "decimal_token": ".",
-    "thousands_token": ",",
-    "decimal_places": 2
-}
-```
-
-
-## <span class="jumptarget"> Update a Currency </span>
-
-Updates an existing currency.
-
-*   OAuth
-`PUT /stores/{store_hash}/v2/currencies/{ID}`
-*   Basic Auth
-`PUT /api/v2/currencies/{ID}`
-
-### <span class="jumptarget"> Read-only Properties </span>
-
-The following properties of the currency are read-only. If one or more of these properties are included in the request, it will be rejected:
+The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * id
-* is_default
-* date_created
-* date_modified
-
 
 ### <span class="jumptarget"> Request </span>
 
@@ -176,32 +145,40 @@ Example request object:
 
 ```json
 {
-    "country_iso2": "AU",
-    "currency_code": "AUD",
-    "currency_exchange_rate": "1.3885600000",
-    "auto_update": "false",
-    "location": "left",
-    "token": "$",
-    "decimal_token": ".",
-    "thousands_token": ",",
-    "decimal_places": 2
+  "id": 2,
+  "name": "New test zone",
+  "type": "state",
+  "locations": [
+    {
+      "id": 5,
+      "country_iso2": "US",
+      "state_iso2": "AS"
+    }
+  ],
+  "free_shipping": {
+    "enabled": false,
+    "minimum_sub_total": "0.0000",
+    "exclude_fixed_shipping_products": false
+  },
+  "handling_fees": {
+    "fixed_surcharge": "6.0000",
+    "display_separately": true
+  },
+  "enabled": true
 }
 ```
 
-## <span class="jumptarget"> Delete a Currency </span>
+## <span class="jumptarget"> Delete a Shipping Zone </span>
 
-Deletes a specified currency. (If successful, this will typically return a "204 No Content".)
-
-*   OAuth
-`DELETE /stores/{store_hash}/v2/currencies/{id}`
-*   Basic Auth
-`DELETE /api/v2/currencies/{id}`
-
-## <span class="jumptarget"> Delete All Currencies </span>
-
-Deletes all currencies associated with the store. (If successful, this will typically return a "204 No Content".)
+Deletes a specified shipping zone. (If successful, this will typically return a "204 No Content".)
 
 *   OAuth
-`DELETE /stores/{store_hash}/v2/currencies`
-*   Basic Auth
-`DELETE /api/v2/currencies` 
+`DELETE /api/v2/shipping/zones/{id}`
+
+### <span class="jumptarget"> Requirements </span>
+
+The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
+
+* id
+
+
