@@ -168,7 +168,7 @@ Example request object:
 }
 ```
 
-## <span class="jumptarget"> Delete a Zone </span>
+## <span class="jumptarget"> Delete a Shipping Zone </span>
 
 Deletes a specified shipping zone. (If successful, this will typically return a "204 No Content".)
 
