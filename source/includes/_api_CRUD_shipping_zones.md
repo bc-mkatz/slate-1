@@ -131,7 +131,7 @@ Example request object:
 Updates an existing shipping zone.
 
 *   OAuth
-`PUT /api/v2/shipping/zones/{ID}`
+`PUT /api/v2/shipping/zones/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
@@ -173,7 +173,7 @@ Example request object:
 Deletes a specified shipping zone. (If successful, this will typically return a "204 No Content".)
 
 *   OAuth
-`DELETE /api/v2/shipping/zones/{ID}`
+`DELETE /api/v2/shipping/zones/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
