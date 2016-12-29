@@ -75,18 +75,18 @@ Example JSON returned in the response:
 
 ```json
 {
-  "id": 2,
-  "name": "Australia",
+  "id": 1,
+  "name": "United States",
   "type": "country",
   "locations": [
     {
-      "id": 3,
-      "country_iso2": "AU"
+      "id": 2,
+      "country_iso2": "US"
     }
   ],
   "free_shipping": {
-    "enabled": false,
-    "minimum_sub_total": "0.0000",
+    "enabled": true,
+    "minimum_sub_total": "10.0000",
     "exclude_fixed_shipping_products": false
   },
   "handling_fees": {
@@ -115,8 +115,8 @@ Example request object:
  "type" : "state",
  "locations": [
    {
-     "country_iso2": "IN",
-     "state_iso2": "AP"
+     "country_iso2": "US",
+     "state_iso2": "NM"
    }
    ],
  "handling_fees": {
@@ -138,7 +138,6 @@ Updates an existing shipping zone.
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * id
-* UpdateZone `[This is in the swagger, but I have no idea what it is?]`
 
 ### <span class="jumptarget"> Request </span>
 
@@ -152,8 +151,8 @@ Example request object:
   "locations": [
     {
       "id": 5,
-      "country_iso2": "IN",
-      "state_iso2": "GJ"
+      "country_iso2": "US",
+      "state_iso2": "AS"
     }
   ],
   "free_shipping": {
