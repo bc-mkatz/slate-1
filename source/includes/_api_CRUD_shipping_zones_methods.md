@@ -1,6 +1,6 @@
 ## <span class="jumptarget"> List Shipping Methods </span>
 
-Gets all configured shipping methods, by zone ID. (Default sorting is by shipping-method ID, from lowest to highest.)
+Gets all configured shipping methods, by `zone_id`. (Default sorting is by shipping-method `id`, from lowest to highest.)
 
 *   OAuth
 >`GET {store_hash}/api/v2/shipping/zones/{zone_id}/methods`
@@ -60,17 +60,17 @@ Example JSON returned in the response:
 
 ## <span class="jumptarget"> Get a Shipping Method </span>
 
-Gets a shipping method, specified by zone ID and method ID.
+Gets a shipping method, specified by `zone_id` and method `id`.
 
 *   OAuth
->`GET {store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
+>`GET {store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * zone_id
-* method_id
+* [method] id
 
 ### <span class="jumptarget"> Response </span>
 
@@ -153,7 +153,7 @@ Updates an existing shipping method.
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * zone_id
-* method_id
+* [method] id
 
 ### <span class="jumptarget"> Request </span>
 
@@ -201,4 +201,4 @@ Deletes a specified shipping method. (If successful, this will typically return 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * zone_id
-* method_id
+* [method] id
