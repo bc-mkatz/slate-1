@@ -290,7 +290,7 @@ table td:nth-child(3) {
 }
 
 
-li a, .dropbtn {
+li > .dropbtn {
     @extend %default-font;
     display: inline-block;
     color: white;
@@ -330,4 +330,8 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+li a, .tocify-wrapper {
+  text-align: left;
 }

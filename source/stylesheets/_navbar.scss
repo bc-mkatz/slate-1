@@ -312,7 +312,8 @@ header {
 
 .top-bar-section ul li>a,
 [top-bar-section] ul li>a {
-    display: block
+    display: block;
+    padding-top: 14px;
 }
 
 .top-bar-section ul li>a:hover,
