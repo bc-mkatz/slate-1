@@ -78,6 +78,10 @@ html, body {
   font-size: 16px;
   padding: 25px;
 
+  li a {
+    text-align: left;
+  }
+
   // language selector for mobile devices
   .lang-selector {
     display: none;
@@ -159,7 +163,7 @@ html, body {
       margin: .5em $nav-padding;
       line-height: 1;
       font-size: 14px;
-      color: $nav-active-text;
+      color: $nav-active-text;    
     }
 
     a {
