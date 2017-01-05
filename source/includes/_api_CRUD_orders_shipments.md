@@ -209,6 +209,14 @@ The following properties of the shipment are required. The request won’t be fu
 
 *   order_address_id
 *   items
+*   shipping_provider
+
+#### <span class="jumptarget"> Notes </span>
+
+* For the `shipping_provider` property, acceptable values are an empty string (`""`), or one of these valid BigCommerce shipping-provider values: `auspost`, `canadapost`, `endicia`, `usps`, `fedex`, `royalmail`, `ups`, `upsready`, `upsonline`, or `shipperhq`.
+* If your POST request does not include `shipping_provider` – at least as an empty string, as shown in the example request below – this property's value will default to `custom`, and no tracking link will be generated in the email. 
+* `tracking_carrier` is optional, but if you include it, its value must refer/map to the same carrier service as the `shipping_provider` value. Acceptable values for `tracking_carrier` are an empty string (`""`), or one of the valid tracking-carrier values viewable [here](https://docs.google.com/spreadsheets/d/1w9c_aECSCGyf-oOrvGeUniDl-ARGKemfZl0qSsav8D4/pubhtml?gid=0&single=true) and downloadable as a .CSV file [here](https://docs.google.com/spreadsheets/d/1mTueEynfcEmwsU2y2Jd2MX-8GKwNZrmlRMBcIElg9aY/pub?gid=0&single=true&output=csv).
+
 
 #### <span class="jumptarget"> Request </span>
 
@@ -219,6 +227,7 @@ Example request object:
   "tracking_number": "EJ958083578US",
   "comments": "Ready to go...",
   "order_address_id": 1,
+  "shipping_provider": "",
   "items": [
     {
       "order_product_id": 15,
@@ -281,14 +290,6 @@ Example JSON returned in the response:
   ]
 }
 ```
-
-#### <span class="jumptarget"> Notes </span>
-
-The following properties of the shipments are optional, but if you provide both values, they must refer/map to the same carrier service: 
-
-* `shipping_provider`: Acceptable values are an empty string (`""`), or one of these valid BigCommerce shipping- provider values: `auspost`, `canadapost`, `endicia`, `usps`, `fedex`, `royalmail`, `ups`, `upsready`, `upsonline`, or `shipperhq`.
-* `tracking_carrier`: Acceptable values are an empty string (`""`), or one of the valid tracking-carrier values viewable [here](https://docs.google.com/spreadsheets/d/1w9c_aECSCGyf-oOrvGeUniDl-ARGKemfZl0qSsav8D4/pubhtml?gid=0&single=true) and downloadable as a .CSV file [here](https://docs.google.com/spreadsheets/d/1mTueEynfcEmwsU2y2Jd2MX-8GKwNZrmlRMBcIElg9aY/pub?gid=0&single=true&output=csv).
-
 
 ### <span class="jumptarget"> Update a Shipment </span>
 
