@@ -173,9 +173,9 @@ The following properties of the blog post are required. The request won’t be f
 
 #### <span class="jumptarget"> Notes </span>
 
-* When including `published_date` in a request, supply it as a flat date string (not an object) in valid <a href="http://tools.ietf.org/html/rfc2822#section-3.3" target="_blank">RFC 2822</a> or <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format. The example request below includes a `published_date` in RFC 2822 format.
+* When including `published_date` in a request, supply it as a flat date string (not an object) in valid <a href="http://tools.ietf.org/html/rfc2822#section-3.3" target="_blank">RFC 2822</a> or <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format. The&#160;example request below includes a `published_date` in RFC 2822 format.
 
-* Blog posts default to draft status. Set `is_published` to true to publish posts to the storefront.
+* Blog posts default to draft status. To publish blog posts to the storefront, set their `is_published` property to `true`.
 
 * If a custom URL is not provided, the post’s URL will be generated based on the value of `title`.
 
@@ -217,7 +217,7 @@ The following properties of the blog post are read-only. If one or more of these
 
 #### <span class="jumptarget"> Notes </span>
 
-* When including `published_date` in a request, supply it as a flat date string (not an object) in valid <a href="http://tools.ietf.org/html/rfc2822#section-3.3" target="_blank">RFC 2822</a> or <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format. The example request below includes a `published_date` in RFC 2822 format.
+* When including `published_date` in a request, supply it as a flat date string (not an object) in valid <a href="http://tools.ietf.org/html/rfc2822#section-3.3" target="_blank">RFC 2822</a> or <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format. The&#160;example request below includes a `published_date` in RFC 2822 format.
 
 #### <span class="jumptarget"> Request </span>
 
@@ -226,8 +226,8 @@ Example request object:
 ```json
 {
   "title": "New: A Sample Blog Post",
-  "url": "/blog/sample-post"
-  "published_date": "Wed, 01 Jan 2017 15:33:33 +0400",
+  "url": "/blog/sample-post",
+  "published_date": "Wed, 01 Jan 2017 15:33:33 +0400"
 }
 ```
 
