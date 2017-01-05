@@ -111,7 +111,7 @@ Example request object:
 
 ```json
 {
- "name": "testzone12345",
+ "name": "UnitedStates-NM",
  "type" : "state",
  "locations": [
    {
@@ -123,6 +123,35 @@ Example request object:
    "fixed_surcharge" : 12.00,
    "display_separately" : true
  }
+}
+```
+
+### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
+```
+{
+  "id": 2,
+  "name": "UnitedStates-NM",
+  "type": "state",
+  "locations": [
+    {
+      "id": 2,
+      "country_iso2": "US",
+      "state_iso2": "NM"
+    }
+  ],
+  "free_shipping": {
+    "enabled": false,
+    "minimum_sub_total": "0.0000",
+    "exclude_fixed_shipping_products": false
+  },
+  "handling_fees": {
+    "fixed_surcharge": "12.0000",
+    "display_separately": true
+  },
+  "enabled": true
 }
 ```
 
@@ -146,11 +175,40 @@ Example request object:
 ```json
 {
   "id": 2,
-  "name": "New test zone",
+  "name": "UnitedStates-Samoa",
   "type": "state",
   "locations": [
     {
       "id": 5,
+      "country_iso2": "US",
+      "state_iso2": "AS"
+    }
+  ],
+  "free_shipping": {
+    "enabled": false,
+    "minimum_sub_total": "0.0000",
+    "exclude_fixed_shipping_products": false
+  },
+  "handling_fees": {
+    "fixed_surcharge": "6.0000",
+    "display_separately": true
+  },
+  "enabled": true
+}
+```
+
+### <span class="jumptarget"> Response </span>
+
+Example JSON returned in the response:
+
+```
+{
+  "id": 2,
+  "name": "UnitedStates-Samoa",
+  "type": "state",
+  "locations": [
+    {
+      "id": 3,
       "country_iso2": "US",
       "state_iso2": "AS"
     }
