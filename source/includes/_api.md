@@ -1,12 +1,8 @@
 # <span class="jumptarget"> API/Apps First Steps </span>
 
-The BigCommerce Stores API features a RESTful architecture, allowing you to code in the language of your choice. All connections require authentication and are secured by TLS encryption. It supports [the JSON media type](#media-types) and uses UTF-8 character encoding.
-
-With clever use of this API, you can automate various commerce, business, and publishing tasks and integrate all kinds of apps with our platform.
-
 <span class="fake-h2" style="color:black;font-weight:bold"> Build Best-Of-Breed Solutions for Fast-Growing Online Businesses </span>
 
-Here are your first steps to get started:
+This section describes how to establish yourself as a vendor of <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> on the BigCommerce Apps Marketplace. Here are your first steps to get started:
 
 ## <span class="jumptarget"> 1. Join the Technology Partner Program </span>
 

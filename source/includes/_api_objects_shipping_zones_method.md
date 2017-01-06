@@ -21,6 +21,8 @@ A shipping method's `type` and `settings` properties can match one of the follow
 
 ### <span class="jumptarget" id="perorder"> perorder Object – Properties </span>
 
+Object model for flat-rate shipping quotes per order.
+
 | Name | Type | Description |
 | --- | --- | --- |
 | rate | number | Flat rate per order. |
@@ -38,6 +40,8 @@ A shipping method's `type` and `settings` properties can match one of the follow
 
 ### <span class="jumptarget" id="peritem"> peritem Object – Properties </span>
 
+Object model for flat-rate shipping quotes per item ordered.
+
 | Name | Type | Description |
 | --- | --- | --- |
 | rate | number | Flat rate per item. |
@@ -54,6 +58,8 @@ A shipping method's `type` and `settings` properties can match one of the follow
 ```
 
 ### <span class="jumptarget" id="weight"> weight Object – Properties </span>
+
+Object model for shipping quotes by weight.
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -88,6 +94,8 @@ A shipping method's `type` and `settings` properties can match one of the follow
 ```
 
 ### <span class="jumptarget" id="total"> total Object – Properties </span>
+
+Object model for shipping quotes by order's total value.
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -140,6 +148,8 @@ This example sets free shipping above a certain order total:
 ```
 
 ### <span class="jumptarget" id="range"> Range Object – Properties </span>
+
+Object model to define ranges for shipping quotes. Units are defined in the calling object.
 
 | Name | Type | Description |
 | --- | --- | --- |

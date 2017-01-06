@@ -3,6 +3,7 @@ title: BigCommerce API &amp; Theme Framework Changelog
 layout: "twocolumn"
 
 includes:
+- changelog_2017
 - changelog_2016
 - changelog_2015
 - changelog_2014
@@ -17,7 +18,7 @@ toc_footers:
   - <a href="http://goo.gl/forms/380FmYFlaJ05CL3q2" target="_blank">Sign Up for the Developer Newsletter</a>
   - <a href="http://github.com/tripit/slate" target="_blank">Site Built with Slate</a>
 
-Search: true
+search: true
 ---
 
 # Changelog
