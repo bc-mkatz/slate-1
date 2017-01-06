@@ -1,6 +1,6 @@
 ## <span class="jumptarget"> Migrating to OAuth </span>
 
-Apps in the App Store that use Basic Authentication are deprecated, and will be sunsetted in the near future. We will contact you directly to let you know the details and the timeline of this transition. This page discusses how to migrate your public app from Basic Authentication to OAuth.
+Apps in the App Store that use Basic Authentication are now deprecated, and will eventually be sunsetted. We will contact you directly to let you know the details and the timeline of this transition. This page discusses how to migrate your public app from Basic Authentication to OAuth.
 
 
 <aside class="notice">

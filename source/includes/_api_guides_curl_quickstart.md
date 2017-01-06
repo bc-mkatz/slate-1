@@ -1,4 +1,4 @@
-## <span class="jumptarget" id="curl_quickstart"> cURL Quickstart Guide </span>
+# <span class="jumptarget" id="curl_quickstart"> cURL Quickstart Guide </span>
 
 This section provides some sample cURL commands, for quickstart purposes. These use Basic Authentication, so before you can issue these commands, you must generate Basic Authentication credentials by following the steps discussed [here](#pvt_token). Once you have your Basic Authentication credentials, you can issue cURL commands as listed below.
 
@@ -16,11 +16,11 @@ If the request is made using the `Authorization` header, you need to encode the 
     https://store.mybigcommerce.com/api/v2/orders.json
 ```
 
-### <span class="jumptarget"> Orders cURL Commands </span>
+## <span class="jumptarget"> Orders cURL Commands </span>
 
 Here are sample cURL commands to handle orders.
 
-#### <span class="jumptarget"> Get a List of Orders from the Store</span>
+### <span class="jumptarget"> Get a List of Orders from the Store</span>
 
 ```
     curl --request GET \
@@ -30,7 +30,7 @@ Here are sample cURL commands to handle orders.
 
 By default, the API request returns only 50 orders. If you want to return all the orders from the store, you must use filters, as shown in the next example below.
 
-#### <span class="jumptarget"> Get All Orders from the Store</span>
+### <span class="jumptarget"> Get All Orders from the Store</span>
 
 Use the `limit` and `page` filter parameters to get a data beyond what the default query returns. Note that 200 orders is the maximum returned per page:
 
@@ -40,7 +40,7 @@ Use the `limit` and `page` filter parameters to get a data beyond what the defau
     https://store.mybigcommerce.com/api/v2/orders.json?limit=200&page=1
 ```
 
-#### <span class="jumptarget"> Update an Order</span>
+### <span class="jumptarget"> Update an Order</span>
 
 Orders take many fields upon update requests. (For details, please see <a href="/api/v2/#update-an-order" target="_blank">this documentation</a>.) Here, we update an order using just the mandatory fields:
 
@@ -53,7 +53,7 @@ Orders take many fields upon update requests. (For details, please see <a href="
 ```
 
 
-#### <span class="jumptarget"> Get Orders Created since a Certain Date</span>
+### <span class="jumptarget"> Get Orders Created since a Certain Date</span>
 
 You can use the `If-Modified-Since` header to request orders that have been created after a given date:
 
@@ -65,7 +65,7 @@ You can use the `If-Modified-Since` header to request orders that have been crea
     https://store.mybigcommerce.com/api/v2/orders.json
 ```
 
-#### <span class="jumptarget"> Get Coupons Associated with an Order</span>
+### <span class="jumptarget"> Get Coupons Associated with an Order</span>
 
 An order can contain coupons, which might be applied to the order to offer discounts to the customer. You can look at all the available coupons in an order as follows:
 
@@ -75,7 +75,7 @@ An order can contain coupons, which might be applied to the order to offer disco
     https://store.mybigcommerce.com/api/v2/orders/115/coupons.json
 ```
 
-#### <span class="jumptarget"> Create a Shipment for an Order</span>
+### <span class="jumptarget"> Create a Shipment for an Order</span>
 
 You can create a shipment for an order via the <a href="/api/v2/#create-a-shipment" target="_blank">Orders &gt; Create a Shipment</a> endpoint. As an example, third-party shipping services can query orders from a store when the orders are created, and create shipments for those:
 
@@ -87,7 +87,7 @@ You can create a shipment for an order via the <a href="/api/v2/#create-a-shipme
     https://store.mybigcommerce.com/api/v2/orders/114/shipments.json
 ```
 
-### <span class="jumptarget"> Products cURL Commands </span>
+## <span class="jumptarget"> Products cURL Commands </span>
 
 Here are sample cURL commands to handle products.
 
@@ -125,7 +125,7 @@ Let's assume that we want to create a product using only the fields that are for
     https://store.mybigcommerce.com/api/v2/products.json
 ```
 
-#### <span class="jumptarget"> Update a Product </span>
+### <span class="jumptarget"> Update a Product </span>
 
 To update the product created above, you could use the following:
 
@@ -137,7 +137,7 @@ To update the product created above, you could use the following:
     https://store.mybigcommerce.com/api/v2/products/id.json
 ```
 
-#### <span class="jumptarget"> Search a Product by SKU </span>
+### <span class="jumptarget"> Search a Product by SKU </span>
 
 To search by a product SKU, we could use the following code. Remember that when a product has optionset/variations defined, and if the individual options have SKUs defined, then the product SKU is overriden by the option SKUs. Currently, there are two ways to search for SKUs: `GET /products?sku="something"` or `GET /products/skus?sku="something"`. The first call returns only product-level SKUs and not option-level SKUs.
 
@@ -147,11 +147,11 @@ To search by a product SKU, we could use the following code. Remember that when 
     https://store.mybigcommerce.com/api/v2/products/skus.json?sku="abcd"
 ```
 
-### <span class="jumptarget"> Coupons cURL Commands </span>
+## <span class="jumptarget"> Coupons cURL Commands </span>
 
 Here are sample cURL commands to handle coupons.
 
-#### <span class="jumptarget"> Get a List of Coupons from the Store </span>
+### <span class="jumptarget"> Get a List of Coupons from the Store </span>
 
 ```
     curl --request GET \
@@ -193,11 +193,11 @@ Updating a coupon is almost similar to the Create example above, except that we 
     https://store.mybigcommerce.com/api/v2/coupons/15.json
 ```
 
-### <span class="jumptarget"> Option Sets cURL Commands </span>
+## <span class="jumptarget"> Option Sets cURL Commands </span>
 
 Here are sample cURL commands to handle option sets.
 
-#### <span class="jumptarget"> Connect Options to Option Sets </span>
+### <span class="jumptarget"> Connect Options to Option Sets </span>
 
 This is currently a four-step process.
 
