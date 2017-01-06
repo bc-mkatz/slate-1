@@ -3,6 +3,7 @@ title: BigCommerce API &amp; Theme Framework Changelog
 layout: "twocolumn"
 
 includes:
+- changelog_2017
 - changelog_2016
 - changelog_2015
 - changelog_2014
