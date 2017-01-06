@@ -3,7 +3,9 @@
 Gets all configured shipping methods, by `zone_id`. (Default sorting is by shipping-method `id`, from lowest to highest.)
 
 *   OAuth
->`GET {store_hash}/api/v2/shipping/zones/{zone_id}/methods`
+>`GET /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods`
+*   Basic Auth
+>`GET /api/v2/shipping/zones/{zone_id}/methods`
 
 ### <span class="jumptarget"> Requirements </span>
 
@@ -57,13 +59,14 @@ Example JSON returned in the response:
 ]
 ```
 
-
 ## <span class="jumptarget"> Get a Shipping Method </span>
 
 Gets a shipping method, specified by `zone_id` and method `id`.
 
 *   OAuth
->`GET {store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`GET /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+*   Basic Auth
+>`GET /api/v2/shipping/zones/{zone_id}/methods/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
@@ -96,7 +99,9 @@ Example JSON returned in the response:
 Creates a new method in the specificed shipping zone.
 
 *   OAuth
-`POST {store_hash}/api/v2/shipping/zones/{zone_id}/methods`
+>`POST /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods`
+*   Basic Auth
+>`POST /api/v2/shipping/zones/{zone_id}/methods`
 
 ### <span class="jumptarget"> Requirements </span>
 
@@ -146,8 +151,9 @@ Example JSON returned in the response:
 Updates an existing shipping method.
 
 *   OAuth
-`{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
-
+>`PUT /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
+*   Basic Auth
+>`PUT /api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
@@ -194,7 +200,9 @@ Example JSON returned in the response:
 Deletes a specified shipping method. (If successful, this will typically return a "204 No Content".)
 
 *   OAuth
-`{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`DELETE /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+*   Basic Auth
+>`DELETE }/api/v2/shipping/zones/{zone_id}/methods/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 

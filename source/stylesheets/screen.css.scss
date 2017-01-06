@@ -107,7 +107,8 @@ html, body {
       padding: 7px 0 7px 20px;
       box-sizing: border-box;
       margin: 10px 0px 10px 15px;
-      width: $nav-width - 75;
+      /* width: $nav-width - 75; */
+      width: $nav-width - 85; /* 1/5/17: prevents close-box wrapover */
       outline: none;
       color: $nav-active-text;
       font-size: 14px;
