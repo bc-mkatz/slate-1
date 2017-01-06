@@ -3,7 +3,9 @@
 Gets all shipping zones.
 
 *   OAuth
-`GET /api/v2/shipping/zones`  
+>`GET /stores/{store_hash}/api/v2/shipping/zones`
+*   Basic Auth
+>`GET /api/v2/shipping/zones`
 
 ### <span class="jumptarget"> Response </span>
 
@@ -61,7 +63,9 @@ Example JSON returned in the response:
 Retrieves a specified shipping zone by zone ID.
 
 *   OAuth
-`GET /api/v2/shipping/zones/{id}`
+>`GET /stores/{store_hash}/api/v2/shipping/zones/{id}`
+*   Basic Auth
+>`GET /api/v2/shipping/zones/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
@@ -102,7 +106,9 @@ Example JSON returned in the response:
 Creates a new shipping zone.
 
 *   OAuth
-`POST /api/v2/shipping/zones`
+>`POST /stores/{store_hash}/api/v2/shipping/zones`
+*   Basic Auth
+>`POST /api/v2/shipping/zones`
 
 
 ### <span class="jumptarget"> Request </span>
@@ -160,7 +166,10 @@ Example JSON returned in the response:
 Updates an existing shipping zone.
 
 *   OAuth
-`PUT /api/v2/shipping/zones/{id}`
+>`PUT /stores/{store_hash}/api/v2/shipping/zones/{id}`
+*   Basic Auth
+>`PUT /api/v2/shipping/zones/{id}`
+
 
 ### <span class="jumptarget"> Requirements </span>
 
@@ -231,12 +240,12 @@ Example JSON returned in the response:
 Deletes a specified shipping zone. (If successful, this will typically return a "204 No Content".)
 
 *   OAuth
-`DELETE /api/v2/shipping/zones/{id}`
+>`DELETE /stores/{store_hash}/api/v2/shipping/zones/{id}`
+*   Basic Auth
+>`DELETE /api/v2/shipping/zones/{id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * id
-
-
