@@ -1,4 +1,4 @@
-BigCommerce Catalog API
+BigCommerce Catalog API (partial swagger-md conversion)
 =======================
 A Swagger Document for the BigCommmerce API V3.
 
