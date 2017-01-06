@@ -57,7 +57,6 @@ Example JSON returned in the response:
 ]
 ```
 
-
 ## <span class="jumptarget"> Get a Shipping Method </span>
 
 Gets a shipping method, specified by `zone_id` and method `id`.
