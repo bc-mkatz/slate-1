@@ -16,7 +16,7 @@ toc_footers:
   - <a href="http://github.com/tripit/slate" target="_blank">Site Built with Slate</a>
 
 includes:
-  - api
+  - api_2_quick_starts
   - api_req_headers
   - api_response_headers
   - api_media_types
@@ -37,8 +37,8 @@ includes:
   - api_root_basic_auth
   - api_legacy_basic_auth
   - api_rate_limits_basic
-  - api_guides_curl_quickstart
   - api_guides_oauth_transition
+  - api_guides_curl_quickstart
   - api_storefront_apps_root
   - api_customer_login
   - api_current_customer
