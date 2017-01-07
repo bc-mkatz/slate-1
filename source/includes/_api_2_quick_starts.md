@@ -58,9 +58,9 @@ When you log in to the BigCommerce Developer Portal to get OAuth credentials for
 
 1. Select **My Apps** in this Developer Portals's upper-right-hand corner, and log in to your BigCommerce account.
 2. Within the Developer Portal, select **Create an app**. You can give your app any name you'd like, such as `Test`.
-3. Once the app is created, select **View Client ID**. This will display the modal shown below, from which you can copy your **Client ID** and **Client Secret**.
+3. Once the app is created, select **View Client ID**. This will display the modal shown below, from which you can copy your <br> **Client ID** and **Client Secret**.
 
-![BigCommerce Client ID and Secret](../assets/client-id+secret-modal.png)
+<img src="../assets/client-id+secret-modal.png" alt="BigCommerce Client ID and Secret" height=67% width=67%>
 
 ## <span class="jumptarget">Making an API Request</span>
 
