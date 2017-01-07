@@ -121,7 +121,7 @@ NOTE: Although the **Create a Trial Store** option's name indicates that the sto
 
 Once you’re ready to start on your app, navigate to the Developer Portal home page, select the **My Apps** link, and log in using the same email address you've used for your sandbox store.
 
-The **My Apps** page is where you will add, edit, and manage any of your BigCommerce Single-Click Apps. Start by clicking **Create an app now**, and initiating <a href="/api/#app-registration">registration of your app</a>. (You can always come back to edit your draft app's name and other details later.)
+The **My Apps** page is where you will add, edit, and manage any of your BigCommerce Single-Click Apps. Start by clicking **Create an app**, and initiating <a href="/api/#app-registration">registration of your app</a>. (You can always come back to edit your draft app's name and other details later.)
 
 Once your draft app is created, you will be able to install and test it privately in your sandbox store.
  
