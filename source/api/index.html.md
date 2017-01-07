@@ -16,7 +16,7 @@ toc_footers:
   - <a href="http://github.com/tripit/slate" target="_blank">Site Built with Slate</a>
 
 includes:
-  - api
+  - api_2_quick_starts
   - api_req_headers
   - api_response_headers
   - api_media_types
