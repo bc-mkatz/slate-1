@@ -1,6 +1,6 @@
 # <span class="jumptarget" id="apiquickstart"> API/Apps First Steps </span>
 
-The following sections list initial steps for two different app-development scenarios:
+The following sections list initial steps for two different development scenarios:
 
 * Developing private apps for a particular BigCommerce store: You can follow the [Apps Quick Start](#apicred) procedure, which has no administrative requirements.
 
@@ -10,12 +10,12 @@ These two scenarios are not mutually exclusive – some developers will work und
 
 # <span class="jumptarget" id="apicred"> Apps Quick Start: Obtaining API Credentials</span>
 
-<aside class="warning">
-<span class="aside-warning-hd"> Private or Saleable Apps? </span><br><br>
-This section is intended for developers who want to immediately start developing and testing private apps for a particular store. If your ultimate goal is to distribute apps on the BigCommerce Apps Marketplace, you can avoid repeated steps (like creating trial/sandbox stores on which to test your apps) by jumping directly to the instructions under [Joining the BigCommerce App Marketplace](#joinappmkt).
+<aside class="notice">
+<span class="aside-notice-hd"> Private or Saleable Apps? </span><br><br>
+This section is intended for developers who want to immediately start developing and testing private apps for a particular store. <br> If your ultimate goal is to distribute apps on the BigCommerce Apps Marketplace, you can avoid repeated steps (like creating trial/sandbox stores for app testing) by jumping directly to the instructions under <a href="#joinappmkt">Joining the BigCommerce App Marketplace</a>.
 </aside>
 
-To obtain Basic or OAuth credentials to use this API, you will first need to create a trial store. (If you already have a store, skip ahead to [Logging In](#login).)
+To obtain Basic or OAuth credentials to use this API, you will first need to create a trial store. (If you already have a store, skip ahead to [Logging&#160;In](#login).)
 
 ## <span class="jumptarget" id="createstore"> Creating a Trial Store</span>
 
@@ -73,9 +73,9 @@ Many tools are available to interact with APIs. For example, to see how to quick
 
 The following sections outline the steps required to become a vendor of <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> on the BigCommerce platform.
 
-<aside class="warning">
-<span class="aside-warning-hd"> Want a Quicker Start? </span><br><br>
-If you only want to develop private apps for a particular BigCommerce store, you can get started faster by jumping to the streamlined instructions under [Apps Quick Start](#apicred).
+<aside class="notice">
+<span class="aside-notice-hd"> Want a Quicker Start? </span><br><br>
+If you only want to develop private apps for a particular BigCommerce store, you can get started faster by jumping to the streamlined instructions under <a href="#apicred">Apps Quick Start</a>.
 </aside>
 
 
