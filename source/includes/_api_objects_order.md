@@ -45,7 +45,7 @@ The Order object contains a record of the purchase agreement between a shopper a
 | payment_status | enum | A read-only value. Do not attempt to modify or set this value in a POST or PUT operation. |
 | refunded_amount | decimal | The amount refunded from this transaction. |
 | order_is_digital | boolean | Whether this is an order for digital products. |
-| store_credit_amount | decimal | A read-only value. Do not pass in a POST or PUT. |
+| store_credit_amount | decimal | Represents the store credit that the shopper has redeemed on this individual order. This is a read-only value. Do not pass in a POST or PUT. |
 | gift_certificate_amount | decimal | A read-only value. Do not pass in a POST or PUT. |
 | ip_address | string | IP Address of the customer, if known. |
 | geoip_country | string | The full name of the country where the customer made the purchase, based on the IP. |
