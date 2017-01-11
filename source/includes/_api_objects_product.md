@@ -11,9 +11,9 @@ A product object represents a saleable item in the catalog.
 | Name | Type | Description |
 | --- | --- | --- | --- |
 | id | int | The unique numerical ID of the product. Increments sequentially. |
-| keyword_filter | string |
+| keyword_filter | string | (This property is deprecated.) |
 | name | string | The product name. |
-| type | enum | The product type. One of:<br><br> `physical` – a physical stock unit.<br> `digital` – a digital download. |
+| type | enum | The product type. One of:<br> `physical` – a physical stock unit.<br> `digital` – a digital download. |
 | sku | string | User-defined product code/stock keeping unit (SKU). |
 | description | text | Product description, which can include HTML formatting. |
 | search_keywords | text | A comma-separated list of keywords that can be used to locate the product when searching the store. |
@@ -22,7 +22,7 @@ A product object represents a saleable item in the catalog.
 | cost_price | decimal | The product's cost price. Stored for reference only; not used or displayed anywhere on the store. |
 | retail_price | decimal | The product's retail cost. If entered, this retail price will be shown on the product page. |
 | sale_price | decimal | Sale price. If entered, this will be used instead of value in the price field when calculating the product's cost. |
-| calculated_price | decimal |  |
+| calculated_price | decimal | Price as displayed to guests, adjusted for applicable sales and rules. (Cart price might incorporate further discounts for logged-in customers or customer groups.) Read-only. |
 | sort_order | int | Priority to give this product when included in product lists on category pages and in search results. Lower integers will place the product closer to the top of the results. |
 | is_visible | boolean | Flag to determine whether or not the product should be displayed to customers browsing. If `true`, the product will be displayed. If `false`, the product will be hidden from view. |
 | is_featured | boolean | Flag to determine whether the product should be included in the "featured products" panel for shoppers viewing the store. |
@@ -36,10 +36,10 @@ A product object represents a saleable item in the catalog.
 | depth | decimal | Depth of the product, which can be used when calculating shipping costs. |
 | fixed_cost_shipping_price | decimal | A fixed shipping cost for the product. If defined, this value will be used instead of normal shipping-cost calculation during checkout. |
 | is_free_shipping | boolean | Flag used to indicate whether or not the product has free shipping. If `true`, the shipping cost for the product will be zero. |
-| inventory_tracking | enum | The type of inventory tracking for the product. One of:<br><br> `none` – inventory levels will not be tracked.<br> `simple` – inventory levels will be tracked using the `inventory_level` and `inventory_warning_level` fields.<br> `sku` – inventory levels will be tracked based on individual product options, which maintain their own warning levels and inventory levels. |
+| inventory_tracking | enum | The type of inventory tracking for the product. One of:<br> `none` – inventory levels will not be tracked.<br> `simple` – inventory levels will be tracked using the `inventory_level` and `inventory_warning_level` fields.<br> `sku` – inventory levels will be tracked based on individual product options, which maintain their own warning levels and inventory levels. |
 | rating_total | int | The total rating for the product. |
 | rating_count | int | The total number of ratings the product has had. |
-| total_sold | int |
+| total_sold | int | Total quantity of this product sold through transactions. |
 | date_created | date | The date of which the product was created. |
 | brand_id | int | The product's brand |
 | view_count | int | The number of times the product has been viewed. |
@@ -52,7 +52,7 @@ A product object represents a saleable item in the catalog.
 | categories | array | An array of IDs for the categories this product belongs to. When updating a product, if an array of categories is supplied, then all product categories will be overwritten. Does not accept more than 1,000 ID values. |
 | date_modified | date | The date that the product was last modified. |
 | event_date_field_name | string | Name of the field to be displayed on the product page when selecting the event/delivery date. |
-| event_date_type | enum | One of the following values:<br><br> `none` – Disables the event/delivery date requirement and field.<br> `after` – The selected date must fall either on, or after, the date specified in the `event_date_start` field.<br> `before` – The selected date must fall either before, or on, the date specified in the `event_date_end` field.<br> `range` – The selected date must fall between the `event_date_start` and `event_date_end` dates. |
+| event_date_type | enum | One of the following values:<br> `none` – Disables the event/delivery date requirement and field.<br> `after` – The selected date must fall either on, or after, the date specified in the `event_date_start` field.<br> `before` – The selected date must fall either before, or on, the date specified in the `event_date_end` field.<br> `range` – The selected date must fall between the `event_date_start` and `event_date_end` dates. |
 | event_date_start | date | When the product requires the customer to select an event/delivery date, this date is used as the "after" date. |
 | event_date_end | date | When the product requires the customer to select an event/delivery date, this date is used as the "before" date. |
 | myob_asset_account | string | MYOB Asset Account. |
@@ -72,26 +72,27 @@ A product object represents a saleable item in the catalog.
 | is_open_graph_thumbnail | boolean | If set to `true`, the product thumbnail image will be used as the open graph image. |
 | upc | string | The product UPC code, which is used in feeds for shopping comparison sites. |
 | date_last_imported | date | The date on which the product was last imported using the bulk importer. |
-| option_set_id | int | The ID of the [option set](/v2#product-option-sets) applied to the product. (NOTE: To remove the option set from the product, set the value to `null` on update.) |
+| option_set_id | int | The ID of the [option set](/api/v2/#option-sets) applied to the product. (NOTE: To remove the option set from the product, set the value to `null` on update.) |
 | tax_class_id | int | The ID of the tax class applied to the product. (NOTE: Value ignored if automatic tax is enabled.) |
 | option_set_display | enum | The position on the product page where options from the option set will be displayed. |
 | bin_picking_number | string | The BIN picking number for the product. |
-| custom_url | string |
-| primary_image | object | An image object, corresponding to the image that is set as the product's thumbnail. This object includes that image's `id`, plus four URL values identifying where to pull the image at different sizes:<br> <br>`standard_url` is the image used in the product page's image box.<br> `tiny_url` is the thumbnail image displayed below the product page's image box.<br> `thumbnail_url` is used for product list-box images on category pages and in side panels.<br> `zoom_url` is either the original image size provided to BigCommerce, or the merchant-selected `Product Zoom Image`/`Zoomed image` size – whichever is smaller. (You can always access the product's original image via the [Product Images resource](/api/v2/products/#product-images).) |
-| availability | enum | Availability of the product. Possible values:<br><br> `available` – the product can be purchased on the storefront.<br> `disabled` - the product is listed on the storefront, but cannot be purchased.<br> `preorder` – the product is listed for pre-orders. |
-| brand | resource |
-| downloads | resource |
-| images | resource | See the [Product Images resource](/api/v2/products/#product-images) for information. |
-| discount_rules | resource | See the [Bulk Pricing/Discount](/api/v2#bulk-pricing) resource for information. |
-| configurable_fields | resource | See the [Configurable Fields](/api/v2#configurable-fields) resource for information. |
-| custom_fields | resource | See the [Custom Fields](/api/v2#custom-fields) resource for information. |
-| videos | resource | See the [Videos resource](/api/v2/products/#videos) for information. |
-| skus | resource | Stock Keeping Units for the product. See the [Product SKUs](/api/v2#product-skus) resource for the definition of a sku object. |
-| rules | resource | Rules that apply only to this product, based on the product's [option set](/v2#product-option-sets). See [Product Rules](/api/v2#product-rules) resource for information. |
-| option_set | resource | See the [Product Option Sets](/v2#product-option-sets) resource for information. |
-| options | resource | Options from the [option set](/v2#product-option-sets) applied to the product. See the [Product Options](/api/v2#product-options) resource for information. |
-| tax_class | resource |
-| avalara_product_tax_code | resource | Accepts AvaTax system codes, which identify products and services that fall into special sales-tax categories. Allows merchants who subscribe to Avalara Premium to achieve increased accuracy in sales-tax calculations.<br><br> Stores without Avalara Premium will ignore the code when calculating sales tax. Do not pass more than one code. The codes are case-sensitive.<br><br> For further information and the full list of codes, please see [this Avalara reference page](https://help.avalara.com/000_AvaTax_Calc/000AvaTaxCalc_User_Guide/040_Managing_Tax_Profiles/050_Tax_Codes/001_What_is_a_Tax_Code) > "AvaTax System tax codes" section. |
+| custom_url | string | Custom URL (if set) overriding the structure dictated in the store's settings. If no custom URL is set, this will contain the default URL. |
+| primary_image | object | An image object, corresponding to the image that is set as the product's thumbnail. This object includes that image's `id`, plus four URL values identifying where to pull the image at different sizes:<br>`standard_url` is the image used in the product page's image box.<br> `tiny_url` is the thumbnail image displayed below the product page's image box.<br> `thumbnail_url` is used for product list-box images on category pages and in side panels.<br> `zoom_url` is either the original image size provided to BigCommerce, or the merchant-selected `Product Zoom Image`/`Zoomed image` size – whichever is smaller. (You can always access the product's original image via the [Product Images resource](/api/v2/#product-images).) |
+| availability | enum | Availability of the product. Possible values:<br> `available` – the product can be purchased on the storefront.<br> `disabled` - the product is listed on the storefront, but cannot be purchased.<br> `preorder` – the product is listed for pre-orders. |
+| brand | resource | The product's brand |
+| downloads | resource | Total number of downloads for a downloadable product. |
+| images | resource | See the [Product Images resource](/api/v2/#product-images) for information. |
+| discount_rules | resource | See the [Bulk Pricing/Discount](/api/v2/#bulk-pricing) resource for information. |
+| configurable_fields | resource | See the [Configurable Fields](/api/v2/#configurable-fields) resource for information. |
+| custom_fields | resource | See the [Custom Fields](/api/v2/#custom-fields) resource for information. |
+| videos | resource | See the [Videos resource](/api/v2/#videos) for information. |
+| skus | resource | Stock Keeping Units for the product. See the [Product SKUs](/api/v2/#skus) resource for the definition of a sku object. |
+| rules | resource | Rules that apply only to this product, based on the product's [option set](/v2#product-option-sets). See [Product Rules](/api/v2/#product-rules) resource for information. |
+| option_set | resource | See the [Product Option Sets](/v2/#product-option-sets) resource for information. |
+| options | resource | Options from the [option set](/api/v2/#option-sets) applied to the product. See the [Product Options](/api/v2/#product-options) resource for information. |
+| tax_class | resource | Assigned tax class, when using a manual tax setup. This can be a number matching one of the tax classes set up in your store. |
+| avalara_product_tax_code | resource | Accepts AvaTax System Tax Codes, which identify products and services that fall into special sales-tax categories. By using these codes, merchants who subscribe to Avalara Premium can calculate sales taxes more accurately.<br><br> Stores without Avalara Premium will ignore the code when calculating sales tax. Do not pass more than one code. The codes are case-sensitive.<br><br> For details, please see Avalara's <a href="https://help.avalara.com/000_Avalara_AvaTax/Manage_Product_Taxability/010_Select_AvaTax_System_Tax_Codes" target="_blank">overview</a> and <a href="https://help.avalara.com/000_Avalara_AvaTax/Manage_Product_Taxability/Tax_Codes_-_Frequently_Asked_Questions" target="_blank">FAQ</a> on AvaTax System Tax Codes. You can also <a href="https://help.avalara.com/@api/deki/files/1675/AvaTax_System_Tax_Codes_Toolkit.zip?revision=37" target="_blank">download codes</a> as a zipfile of spreadsheets, or <a href="https://taxcode.avatax.avalara.com/" target="_blank">search or browse codes</a> in Avalara's Tax Code Search Tool. (These external links are subject to change.) |
+
 
 ### <span class="jumptarget"> Product Webhook Events </span>
 
