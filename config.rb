@@ -9,6 +9,9 @@ set :markdown,
     with_toc_data: true,
     no_intra_emphasis: true
 
+# Sitemap
+page "/sitemap.xml", :layout => false
+
 # Assets
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
