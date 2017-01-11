@@ -10,7 +10,7 @@ A Shipping Method object represents a shipping method enabled within the store.
 | --- | --- | --- |
 | id | int | Shipping-method ID. |
 | name | string | Display name for shipping method. |
-| type | string | Shipping-method type. The currently supported static/fixed shipping-quote types are [`perorder`](#perorder), [`peritem`](#peritem), [`weight`](#weight), or [`total`](#total). We plan to later add support for these dynamic/real-time shipping-quote types: `auspost`, `canadapost`, `endicia`, `usps`, `fedex`, `royalmail`, `ups`, `upsready`, `upsonline`, or `shipperhq`. |
+| type | string | Shipping-method type. The currently supported static/fixed shipping-quote types are [`perorder`](#perorder), [`peritem`](#peritem), [`weight`](#weight), or [`total`](#total). We plan to later add support for these dynamic/real-time shipping-quote types: `auspost`, `canadapost`, `endicia`, `usps`, `fedex`, `royalmail`, `ups`, `upsready`, or `upsonline`. |
 | settings | object | Depends on the shipping-method `type`. See the supported `settings` object models [here](#settingstypes). |
 | enabled | boolean | Whether or not this shipping-zone method is enabled. |
 | handling_fees | object | Handling-fee information for this method. This object currently contains the following element: <br> `fixed_surcharge`: the handling fee. |
