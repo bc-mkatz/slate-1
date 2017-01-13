@@ -2,7 +2,7 @@
 
 Each order status represents a state in the order fulfillment workflow.
 
-### <span class="jumptarget"> Order Status Object - Properties </span>
+### <span class="jumptarget"> Order Status Object – Properties </span>
 
 | Name | Type | Description |
 | --- | --- | --- |
