@@ -12,6 +12,7 @@ toc_footers:
   - <a href="http://github.com/tripit/slate" target="_blank">Site Built with Slate</a>
 
 includes:
+  - api_oauth_tokens
   - api_objects_shipping_zone
   - api_CRUD_shipping_zones
   - api_objects_shipping_zones_method
@@ -22,5 +23,5 @@ includes:
 search: true
 ---
 
-# <span class="jumptarget"> Shipping Zones Reference </span>
+# <span class="jumptarget"> Draft New API Content </span>
 
