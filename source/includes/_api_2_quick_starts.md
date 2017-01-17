@@ -4,7 +4,7 @@ The following sections list initial steps for two different development scenario
 
 * Developing private apps for a particular BigCommerce store: You can follow the [Apps Quick Start](#apicred) procedure, which has no administrative requirements.
 
-* Developing <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> for sale to/installation on any BigCommerce store. for a particular BigCommerce store: See the [Joining the BigCommerce App Marketplace](#joinappmkt) procedure, which requires applying to become a BigCommerce partner.
+* Developing <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> for sale to/installation on any BigCommerce store: See the [Joining the BigCommerce App Marketplace](#joinappmkt) procedure, which requires applying to become a BigCommerce partner.
 
 These two scenarios are not mutually exclusive – some developers will work under both scenarios – but some of their instructions are redundant. Please use the links above to jump to the section that best matches your immediate scenario.
 

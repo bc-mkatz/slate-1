@@ -151,9 +151,9 @@ Example JSON returned in the response:
 Updates an existing shipping method.
 
 *   OAuth
->`PUT /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
+>`PUT /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
 *   Basic Auth
->`PUT /api/v2/shipping/zones/{zone_id}/methods/{method_id}`
+>`PUT /api/v2/shipping/zones/{zone_id}/methods/{id}`
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.

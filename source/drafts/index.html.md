@@ -13,6 +13,7 @@ toc_footers:
 
 includes:
   - api_oauth_tokens
+  - tut_postman_oauth
   - api_objects_shipping_zone
   - api_CRUD_shipping_zones
   - api_objects_shipping_zones_method
