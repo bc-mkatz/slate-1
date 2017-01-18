@@ -34,7 +34,7 @@ By default, your app will only be accessible to the store owner (ie. the user wh
 *   Your app should be aware that when it receives the [Load Callback](#load-request-and-response), the user information passed in, [may not be the store owner](#about-the-load-request). You'll need to determine how to respond if you see a different user. For example, you may want to provision a new user account in order to personalize the experience.
 *   You can optionally specify a [Remove User Callback URI](#about-the-remove-user-request) to receive a callback when a store admin revokes a user's access.
 
-#### <span class="jumptarget"> <a name="request_scopes"></a> Requesting OAuth Scopes </span>
+#### <span class="jumptarget" id="request_scopes">  Requesting OAuth Scopes </span>
 
 If you know the [OAuth scopes](#oauth-scopes) that your app requires, you should select these. If you do not yet know the scopes that you need, you can just request minimal permissions (such as `Information: Read-Only`) to get started. However, once you determine the scopes you need, you must:
 
