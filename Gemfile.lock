@@ -32,6 +32,8 @@ GEM
     fastimage (1.8.1)
       addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.10)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     haml (4.0.7)
       tilt
     hamster (2.0.0)
@@ -124,6 +126,7 @@ PLATFORMS
 
 DEPENDENCIES
   builder
+  font-awesome-sass
   middleman (~> 4.0.0)
   middleman-autoprefixer (~> 2.7.0)
   middleman-gh-pages (~> 0.0.3)
