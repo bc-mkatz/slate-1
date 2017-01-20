@@ -65,14 +65,15 @@ Once your draft app is created, you will be able to install and test it privatel
 <aside class="notice">
 <span class="aside-notice-hd">Note</span>
 	<br><br>
-To access your draft app in the store, make sure the email address you enter for your sandbox store’s **Owner** is identical to the email address you use for the BigCommerce Developer Portal. </ul>
+To access your draft app in the store, make sure the email address you enter for your sandbox store’s <strong>Owner</strong> is identical to the email address you use for the BigCommerce Developer Portal. </ul>
 </aside>
+
+## <span class="jumptarget"> App Guidelines and Client Libraries </span>
+
+For details on designing and building your app, please see [Building Apps with OAuth](#using-oauth-intro).
+
+To facilitate app development on the BigCommerce platform, we provide [client libraries](#client-libraries) in a variety of popular programming languages.
 
 ## <span class="jumptarget"> Submit Your App </span>
 
 Once your app is fully functional, and meets all of BigCommerce’s <a href="#app-store-approval-requirements">approval requirements</a>, submit the app from **My Apps**. We will get back to you as soon as we have reviewed your submission.
-
-
-## <span class="jumptarget"> About Client Libraries </span>
-
-To make facilitate app development on the BigCommerce platform, we provide [client libraries](#client-libraries) in a variety of popular programming languages.

@@ -1,4 +1,4 @@
-# <span class="jumptarget"> <a name="using-oauth-intro"></a> Building OAuth Apps </span>
+# <span class="jumptarget"> <a name="using-oauth-intro"></a> Building Apps with OAuth </span>
 
 OAuth apps (also known as public apps or <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a>) can be listed in the App Store for easy installation in all BigCommerce stores. They&#160;use OAuth to obtain an access token and to communicate with the central BigCommerce API endpoint. 
 
