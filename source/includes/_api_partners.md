@@ -1,8 +1,3 @@
-## <span class="jumptarget">Making an API Request</span>
-
-Many tools are available to interact with APIs. For example, to see how to quickly make initial requests using <a href="https://en.wikipedia.org/wiki/CURL" target="_blank">cURL</a> commands, please see our [cURL Quickstart Guide](#curl-quickstart-guide).
-
-
 # <span class="jumptarget" id="joinappmkt"> Joining the App Marketplace </span>
 
 The following sections outline the steps required to become a vendor of <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> on the BigCommerce platform. Doing so requires a partnership application, but acceptance will authorize you to provide best-of-breed solutions to the fast-growing online businesses we host.
