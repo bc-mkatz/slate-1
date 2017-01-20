@@ -5,6 +5,11 @@
 ## <span class="jumptarget"> January </span>
 
 
+
+### <span class="jumptarget"> Stencil: New template Property Replaces Deprecated template_file </span>
+
+BigCommerce has deprecated the Stencil themes platform's global `template_file` property. Its replacement is a new `template` property, which returns correct page types for custom template files. To pick up this correction, you must update your Stencil CLI installation. For details and links, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>.
+
 ### <span class="jumptarget"> Stencil Cornerstone 1.4.2 Theme Released </span>
 
 Version [1.4.2](https://stencil.bigcommerce.com/docs/cornerstone-14x-theme-release-notes#142) of Stencil's default Cornerstone theme is now available. To deter spam submissions through the storefront Contact form, this update replaces the Contact template's CAPTCHA challenge with a Google reCAPTCHA v1 challenge. For the PR #/commit # to apply this fix, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>.
