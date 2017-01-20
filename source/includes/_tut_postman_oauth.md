@@ -6,7 +6,7 @@ To get started, you'll need OAuth credentials to supply to Postman. BigCommerce 
 
 ## <span class="jumptarget"> Creating OAuth2.0 Credentials </span>
 
-Create yur OAuth 2.0 credentials as described above in [this section](#cp_oauth_get). (Depending on what scopes you set, you will be limited in what objects you can request. You can view scope information [here](/api/#oauth-scopes).)
+Create your OAuth 2.0 credentials as described above in [this section](#cp_oauth_get). (Depending on what scopes you set, you will be limited in what objects you can request. You can view scope information [here](/api/#oauth-scopes).)
 
 ## <span class="jumptarget"> Postman Setup </span>
 
