@@ -17,6 +17,9 @@ toc_footers:
 
 includes:
   - api_2_quick_starts
+  - api_oauth_tokens
+  - api_basic_auth_tokens
+  - api_partners
   - api_req_headers
   - api_response_headers
   - api_media_types
@@ -39,6 +42,7 @@ includes:
   - api_rate_limits_basic
   - api_guides_oauth_transition
   - api_guides_curl_quickstart
+  - tut_postman_oauth
   - api_storefront_apps_root
   - api_customer_login
   - api_current_customer

@@ -1,2 +1,1 @@
-# <span class="jumptarget"> Building Basic-Auth Apps </span>
-
+# <span class="jumptarget" id="using-basic-auth-intro"> Building Apps with Basic Auth </span>

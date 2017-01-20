@@ -1,12 +1,12 @@
-# <span class="jumptarget"> Postman/OAuth Quick Start </span>
+# <span class="jumptarget" id="postman_qs"> Postman/OAuth Quickstart Guide </span>
 
-This section shows you how to quickly get started exercising BigCommerce APIs, using the [Postman app](https://www.getpostman.com/).
+This section shows you how to quickly get started exercising BigCommerce APIs, using the <a href="https://www.getpostman.com/" target="_blank">Postman app</a>.
 
 To get started, you'll need OAuth credentials to supply to Postman. BigCommerce uses OAuth 2.0. 
 
 ## <span class="jumptarget"> Creating OAuth2.0 Credentials </span>
 
-Create yur OAuth 2.0 credentials as described above in [this section](#cp_oauth_get). (Depending on what scopes you set, you will be limited in what objects you can request. You can view scope information [here](/api/#oauth-scopes).)
+Create your OAuth 2.0 credentials as described above under [Obtaining OAuth Tokens](#cp_oauth_get). (Depending on what scopes you set, you will be limited in what objects you can request. You can view scope information [here](/api/#oauth-scopes).)
 
 ## <span class="jumptarget"> Postman Setup </span>
 

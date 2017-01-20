@@ -4,7 +4,7 @@ Once you have a [sandbox store](#api-apps-first-steps), you must register your a
 
 *   The **Client ID** value uniquely identifies your app and you will need to pass it in the header of all your requests to the Stores API.
 
-*   The **Client Secret** value is a secret that your app and BigCommerce share. You do need to pass the **Client Secret** value once during the [app installation](#app-installation-and-update-sequence) sequence. Thereafter, BigCommerce uses it to sign payloads in [load, uninstall, and remove user requests](#load-uninstall-and-user-removal-requests) and your app uses it to verify the signature to ensure that the request is coming from BigCommerce.
+*   The **Client Secret** value is a secret that your app and BigCommerce share. You do need to pass the **Client Secret** value once during the [app installation](#app-installation-and-update-sequence) sequence. Thereafter, BigCommerce uses it to sign payloads in [load, uninstall, and remove user requests](#load-uninstall-and-user-removal-requests), and your app uses it to verify the signature to ensure that the request is coming from BigCommerce.
 
 The app registration wizard requests a number of details that you may not know just yet. You can come back and fill in the additional information later (discussed in [App Submission](#app-submission)).
 
