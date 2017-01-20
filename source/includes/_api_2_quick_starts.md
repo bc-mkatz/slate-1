@@ -4,7 +4,7 @@ The following sections offer initial steps for two different development scenari
 
 * Developing private apps for a particular BigCommerce store: You can follow the [Apps Quick Start](#apicred) procedure, which has no administrative requirements.
 
-* Developing <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> for sale to/installation on any BigCommerce store: Jump to the [App Marketplace Workflow](#joinappmkt) procedure, which requires applying to become a BigCommerce partner.
+* Developing <a href="https://www.bigcommerce.com/single-click-apps/" target="_blank">Single-Click Apps</a> for sale to/installation on any BigCommerce store: Jump to the [Joining the App Marketplace](#joinappmkt) procedure, which requires applying to become a BigCommerce partner.
 
 These two scenarios are not mutually exclusive –  some developers will work under both scenarios. But some of their setup instructions are redundant. Therefore, we suggest that you start with the section that best matches your immediate scenario.
 
@@ -43,3 +43,4 @@ Otherwise, you might need to log into your store:
 
     This will reopen your store's control panel.
 
+Next, you will need to [obtain API credentials](#apicred), as explained just below.

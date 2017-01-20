@@ -1,12 +1,12 @@
-# <span class="jumptarget" id="apicred"> Obtaining API Credentials</span>
+# <span class="jumptarget" id="apicred"> Managing API Credentials</span>
 
-You now have two options for obtaining credentials to connect your app with your BigCommerce store:
+You have two options for obtaining and managing credentials that will connect your app with your BigCommerce store:
 
-* [Obtaining an OAuth Token](#cp_oauth_get): We recommend OAuth, as it is compatible with all current and planned BigCommerce APIs.
+* [Obtaining OAuth Tokens](#cp_oauth_get): We recommend OAuth, because this authentication method is compatible with all current and planned BigCommerce APIs. Also, OAuth is required for apps intended to be [sold on the BigCommerce App Marketplace](#).
 
-* [Creating Basic Auth Credentials](#basiccred): Basic Auth is still supported as a legacy option for most of our v2 API. However, it is not compatible with [webhooks](##webhooks-overview), nor with our <a href="https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md" target="_blank">v3 API</a>.
+* [Creating Basic Auth Credentials](#basiccred): Basic Auth is still supported as a legacy option for [private apps](##building-basic-auth-apps) (apps developed for a single BigCommerce store). However, although Basic Auth is compatible with most of our v2 API, it is inccompatible with [webhooks](##webhooks-overview), and incompatible with our <a href="https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md" target="_blank">v3 API</a>.
 
-## <span class="jumptarget" id="cp_oauth_get"> Obtaining an OAuth Token </span>
+## <span class="jumptarget" id="cp_oauth_get"> Obtaining OAuth Tokens </span>
 
 You can create and manage OAuth tokens in the BigCommerce control panel by creating an API account, as described below. (Only the <a href="https://support.bigcommerce.com/articles/Public/Store-Owner" target="_blank">store&#160;owner</a> can create API accounts; accounts are limited to 50 per store.) 
 
