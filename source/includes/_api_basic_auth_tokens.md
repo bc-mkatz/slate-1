@@ -46,6 +46,6 @@ To change the API token that an app is using to access a store, use the followin
 5.  Select the **Generate New Token** button.
 6.  Select the **Save** button.
 
-## <span class="jumptarget" id="request_basic"> Making an API Request with Basic Auth </span>
+### <span class="jumptarget" id="request_basic"> Making an API Request with Basic Auth </span>
 
 Many tools are available to interact with APIs. For example, to see how to quickly make initial requests using <a href="https://en.wikipedia.org/wiki/CURL" target="_blank">cURL</a> commands, please see our [cURL Quickstart Guide](#curl-quickstart-guide).

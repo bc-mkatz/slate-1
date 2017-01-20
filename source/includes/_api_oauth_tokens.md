@@ -7,9 +7,14 @@ You have two options for obtaining and managing credentials that will connect yo
 * [Creating Basic Auth Credentials](#basiccred): Basic Auth is still supported as a legacy option for [private apps](##building-basic-auth-apps) (apps developed for a single BigCommerce store). However, although Basic Auth is compatible with most of our v2 API, it is inccompatible with [webhooks](##webhooks-overview), and incompatible with our <a href="https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md" target="_blank">v3 API</a>.
 
 
-## <span class="jumptarget" id="cp_oauth_manage"> Managing OAuth Tokens </span>
+## <span class="jumptarget" id="cp_oauth_manage"> Authenticating with OAuth </span>
 
 The following sections outline how to create and manage OAuth tokens in the BigCommerce control panel.
+
+<aside class="notice">
+<span class="notice"> Future-Proof with OAuth </span><br><br>
+We strongly recommend building all BigCommerce apps with OAuth. OAuth is compatible with all current and planned BigCommerce APIs, including v2 Webhooks and our v3 API. Also, any apps intended for sale on the BigCommerce App Marketplace must use OAuth. BigCommerce is gradually deprecating its legacy support for <a href="#basiccred">Basic Authentication</a>.
+</aside>
 
 
 ### <span class="jumptarget" id="cp_oauth_get"> Obtaining OAuth Tokens </span>
@@ -56,6 +61,6 @@ There is no undo, so be sure before you delete an account. You can also use the 
 
 <img src="../assets/store-api-accounts.png" alt="Creating an API account" height=100% width=100%>
 
-## <span class="jumptarget" id="request_oauth"> Making an API Request with OAuth </span>
+### <span class="jumptarget" id="request_oauth"> Making an API Request with OAuth </span>
 
 To see how to quickly make initial OAuth requests using the <a href="https://www.getpostman.com/" target="_blank">Postman app</a>, please see our [Postman/OAuth Quickstart Guide](#postman_qs).
