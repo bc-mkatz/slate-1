@@ -6,7 +6,13 @@ You have two options for obtaining and managing credentials that will connect yo
 
 * [Creating Basic Auth Credentials](#basiccred): Basic Auth is still supported as a legacy option for [private apps](##building-basic-auth-apps) (apps developed for a single BigCommerce store). However, although Basic Auth is compatible with most of our v2 API, it is inccompatible with [webhooks](##webhooks-overview), and incompatible with our <a href="https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md" target="_blank">v3 API</a>.
 
-## <span class="jumptarget" id="cp_oauth_get"> Obtaining OAuth Tokens </span>
+
+## <span class="jumptarget" id="cp_oauth_manage"> Managing OAuth Tokens </span>
+
+The following sections outline how to create and manage OAuth tokens in the BigCommerce control panel.
+
+
+### <span class="jumptarget" id="cp_oauth_get"> Obtaining OAuth Tokens </span>
 
 You can create and manage OAuth tokens in the BigCommerce control panel by creating an API account, as described below. (Only the <a href="https://support.bigcommerce.com/articles/Public/Store-Owner" target="_blank">store&#160;owner</a> can create API accounts; accounts are limited to 50 per store.) 
 
@@ -34,7 +40,7 @@ So make sure you store your credentials &ndash; either by copying/pasting the co
 </aside>
 
 
-## <span class="jumptarget" id="cp_oauth_revoke"> Revoking an OAuth Token </span>
+### <span class="jumptarget" id="cp_oauth_revoke"> Revoking an OAuth Token </span>
 
 To revoke an OAuth token, use the following steps to delete the associated API account:
 

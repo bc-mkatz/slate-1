@@ -52,3 +52,12 @@ This callback function will run when the user explicitly logs out of the BigComm
 If you want to charge merchants for your app, please note that BigCommerce expects you to handle the billing aspects of the transaction. Your app needs to take care of collecting the fee from the merchant. 
 
 Under the standard contract, within 30 days of collecting this revenue, you must send BigCommerce 20% and retain the remaining 80% for yourself. Once your app is published, a mandatory revenue-share reporting form will be sent to the primary contact on your partner account, at the beginning of each month.
+
+### <span class="jumptarget"> Private Apps with OAuth? </span>
+
+Some private apps use OAuth. Please note that:
+
+* Such apps will normally be accessible only to stores belonging to the user who created the app in the Developer Portal.
+
+* To be shareable with other stores, these apps must be approved and published in the App Store.
+
