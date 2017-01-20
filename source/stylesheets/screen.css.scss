@@ -2,6 +2,8 @@
 @import 'normalize';
 @import 'variables';
 @import 'icon-font';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
@@ -107,8 +109,7 @@ html, body {
       padding: 7px 0 7px 20px;
       box-sizing: border-box;
       margin: 10px 0px 10px 15px;
-      /* width: $nav-width - 75; */
-      width: $nav-width - 85; /* 1/5/17: prevents close-box wrapover */
+      width: $nav-width - 85;
       outline: none;
       color: $nav-active-text;
       font-size: 14px;
@@ -130,6 +131,11 @@ html, body {
       width: 30px;
       height: 30px;
     }
+
+    .fa-times {
+      color: $nav-text;
+    }
+
     .search:not(:valid) ~ .reset-form {
       display: none;
     }
