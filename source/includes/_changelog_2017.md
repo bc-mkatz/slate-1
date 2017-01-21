@@ -1,9 +1,17 @@
 # <span class="jumptarget"> 2017 </span>
 
 
-
 ## <span class="jumptarget"> January </span>
 
+
+### <span class="jumptarget"> OAuth Tokens via Control Panel </span>
+
+The BigCommerce control panel's new **Advanced Settings** > **API Accounts** option allows you to directly generate and revoke OAuth tokens and their associated user accounts. For details on using these new options with your apps, please see our new documentation on <a href="/api/#cp_oauth_get" target="_blank">Obtaining OAuth Tokens</a>. 
+
+
+### <span class="jumptarget"> Postman/OAuth Quickstart Guide </span>
+
+Our documentation includes a new <a href="/api/#postman_qs" target="_blank">Postman/OAuth Quickstart Guide</a>, with links to a sample Postman collection. You can use these resources to quickly begin exercising BigCommerce APIs without the overhead of building an app.
 
 
 ### <span class="jumptarget"> Stencil: New template Property Replaces Deprecated template_file </span>
