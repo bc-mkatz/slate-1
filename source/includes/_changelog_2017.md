@@ -9,11 +9,6 @@
 The BigCommerce control panel's new **Advanced Settings** > **API Accounts** option allows you to directly generate and revoke OAuth tokens and their associated user accounts. For details on using these new options with your apps, please see our new documentation on <a href="/api/#cp_oauth_get" target="_blank">Obtaining OAuth Tokens</a>. 
 
 
-### <span class="jumptarget"> Postman/OAuth Quickstart Guide </span>
-
-Our documentation includes a new <a href="/api/#postman_qs" target="_blank">Postman/OAuth Quickstart Guide</a>, with links to a sample Postman collection. You can use these resources to quickly begin exercising BigCommerce APIs without the overhead of building an app.
-
-
 ### <span class="jumptarget"> Stencil: New template Property Replaces Deprecated template_file </span>
 
 BigCommerce has deprecated the Stencil themes platform's global `template_file` property. Its replacement is a new `template` property, which returns correct page types for custom template files. To pick up this correction, you must update your Stencil CLI installation. For details and links, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>.
