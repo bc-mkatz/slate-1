@@ -18,6 +18,7 @@ includes:
   - api_CRUD_shipping_zones
   - api_objects_shipping_zones_method
   - api_CRUD_shipping_zones_methods
+  - v3-catalog-sample-script-xform
   - v3-catalog-swagger-md
   - v3-catalog-html-no-css
 

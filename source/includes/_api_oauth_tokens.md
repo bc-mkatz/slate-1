@@ -11,9 +11,9 @@ You have two options for obtaining and managing credentials that will connect yo
 
 The following sections outline how to create and manage OAuth tokens in the BigCommerce control panel.
 
-<aside class="notice">
-<span class="notice"> Future-Proof with OAuth </span><br><br>
-We strongly recommend building all BigCommerce apps with OAuth. OAuth is compatible with all current and planned BigCommerce APIs, including v2 Webhooks and our v3 API. Also, any apps intended for sale on the BigCommerce App Marketplace must use OAuth. BigCommerce is gradually deprecating its legacy support for <a href="#basiccred">Basic Authentication</a>.
+<aside class="success">
+<span class="aside-success-hd"> Future-Proof with OAuth </span><br><br>
+We strongly recommend that you build all BigCommerce apps using OAuth. OAuth is compatible with all current and planned BigCommerce APIs, including v2 Webhooks and our v3 API. Also, any apps intended for sale on the BigCommerce App Marketplace must use OAuth. BigCommerce is gradually deprecating its legacy support for <a href="#basiccred">Basic Authentication</a>.
 </aside>
 
 
@@ -61,6 +61,6 @@ There is no undo, so be sure before you delete an account. You can also use the 
 
 <img src="../assets/store-api-accounts.png" alt="Creating an API account" height=100% width=100%>
 
-### <span class="jumptarget" id="request_oauth"> Making an API Request with OAuth </span>
+### <span class="jumptarget" id="request_oauth"> OAuth API Requests </span>
 
 To see how to quickly make initial OAuth requests using the <a href="https://www.getpostman.com/" target="_blank">Postman app</a>, please see our [Postman/OAuth Quickstart Guide](#postman_qs).

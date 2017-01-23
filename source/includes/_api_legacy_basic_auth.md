@@ -6,11 +6,11 @@ BigCommerce is gradually deprecating Basic Authentication. Apps must use <a href
 Even within the v2 API, apps relying on Basic Authentication cannot access some features. (For example, the Webhooks resource requires OAuth.) Also, apps intended for sale on the BigCommerce App Marketplace must use OAuth.
 </aside>
 
-## <span class="jumptarget" id=""> Obtaining Basic Auth API Tokens </span>
+## <span class="jumptarget" id=""> Obtaining Basic-Auth API Tokens </span>
 
-To obtain tokens to connect your app to a BigCommerce store using BAsic Auth, please see [Creating Basic Auth Credentials](#basiccred).
+To obtain tokens to connect your app to a BigCommerce store using Basic Auth, please see [Creating Basic Auth Credentials](#basiccred).
 
-## <span class="jumptarget"> Making Basic Auth Requests </span>
+## <span class="jumptarget"> Making Basic-Auth Requests </span>
 
 To allow an app to connect to a store using Basic Authentication, the store owner must manually generate an API key and provide this to the app developer along with a base path and user name.
 
