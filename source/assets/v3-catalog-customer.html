@@ -715,7 +715,7 @@ margin-bottom: 20px;
   "properties" : {
     "adjuster" : {
       "type" : "string",
-      "description" : "The type of adjuster, as either `relative` or `percentage`, for either the price or the weight of the variant when the modifier value is selected on the storefront.\n",
+      "description" : "The type of adjuster for either the price or the weight of the variant, when the modifier value is selected on the storefront.\n",
       "enum" : [ "relative", "percentage" ]
     },
     "adjuster_value" : {
@@ -816,11 +816,11 @@ margin-bottom: 20px;
     },
     "quantity_min" : {
       "type" : "integer",
-      "description" : "The maximum inclusive quantity of a product to satisfy this rule. Must be greater than the min value – unless this field has a value of 0 (zero), in which case there will be no maximum bound for this rule.\n"
+      "description" : "The minimum inclusive quantity of a product to satisfy this rule. Must be greater than or equal to zero.\n"
     },
     "quantity_max" : {
       "type" : "integer",
-      "description" : "The minimum inclusive quantity of a product to satisfy this rule. Must be greater than or equal to zero.\n"
+      "description" : "The maximum inclusive quantity of a product to satisfy this rule. Must be greater than the `quantity_min` value – unless this field has a value of 0 (zero), in which case there will be no maximum bound for this rule.\n"
     },
     "type" : {
       "type" : "string",
@@ -1095,7 +1095,7 @@ margin-bottom: 20px;
     },
     "purchasing_disabled_message" : {
       "type" : "string",
-      "description" : "Message displayed in the storefront when a rule disables the purchasing of a product.\n"
+      "description" : "Message displayed on the storefront when a rule disables the purchasing of a product.\n"
     },
     "purchasing_hidden" : {
       "type" : "boolean",
@@ -1112,7 +1112,7 @@ margin-bottom: 20px;
       }
     }
   },
-  "description" : "Apply price, weight. image, or availabilty adjustments to product based on a set of conditions. A complex rule's condistion must contain more than one modifier value or a modifier value and a variant id.\n"
+  "description" : "Apply price, weight, image, or availabilty adjustments to product, based on a set of conditions. A complex rule's condition must either contain more than one modifier value, or else contain a modifier value and a variant id.\n"
 };
     defs.ComplexRuleCollectionResponse = {
   "type" : "object",
@@ -1296,15 +1296,15 @@ margin-bottom: 20px;
     "created_at" : {
       "type" : "string",
       "format" : "date-time",
-      "description" : "Created date and time for the metafield.\n"
+      "description" : "Date and time of the metafield's creation.\n"
     },
     "updated_at" : {
       "type" : "string",
       "format" : "date-time",
-      "description" : "Last updated date and time for the metafield.\n"
+      "description" : "Date and time when the metafield was last updated.\n"
     }
   },
-  "description" : "Allows for app partners to write custom data to various resources in the API.\n"
+  "description" : "Allows app partners to write custom data to various resources in the API.\n"
 };
     defs.MetafieldResponse = {
   "type" : "object",
@@ -1331,7 +1331,7 @@ margin-bottom: 20px;
     },
     "name" : {
       "type" : "string",
-      "description" : "The unique option name, auto-generated from the display name, a timestamp, and the product ID.\n"
+      "description" : "The unique option name. Auto-generated from the display name, a timestamp, and the product ID.\n"
     },
     "display_name" : {
       "type" : "string",
@@ -1516,7 +1516,7 @@ margin-bottom: 20px;
     },
     "date_limit_mode" : {
       "type" : "string",
-      "description" : "(date) The type of limit that is allowed to be entered on a date option. Enum alues: `earliest`, `range`, `latest`.\n",
+      "description" : "(date) The type of limit that is allowed to be entered on a date option.\n",
       "enum" : [ "earliest", "range", "latest" ]
     },
     "date_earliest_value" : {
@@ -1531,12 +1531,12 @@ margin-bottom: 20px;
     },
     "file_types_mode" : {
       "type" : "string",
-      "description" : "(file) The kind of restriction on the types of files that can be uploaded to a file upload option.\n  `specific` - restricts upload to particular file types.\n  `all` - allows all files types.\n",
+      "description" : "(file) The kind of restriction on the file types that can be uploaded with a file upload option. Values: `specific` - restricts uploads to particular file types; `all` - allows all file types.\n",
       "enum" : [ "specific", "all" ]
     },
     "file_types_supported" : {
       "type" : "array",
-      "description" : "(file) The kind of files allowed to be uploaded if the `file_type_option` is set to `specific`.\n  `images` - Allows upload of image MIME types (`bmp`,`gif`,`jpg`,`jpeg`,`jpe`,`jif`,`jfif`,`jfi`,`png`,`wbmp`,`xbm`,`tiff`).\n  `documents` - Allows upload of document MIME types (`txt`,`pdf`,`rtf`,`doc`,`docx`,`xls`,`xlsx`,`accdb`,`mdb`,`one`,`pps`,`ppsx`,`ppt`,`pptx`,`pub`,`odt`,`ods`,`odp`,`odg`,`odf`).\n  `other` - Allows other file type defined in the `file_types_other` array.\n",
+      "description" : "(file) The type of files allowed to be uploaded if the `file_type_option` is set to `specific`. Values:\n  `images` - Allows upload of image MIME types (`bmp`,`gif`,`jpg`,`jpeg`,`jpe`,`jif`,`jfif`,`jfi`,`png`,`wbmp`,`xbm`,`tiff`).\n  `documents` - Allows upload of document MIME types (`txt`,`pdf`,`rtf`,`doc`,`docx`,`xls`,`xlsx`,`accdb`,`mdb`,`one`,`pps`,`ppsx`,`ppt`,`pptx`,`pub`,`odt`,`ods`,`odp`,`odg`,`odf`).\n  `other` - Allows file types defined in the `file_types_other` array.\n",
       "items" : {
         "type" : "string"
       }
@@ -1550,11 +1550,11 @@ margin-bottom: 20px;
     },
     "file_max_size" : {
       "type" : "integer",
-      "description" : "(file) The maximum size of the file that can be used in the file upload option.\n"
+      "description" : "(file) The maximum size for a file that can be used with the file upload option.\n"
     },
     "text_characters_limited" : {
       "type" : "boolean",
-      "description" : "(text, multi_line_text) Flag to validate the length of the text of a text or multi-line text input.\n"
+      "description" : "(text, multi_line_text) Flag to validate the length of a text or multi-line text input.\n"
     },
     "text_min_length" : {
       "type" : "integer",
@@ -1578,20 +1578,20 @@ margin-bottom: 20px;
     },
     "number_limit_mode" : {
       "type" : "string",
-      "description" : "(numbers_only_text) The type of limit that is allowed to be entered on a number option (`lowest`, `highest`, `range`).\n",
+      "description" : "(numbers_only_text) The type of limit on values entered for a number option.\n",
       "enum" : [ "lowest", "highest", "range" ]
     },
     "number_lowest_value" : {
       "type" : "number",
-      "description" : "(numbers_only_text) The lowest allowed value for a number option if `limit_input` is true.\n"
+      "description" : "(numbers_only_text) The lowest allowed value for a number option if `number_limited` is true.\n"
     },
     "number_highest_value" : {
       "type" : "number",
-      "description" : "(numbers_only_text) The highest allowed value for a number option if `limit_input` is true.\n"
+      "description" : "(numbers_only_text) The highest allowed value for a number option if `number_limited` is true.\n"
     },
     "number_integers_only" : {
       "type" : "boolean",
-      "description" : "(numbers_only_text) Flag to limit the imput on a number option to only accept whole numbers.\n"
+      "description" : "(numbers_only_text) Flag to limit the input on a number option to whole numbers only.\n"
     },
     "product_list_adjusts_inventory" : {
       "type" : "boolean",
@@ -1599,11 +1599,11 @@ margin-bottom: 20px;
     },
     "product_list_adjusts_pricing" : {
       "type" : "boolean",
-      "description" : "(product_list, product_list_with_images) Flag to add the price of the optional product to the price of the main product\n"
+      "description" : "(product_list, product_list_with_images) Flag to add the optional product's price to the main product's price.\n"
     },
     "product_list_shipping_calc" : {
       "type" : "string",
-      "description" : "(product_list, product_list_with_images)  How to factor the optional product's weight and dimensions (package) into the shipping quote (none - don't adjust, weight - use shipping weight only, package - use package, weight and dimensions)\n",
+      "description" : "(product_list, product_list_with_images) How to factor the optional product's weight and package dimensions into the shipping quote. Values: `none` - don't adjust; `weight` - use shipping weight only; `package` - use weight and dimensions.\n",
       "enum" : [ "none", "weight", "package" ]
     }
   }
@@ -1822,16 +1822,16 @@ margin-bottom: 20px;
     },
     "availability_description" : {
       "type" : "string",
-      "description" : "Availability text displayed on the checkout page under the product title. Tells the customer how long it will normally take to ship this product, such as 'Usually ships in 24 hours.'\n"
+      "description" : "Availability text displayed on the checkout page, under the product title. Tells the customer how long it will normally take to ship this product, such as 'Usually ships in 24 hours.'\n"
     },
     "gift_wrapping_options_type" : {
       "type" : "string",
-      "description" : "Type of gift wrapping options. Values: `any` - allow any gift wrapping options in the store; `none` - disallow gift wrapping on the product; `list` – provide a list of IDs in `gift_wrapping_options_list` field.\n",
+      "description" : "Type of gift-wrapping options. Values: `any` - allow any gift-wrapping options in the store; `none` - disallow gift wrapping on the product; `list` – provide a list of IDs in the `gift_wrapping_options_list` field.\n",
       "enum" : [ "any", "none", "list" ]
     },
     "gift_wrapping_options_list" : {
       "type" : "array",
-      "description" : "A list of gift wrapping option IDs.\n",
+      "description" : "A list of gift-wrapping option IDs.\n",
       "items" : {
         "type" : "integer"
       }
@@ -1958,50 +1958,59 @@ margin-bottom: 20px;
   "description" : "Response payload for the Bigcommerce API.\n"
 };
     defs.ProductImage = {
+  "allOf" : [ {
+    "$ref" : "#/definitions/ProductImageBase"
+  }, {
+    "properties" : {
+      "id" : {
+        "type" : "integer",
+        "description" : "The unique numeric ID of the image; increments sequentially.\n"
+      },
+      "product_id" : {
+        "type" : "integer",
+        "description" : "The unique numeric identifier for the product with which the image is associated.\n"
+      },
+      "image_file" : {
+        "type" : "string",
+        "description" : "The local path to the original image file uploaded to BigCommerce.\n"
+      },
+      "url_zoom" : {
+        "type" : "string",
+        "description" : "The zoom URL for this image. By default, this is used as the zoom image on product pages when zoom images are enabled.\n"
+      },
+      "url_standard" : {
+        "type" : "string",
+        "description" : "The standard URL for this image. By default, this is used for product-page images.\n"
+      },
+      "url_thumbnail" : {
+        "type" : "string",
+        "description" : "The thumbnail URL for this image. By default, this is the image size used on the category page and in side panels.\n"
+      },
+      "url_tiny" : {
+        "type" : "string",
+        "description" : "The tiny URL for this image. By default, this is the image size used for thumbnails beneath the product image on a product page.\n"
+      }
+    }
+  } ],
+  "description" : "The full ProductImage model.\n"
+};
+    defs.ProductImageBase = {
   "type" : "object",
   "properties" : {
-    "id" : {
-      "type" : "integer",
-      "description" : "The unique numeric ID of the image; increments sequentially.\n"
-    },
-    "product_id" : {
-      "type" : "integer",
-      "description" : "The unique numeric identifier for the product with which the image is associated.\n"
-    },
     "is_thumbnail" : {
       "type" : "boolean",
       "description" : "Flag for identifying whether the image is used as the product's thumbnail.\n"
     },
     "sort_order" : {
       "type" : "integer",
-      "description" : "The order in which the image will be displayed on the product page. Higher integers will give the image a lower priority. If the image is given a lower priority, then when updating, all images with a `sort_order` the same or greater than the image's new `sort_order` value will have their `sort_order` reordered.\n"
+      "description" : "The order in which the image will be displayed on the product page. Higher integers give the image a lower priority. When updating, if the image is given a lower priority, all images with a `sort_order` the same as or greater than the image's new `sort_order` value will have their `sort_order`s reordered.\n"
     },
     "description" : {
       "type" : "string",
       "description" : "The description for the image.\n"
-    },
-    "image_file" : {
-      "type" : "string",
-      "description" : "The local path to the original image file uploaded to BigCommerce. Must be POSTed into as a multipart/form-data field.\n"
-    },
-    "url_zoom" : {
-      "type" : "string",
-      "description" : "The zoom URL for this image.\n"
-    },
-    "url_standard" : {
-      "type" : "string",
-      "description" : "The standard URL for this image.\n"
-    },
-    "url_thumbnail" : {
-      "type" : "string",
-      "description" : "The thumbnail URL for this image.\n"
-    },
-    "url_tiny" : {
-      "type" : "string",
-      "description" : "The tiny URL for this image.\n"
     }
   },
-  "description" : "An product image model.\n"
+  "description" : "Common ProductImage properties.\n"
 };
     defs.ProductImageCollectionResponse = {
   "type" : "object",
@@ -2018,6 +2027,29 @@ margin-bottom: 20px;
   },
   "description" : "Response payload for the Bigcommerce API.\n"
 };
+    defs.ProductImagePost = {
+  "allOf" : [ {
+    "$ref" : "#/definitions/ProductImageBase"
+  }, {
+    "properties" : {
+      "image_url" : {
+        "type" : "string",
+        "description" : "Must be a fully qualified URL path, including protocol.\n"
+      },
+      "image_file" : {
+        "type" : "string",
+        "description" : "Must be sent as a multipart/form-data field in the request body.\n"
+      }
+    }
+  } ],
+  "description" : "The model for a POST to create an image on a product.\n"
+};
+    defs.ProductImagePut = {
+  "allOf" : [ {
+    "$ref" : "#/definitions/ProductImageBase"
+  }, { } ],
+  "description" : "The model for a PUT to update applicable ProductImage fields.\n"
+};
     defs.ProductImageResponse = {
   "type" : "object",
   "properties" : {
@@ -2025,7 +2057,7 @@ margin-bottom: 20px;
       "$ref" : "#/definitions/ProductImage"
     },
     "meta" : {
-      "$ref" : "#/definitions/CollectionMeta"
+      "$ref" : "#/definitions/Meta"
     }
   },
   "description" : "Response payload for the Bigcommerce API.\n"
@@ -2095,7 +2127,7 @@ margin-bottom: 20px;
     },
     "length" : {
       "type" : "string",
-      "description" : "length of video. This will be filled in according to data on YouTube.\n"
+      "description" : "Length of the video. This will be filled in according to data on YouTube.\n"
     }
   },
   "description" : "A product video model.\n"
@@ -7139,7 +7171,7 @@ try {
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">Creates a &#x60;Product&#x60; in the BigCommerce Catalog
+                        <p class="marked">Creates a &#x60;Product&#x60; in the BigCommerce Catalog.
 </p>
                         <p></p>
                         <br />
@@ -7177,7 +7209,7 @@ public class CatalogApiExample {
     public static void main(String[] args) {
         
         CatalogApi apiInstance = new CatalogApi();
-        ProductPost product = ; // ProductPost | A BigCommerce `Product` object
+        ProductPost product = ; // ProductPost | A BigCommerce `Product` object.
 
         try {
             ProductResponse result = apiInstance.createProduct(product);
@@ -7197,7 +7229,7 @@ public class CatalogApiExample {
 
     public static void main(String[] args) {
         CatalogApi apiInstance = new CatalogApi();
-        ProductPost product = ; // ProductPost | A BigCommerce `Product` object
+        ProductPost product = ; // ProductPost | A BigCommerce `Product` object.
 
         try {
             ProductResponse result = apiInstance.createProduct(product);
@@ -7214,7 +7246,7 @@ public class CatalogApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Catalog-createProduct-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">ProductPost *product = ; // A BigCommerce `Product` object
+                              <pre class="prettyprint"><code class="language-cpp">ProductPost *product = ; // A BigCommerce `Product` object.
 
 
 CatalogApi *apiInstance = [[CatalogApi alloc] init];
@@ -7236,7 +7268,7 @@ CatalogApi *apiInstance = [[CatalogApi alloc] init];
 
 var api = new BigCommerceCatalogApi.CatalogApi()
 
-var product = ; // {ProductPost} A BigCommerce `Product` object
+var product = ; // {ProductPost} A BigCommerce `Product` object.
 
 
 
@@ -7269,7 +7301,7 @@ namespace Example
         {
             
             var apiInstance = new CatalogApi();
-            var product = new ProductPost(); // ProductPost | A BigCommerce `Product` object
+            var product = new ProductPost(); // ProductPost | A BigCommerce `Product` object.
 
 
             try
@@ -7291,7 +7323,7 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\CatalogApi();
-$product = ; // ProductPost | A BigCommerce `Product` object
+$product = ; // ProductPost | A BigCommerce `Product` object.
 
 
 try {
@@ -7323,7 +7355,7 @@ try {
 													var schemaWrapper = {
   "in" : "body",
   "name" : "product",
-  "description" : "A BigCommerce `Product` object\n",
+  "description" : "A BigCommerce `Product` object.\n",
   "required" : true,
   "schema" : {
     "$ref" : "#/definitions/ProductPost"
@@ -7504,7 +7536,7 @@ try {
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">Creates an image on a product. Publicly accessible URLs and files (form post) are valid parameters.
+                        <p class="marked">Creates an image on a product. Publically accessible URLs and files (form post) are valid parameters.
 </p>
                         <p></p>
                         <br />
@@ -7544,7 +7576,7 @@ public class CatalogApiExample {
         CatalogApi apiInstance = new CatalogApi();
         Integer productId = 56; // Integer | The ID of the `Product` to which the image is being attached.
 
-        ProductImage productImage = ; // ProductImage | A BigCommerce `ProductImage` object.
+        ProductImagePost productImage = ; // ProductImagePost | A BigCommerce `ProductImage` object.
 
         try {
             ProductImageResponse result = apiInstance.createProductImage(productId, productImage);
@@ -7566,7 +7598,7 @@ public class CatalogApiExample {
         CatalogApi apiInstance = new CatalogApi();
         Integer productId = 56; // Integer | The ID of the `Product` to which the image is being attached.
 
-        ProductImage productImage = ; // ProductImage | A BigCommerce `ProductImage` object.
+        ProductImagePost productImage = ; // ProductImagePost | A BigCommerce `ProductImage` object.
 
         try {
             ProductImageResponse result = apiInstance.createProductImage(productId, productImage);
@@ -7585,7 +7617,7 @@ public class CatalogApiExample {
                             <div class="tab-pane" id="examples-Catalog-createProductImage-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Integer *productId = 56; // The ID of the `Product` to which the image is being attached.
 
-ProductImage *productImage = ; // A BigCommerce `ProductImage` object.
+ProductImagePost *productImage = ; // A BigCommerce `ProductImage` object.
 
 
 CatalogApi *apiInstance = [[CatalogApi alloc] init];
@@ -7611,7 +7643,7 @@ var api = new BigCommerceCatalogApi.CatalogApi()
 var productId = 56; // {Integer} The ID of the `Product` to which the image is being attached.
 
 
-var productImage = ; // {ProductImage} A BigCommerce `ProductImage` object.
+var productImage = ; // {ProductImagePost} A BigCommerce `ProductImage` object.
 
 
 
@@ -7646,7 +7678,7 @@ namespace Example
             var apiInstance = new CatalogApi();
             var productId = 56;  // Integer | The ID of the `Product` to which the image is being attached.
 
-            var productImage = new ProductImage(); // ProductImage | A BigCommerce `ProductImage` object.
+            var productImage = new ProductImagePost(); // ProductImagePost | A BigCommerce `ProductImage` object.
 
 
             try
@@ -7670,7 +7702,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\Api\CatalogApi();
 $productId = 56; // Integer | The ID of the `Product` to which the image is being attached.
 
-$productImage = ; // ProductImage | A BigCommerce `ProductImage` object.
+$productImage = ; // ProductImagePost | A BigCommerce `ProductImage` object.
 
 
 try {
@@ -7746,7 +7778,7 @@ try {
   "description" : "A BigCommerce `ProductImage` object.\n",
   "required" : true,
   "schema" : {
-    "$ref" : "#/definitions/ProductImage"
+    "$ref" : "#/definitions/ProductImagePost"
   }
 };
 													
@@ -7826,7 +7858,7 @@ try {
                                   <input id='examples-Catalog-createProductImage-schema-data' type='hidden' value=''></input>
                                 </div>
                               </div>
-                            <h3> Status: 404 - The resource was not found.
+                            <h3> Status: 404 - The product ID does not exist.
  </h3>
 
                               <ul class="nav nav-tabs nav-tabs-examples" >
@@ -7843,7 +7875,7 @@ try {
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "The resource was not found.\n",
+  "description" : "The product ID does not exist.\n",
   "schema" : {
     "$ref" : "#/definitions/NotFound"
   }
@@ -22354,6 +22386,52 @@ try {
                                   <input id='examples-Catalog-getProductImages-schema-data' type='hidden' value=''></input>
                                 </div>
                               </div>
+                            <h3> Status: 204 - There are not any images on this product.
+ </h3>
+
+                            <h3> Status: 404 - The product ID does not exist.
+ </h3>
+
+                              <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a href="#examples-Catalog-getProductImages-schema">Schema</a>
+                                </li>
+
+                              </ul>
+
+                              <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="examples-Catalog-getProductImages-schema">
+                                  <div id='examples-Catalog-getProductImages-schema-404' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "The product ID does not exist.\n",
+  "schema" : {
+    "$ref" : "#/definitions/NotFound"
+  }
+};
+                                        var schema = schemaWrapper.schema;
+                                        schemaWrapper.definitions = defs;
+                                        //console.log(JSON.stringify(schema))
+                                        JsonRefs.resolveRefs(schemaWrapper, {
+                                            "depth": 3,
+                                            "resolveRemoteRefs": false,
+                                            "resolveFileRefs": false
+                                        }, function(err, resolved, metadata) {
+                                          //console.log(JSON.stringify(resolved));
+                                          var view = new JSONSchemaView(resolved.schema, 3);
+                                          $('#examples-Catalog-getProductImages-schema-data').val(JSON.stringify(resolved.schema));
+                                          var result = $('#examples-Catalog-getProductImages-schema-404');
+                                          result.empty();
+                                          result.append(view.render());
+                                        });
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='examples-Catalog-getProductImages-schema-data' type='hidden' value=''></input>
+                                </div>
+                              </div>
                         </article>
                       </div>
                       <hr>
@@ -23936,9 +24014,9 @@ public class CatalogApiExample {
 
         Integer inventoryLevel = 56; // Integer | Filter items by inventory_level.
 
-        Integer inventoryLow = 56; // Integer | Filter items by inventory_low, values: 1, 0.
+        Integer inventoryLow = 56; // Integer | Filter items by inventory_low; values: 1, 0.
 
-        Integer outOfStock = 56; // Integer | Filter items by out_of_stock. To enable the filter, pass out_of_stock=1.
+        Integer outOfStock = 56; // Integer | Filter items by out_of_stock. To enable the filter, pass `out_of_stock`=`1`.
 
         Integer totalSold = 56; // Integer | Filter items by total_sold.
 
@@ -24009,9 +24087,9 @@ public class CatalogApiExample {
 
         Integer inventoryLevel = 56; // Integer | Filter items by inventory_level.
 
-        Integer inventoryLow = 56; // Integer | Filter items by inventory_low, values: 1, 0.
+        Integer inventoryLow = 56; // Integer | Filter items by inventory_low; values: 1, 0.
 
-        Integer outOfStock = 56; // Integer | Filter items by out_of_stock. To enable the filter, pass out_of_stock=1.
+        Integer outOfStock = 56; // Integer | Filter items by out_of_stock. To enable the filter, pass `out_of_stock`=`1`.
 
         Integer totalSold = 56; // Integer | Filter items by total_sold.
 
@@ -24079,9 +24157,9 @@ Integer *isFreeShipping = 56; // Filter items by is_free_shipping.
  (optional)
 Integer *inventoryLevel = 56; // Filter items by inventory_level.
  (optional)
-Integer *inventoryLow = 56; // Filter items by inventory_low, values: 1, 0.
+Integer *inventoryLow = 56; // Filter items by inventory_low; values: 1, 0.
  (optional)
-Integer *outOfStock = 56; // Filter items by out_of_stock. To enable the filter, pass out_of_stock=1.
+Integer *outOfStock = 56; // Filter items by out_of_stock. To enable the filter, pass `out_of_stock`=`1`.
  (optional)
 Integer *totalSold = 56; // Filter items by total_sold.
  (optional)
@@ -24181,9 +24259,9 @@ var opts = {
 
   'inventoryLevel': 56, // {Integer} Filter items by inventory_level.
 
-  'inventoryLow': 56, // {Integer} Filter items by inventory_low, values: 1, 0.
+  'inventoryLow': 56, // {Integer} Filter items by inventory_low; values: 1, 0.
 
-  'outOfStock': 56, // {Integer} Filter items by out_of_stock. To enable the filter, pass out_of_stock=1.
+  'outOfStock': 56, // {Integer} Filter items by out_of_stock. To enable the filter, pass `out_of_stock`=`1`.
 
   'totalSold': 56, // {Integer} Filter items by total_sold.
 
@@ -24267,9 +24345,9 @@ namespace Example
  (optional) 
             var inventoryLevel = 56;  // Integer | Filter items by inventory_level.
  (optional) 
-            var inventoryLow = 56;  // Integer | Filter items by inventory_low, values: 1, 0.
+            var inventoryLow = 56;  // Integer | Filter items by inventory_low; values: 1, 0.
  (optional) 
-            var outOfStock = 56;  // Integer | Filter items by out_of_stock. To enable the filter, pass out_of_stock=1.
+            var outOfStock = 56;  // Integer | Filter items by out_of_stock. To enable the filter, pass `out_of_stock`=`1`.
  (optional) 
             var totalSold = 56;  // Integer | Filter items by total_sold.
  (optional) 
@@ -24342,9 +24420,9 @@ $isFreeShipping = 56; // Integer | Filter items by is_free_shipping.
 
 $inventoryLevel = 56; // Integer | Filter items by inventory_level.
 
-$inventoryLow = 56; // Integer | Filter items by inventory_low, values: 1, 0.
+$inventoryLow = 56; // Integer | Filter items by inventory_low; values: 1, 0.
 
-$outOfStock = 56; // Integer | Filter items by out_of_stock. To enable the filter, pass out_of_stock=1.
+$outOfStock = 56; // Integer | Filter items by out_of_stock. To enable the filter, pass `out_of_stock`=`1`.
 
 $totalSold = 56; // Integer | Filter items by total_sold.
 
@@ -24865,7 +24943,7 @@ try {
 													var schemaWrapper = {
   "name" : "inventory_low",
   "in" : "query",
-  "description" : "Filter items by inventory_low, values: 1, 0.\n",
+  "description" : "Filter items by inventory_low; values: 1, 0.\n",
   "required" : false,
   "type" : "integer"
 };
@@ -24898,7 +24976,7 @@ try {
 													var schemaWrapper = {
   "name" : "out_of_stock",
   "in" : "query",
-  "description" : "Filter items by out_of_stock. To enable the filter, pass out_of_stock=1.\n",
+  "description" : "Filter items by out_of_stock. To enable the filter, pass `out_of_stock`=`1`.\n",
   "required" : false,
   "type" : "integer"
 };
@@ -25289,7 +25367,7 @@ try {
                             </table>
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - An array of products and metadata
+                            <h3> Status: 200 - An array of products and metadata.
  </h3>
 
                               <ul class="nav nav-tabs nav-tabs-examples" >
@@ -25306,7 +25384,7 @@ try {
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "An array of products and metadata\n",
+  "description" : "An array of products and metadata.\n",
   "schema" : {
     "$ref" : "#/definitions/ProductCollectionResponse"
   }
@@ -31190,7 +31268,7 @@ public class CatalogApiExample {
 
         Integer imageId = 56; // Integer | The ID of the `Image` that is being operated on.
 
-        ProductImage productImage = ; // ProductImage | A BigCommerce `ProductImage` object.
+        ProductImagePut productImage = ; // ProductImagePut | A BigCommerce `ProductImage` object.
 
         try {
             ProductImageResponse result = apiInstance.updateProductImage(productId, imageId, productImage);
@@ -31214,7 +31292,7 @@ public class CatalogApiExample {
 
         Integer imageId = 56; // Integer | The ID of the `Image` that is being operated on.
 
-        ProductImage productImage = ; // ProductImage | A BigCommerce `ProductImage` object.
+        ProductImagePut productImage = ; // ProductImagePut | A BigCommerce `ProductImage` object.
 
         try {
             ProductImageResponse result = apiInstance.updateProductImage(productId, imageId, productImage);
@@ -31235,7 +31313,7 @@ public class CatalogApiExample {
 
 Integer *imageId = 56; // The ID of the `Image` that is being operated on.
 
-ProductImage *productImage = ; // A BigCommerce `ProductImage` object.
+ProductImagePut *productImage = ; // A BigCommerce `ProductImage` object.
 
 
 CatalogApi *apiInstance = [[CatalogApi alloc] init];
@@ -31265,7 +31343,7 @@ var productId = 56; // {Integer} The ID of the `Product` to which the image is b
 var imageId = 56; // {Integer} The ID of the `Image` that is being operated on.
 
 
-var productImage = ; // {ProductImage} A BigCommerce `ProductImage` object.
+var productImage = ; // {ProductImagePut} A BigCommerce `ProductImage` object.
 
 
 
@@ -31302,7 +31380,7 @@ namespace Example
 
             var imageId = 56;  // Integer | The ID of the `Image` that is being operated on.
 
-            var productImage = new ProductImage(); // ProductImage | A BigCommerce `ProductImage` object.
+            var productImage = new ProductImagePut(); // ProductImagePut | A BigCommerce `ProductImage` object.
 
 
             try
@@ -31328,7 +31406,7 @@ $productId = 56; // Integer | The ID of the `Product` to which the image is bein
 
 $imageId = 56; // Integer | The ID of the `Image` that is being operated on.
 
-$productImage = ; // ProductImage | A BigCommerce `ProductImage` object.
+$productImage = ; // ProductImagePut | A BigCommerce `ProductImage` object.
 
 
 try {
@@ -31439,7 +31517,7 @@ try {
   "description" : "A BigCommerce `ProductImage` object.\n",
   "required" : true,
   "schema" : {
-    "$ref" : "#/definitions/ProductImage"
+    "$ref" : "#/definitions/ProductImagePut"
   }
 };
 													
@@ -35864,7 +35942,7 @@ try {
           </div>
           <div id="generator">
             <div class="content">
-              Generated 2017-01-26T06:40:49.444Z
+              Generated 2017-01-27T07:40:39.280Z
             </div>
           </div>
       </div>
