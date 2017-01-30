@@ -1360,7 +1360,9 @@ Please view the documentation generated from the Swagger file [here](http://edit
    <div class="example-data-content-type">
     Content-Type: application/json
    </div>
-   <pre class="example"><code>{
+
+```json
+{
   "data" : {
     "inventory_value" : 1.3579000000000001069366817318950779736042022705078125,
     "inventory_count" : 123,
@@ -1368,7 +1370,9 @@ Please view the documentation generated from the Swagger file [here](http://edit
     "primary_category_name" : "aeiou"
   },
   "meta" : { }
-}</code></pre>
+}
+```
+
    <h3 class="field-label">
     Produces
    </h3>
