@@ -1,17 +1,18 @@
-# v3 Catalog API Documentation
+# <span class="jumptarget"> v3 Catalog API Documentation </span>
 
-_Welcome! Please note that this API is in our partner-release stage, which means that in the short term, we'll be iterating on feedback from partners. Our goal is to make sure that all concerns are addressed, and that we reach our goal of creating the most powerful, easiest-to-use catalog API in ecommerce. Because of this iterative approach, please expect small changes and many additions to occur._
+Welcome! Please note that this API is in our partner-release stage, which means that in the short term, we'll be iterating on feedback from partners. Our goal is to make sure that all concerns are addressed, and that we reach our goal of creating the most powerful, easiest-to-use catalog API in ecommerce. Because of this iterative approach, please expect small changes and many additions to occur.
 
-**Have suggestions, feedback or questions? Submit them as an issue here:** 
-https://github.com/bigcommerce/api/issues
+**Have suggestions, feedback or questions? Submit them as an issue here:**
+[https://github.com/bigcommerce/api/issues]()
 
-**Want to see what we have in development, and help direct our roadmap? View our public API roadmap here:** https://trello.com/b/1Od4oCsl/bigcommerce-api-roadmap
+**Want to see what we have in development, and help direct our roadmap? View our public API roadmap here:**    
+[https://trello.com/b/1Od4oCsl/bigcommerce-api-roadmap]()
 
-## Access and Authentication
+## <span class="jumptarget"> Access and Authentication </span>
 
-All BigCommerce stores have access to the v3 Catalog API.
+All BigCommerce stores have access to the v3 Catalog and Customers API.
 
-The base URI is: https://api.bigcommerce.com/stores/{store_hash}/v3/
+The base URI is: [https://api.bigcommerce.com/stores/{store_hash}/v3/]()
 
 To authenticate, you'll need to use an OAuth client ID and token, sent along with the following headers:
   
@@ -19,15 +20,18 @@ To authenticate, you'll need to use an OAuth client ID and token, sent along wit
 - X-Auth-Client: {client_id}  
 - X-Auth-Token: {oauth_token}
 
-The flow to register for a client ID and retrieve a token is the same as with the v2 API:
-- To get your Client ID, you must complete [App Registration](https://developer.bigcommerce.com/api/registration).
-- To get your OAuth token, you must complete [App Installation](https://developer.bigcommerce.com/api/callback).
+The flow to obtain a client ID and token is the same as with the v2 API. You can now obtain OAuth credentials directly from the BigCommerce control panel, as outlined [here](/api/#authenticating-with-oauth).
 
-On our short-term roadmap is the ability to more easily create OAuth credentials, within the control panel – similar to the way legacy v2 keys are created now. _Note that in the future, we'll be deprecating legacy keys from v2, and removing the ability to create v2 keys within the CP. So grokking our OAuth flow now is not a wasted effort!_
 
-Existing v2 client ids and tokens will also work with the v3 API. So, if you've already integrated with v2 using our OAuth flow, you should be golden!
+<aside class="success">
+<span class="aside-success-hd"> Future-Proof with OAuth </span><br><br>
+Note that in the future, we'll be deprecating <a href="#basiccred">legacy keys from v2</a> and removing the ability to create v2 keys within the control panel. So grokking our OAuth flow now is not a wasted effort!
+</aside>
 
-## What's New?
+
+Existing v2 client IDs and tokens will also work with the v3 API. So, if you've already integrated with v2 using our OAuth flow, you should be ready to work with this v3 API!
+
+## <span class="jumptarget"> What's New? </span>
 
 - Variants
   - Every purchasable entity in the catalog is now a variant. When you create a product without any options, we automatically create a variant for you. This enables enhanced flows around inventory management, such as the ability to solely use the variants endpoint to manage inventory levels.
@@ -43,7 +47,7 @@ Existing v2 client ids and tokens will also work with the v3 API. So, if you've 
 - Full Access to Modifer Configuration values
   - Properties like number-only field limits, and product-list inventory adjustment settings, are now available via this API. This exposes more than 20 properties previously unavailable to our developers.
 
-## What's Not Here?
+## <span class="jumptarget"> What's Not Here? </span>
 
 If you're currently consuming our v2 API, you'll notice that some catalog endpoints and elements are missing from this version. Some of the omissions are intentional; we're iterating on others, making sure they're done right. 
 
@@ -65,7 +69,7 @@ If you're currently consuming our v2 API, you'll notice that some catalog endpoi
 
 You can see how we're planning to iterate by looking at the [public API roadmap](https://trello.com/b/1Od4oCsl/bigcommerce-api-roadmap). 
 
-## v2 Catalog API and Control-Panel Interoperability
+## <span class="jumptarget"> v2 Catalog API and Control-Panel Interoperability </span>
 
 The v3 Catalog API is essentially our catalog's future state. This means that many concepts don't map visibly to their v2 and control-panel relatives.
 
@@ -79,12 +83,13 @@ The good news here is we've built this API with v2 interoperability in mind. So 
 
 _We're already refreshing our control panel's Add/Edit Product workflow to align with the concepts in v3._
 
-### Product POST with Variants
+### <span class="jumptarget"> Product POST with Variants </span>
 
 When you include variants in your Product POST, we'll automatically create all the options and option values for you. If you don't pass the price and weight with the variants, the product price and weight will be used for the variants on the storefront.
 
 Here's a sample POST to https://api.bigcommerce.com/stores/{store-hash}/v3/catalog/products:
-```javascript
+
+```json
 {
     "name": "T-shirt",
     "type": "physical",
@@ -182,7 +187,8 @@ Here's a sample POST to https://api.bigcommerce.com/stores/{store-hash}/v3/catal
 ```
 
 When you create a product, we'll automatically return variants in the response:
-```javascript
+
+```json
 {
     "data": {
         "id": 114,
@@ -407,12 +413,12 @@ When you create a product, we'll automatically return variants in the response:
 }
 ```
 
-## Expanding Product Sub-Resources on GET
+## <span class="jumptarget"> Expanding Product Sub-Resources on GET </span>
 
 You can include sub-resources on a product, as a comma-separated list, by using `include={sub-resources}` as a query string. Valid expansions currently include `variants`, `images`, `custom_fields`, and `bulk_pricing_rules`. For instance, if you wanted variants and custom fields to also return in the product response, you'd GET: 
 https://api.bigcommerce.com/stores/{store-hash}/v3/catalog/products?include=variants,custom_fields
 
-# v3 Catalog API Reference
+## <span class="jumptarget"> v3 Catalog API Reference </span>
 
 Please view the documentation generated from the Swagger file [here](http://editor.swagger.io/#/?import=https://raw.githubusercontent.com/bigcommerce/api/master/swagger/v3-catalog.yaml).
 
@@ -423,17 +429,17 @@ Please view the documentation generated from the Swagger file [here](http://edit
   </title>
  </head>
  <body>
-  <h1>
+  <h2 class="jumptarget">
    BigCommerce Catalog API
-  </h1>
+  </h2>
   <div class="app-desc">
-   A Swagger Document for the BigCommmerce API V3.
+   Swagger-generated documentation for the BigCommmerce v3 API.
   </div>
-  <h2>
+  <h3 class="jumptarget">
    <a name="__Methods">
     Methods/Endpoints
    </a>
-  </h2>
+  </h3>
   [ Jump to
   <a href="#__Models">
    Models
@@ -1231,7 +1237,7 @@ Please view the documentation generated from the Swagger file [here](http://edit
     </a>
    </li>
   </ul>
-  <h4>
+  <h4 class="jumptarger">
    <a href="#Customers">
     Customers
    </a>
@@ -1298,7 +1304,7 @@ Please view the documentation generated from the Swagger file [here](http://edit
     </a>
    </li>
   </ul>
-  <h1>
+  <h1 classs="jumptarget">
    <a name="Catalog">
     Catalog
    </a>
@@ -12399,7 +12405,7 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </a>
   </div>
   <hr/>
-  <h1>
+  <h1 class="jumptarget">
    <a name="Customers">
     Customers
    </a>
@@ -13216,11 +13222,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Up
    </a>
   </div>
-  <h2>
+  <h3 class="jumptarget">
    <a name="__Models">
     Models
    </a>
-  </h2>
+  </h3>
   [ Jump to
   <a href="#__Methods">
    Methods
@@ -19616,7 +19622,7 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
 
-<h2> <a name="definitions"></a> Definitions </h2>
+<h2 class="jumptarget"> <a name="definitions"></a> Definitions </h2>
 
 <div id="integer"> <b>Integer:</b> A whole number. </div>
 
