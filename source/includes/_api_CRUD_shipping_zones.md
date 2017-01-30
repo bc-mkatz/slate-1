@@ -25,7 +25,7 @@ Example JSON returned in the response:
     ],
     "free_shipping": {
       "enabled": true,
-      "minimum_sub_total": "10.0000",
+      "minimum_subtotal": "10.0000",
       "exclude_fixed_shipping_products": false
     },
     "handling_fees": {
@@ -46,7 +46,7 @@ Example JSON returned in the response:
     ],
     "free_shipping": {
       "enabled": false,
-      "minimum_sub_total": "0.0000",
+      "minimum_subtotal": "0.0000",
       "exclude_fixed_shipping_products": false
     },
     "handling_fees": {
@@ -90,7 +90,7 @@ Example JSON returned in the response:
   ],
   "free_shipping": {
     "enabled": true,
-    "minimum_sub_total": "10.0000",
+    "minimum_subtotal": "10.0000",
     "exclude_fixed_shipping_products": false
   },
   "handling_fees": {
@@ -150,7 +150,7 @@ Example JSON returned in the response:
   ],
   "free_shipping": {
     "enabled": false,
-    "minimum_sub_total": "0.0000",
+    "minimum_subtotal": "0.0000",
     "exclude_fixed_shipping_products": false
   },
   "handling_fees": {
@@ -195,7 +195,7 @@ Example request object:
   ],
   "free_shipping": {
     "enabled": false,
-    "minimum_sub_total": "0.0000",
+    "minimum_subtotal": "0.0000",
     "exclude_fixed_shipping_products": false
   },
   "handling_fees": {
@@ -224,7 +224,7 @@ Example JSON returned in the response:
   ],
   "free_shipping": {
     "enabled": false,
-    "minimum_sub_total": "0.0000",
+    "minimum_subtotal": "0.0000",
     "exclude_fixed_shipping_products": false
   },
   "handling_fees": {

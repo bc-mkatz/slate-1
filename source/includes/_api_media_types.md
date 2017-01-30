@@ -2,7 +2,7 @@
 
 ## <span class="jumptarget"> Introduction to Media Types</span>
 
-The BigCommerce API can both accept requests and respond in JSON or XML. Requests should be encoded using the UTF-8 character set. Other character sets may have unpredictable results.
+The BigCommerce API can accept requests, and respond, in either JSON or XML. You should encode requests using the UTF-8 character set. (Other character sets might have unpredictable results.)
 
 <aside class="warning">
 <span class="aside-warning-hd">Restricted XML Support</span><br><br>

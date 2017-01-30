@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'font-awesome-sass'
+
 # Middleman
 gem 'middleman', '~>4.0.0'
 gem 'middleman-gh-pages', '~> 0.0.3'

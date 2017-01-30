@@ -5,6 +5,11 @@
 ## <span class="jumptarget"> December </span>
 
 
+### Stencil Now Supports Optimized One-Page Checkout
+
+<b>2016-12-19:</b> The Stencil framework now supports <a href="https://support.bigcommerce.com/articles/Public/Optimized-Single-Page-Checkout" target="_blank">Optimized One-Page Checkout</a>. To enable this option, you must first update your Stencil CLI installation, and then ensure that your `config.json` file includes the `customized_checkout` value. For details and links, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>.
+
+
 ### Stencil Product > Ratings Count
 
 Stencil themes' [Common Product Card Model](https://stencil.bigcommerce.com/docs/common-product-card-model) now includes a `ratings` property, representing the number of customer reviews that contributed to a product's `rating` value.
