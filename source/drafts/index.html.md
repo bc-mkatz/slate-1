@@ -16,11 +16,10 @@ includes:
   - api_CRUD_shipping_zones
   - api_objects_shipping_zones_method
   - api_CRUD_shipping_zones_methods
-  - v3-catalog-swagger-md
-  - v3-catalog-html-no-css
+  - v3_catalog_customer_complete
 
 search: true
 ---
 
-# <span class="jumptarget"> Shipping Zones Reference </span>
+# <span class="jumptarget"> Draft Documentation – Internal Review </span>
 
