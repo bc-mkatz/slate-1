@@ -429,32 +429,18 @@ Please view the documentation generated from the Swagger file [here](http://edit
   </title>
  </head>
  <body>
-  <h2 class="jumptarget">
-   BigCommerce Catalog API
-  </h2>
-  <div class="app-desc">
-   Swagger-generated documentation for the BigCommmerce v3 API.
-  </div>
-  <h3 class="jumptarget">
-   <a name="__Methods">
-    Methods/Endpoints
-   </a>
-  </h3>
+  <h1 id="__Methods" class="jumptarget">
+    Methods/Endpoints – Contents
+  </h1>
   [ Jump to
   <a href="#__Models">
    Models
   </a>
   ]
-  <h3>
-   Table of Contents
-  </h3>
   <div class="method-summary">
   </div>
-  <h4>
-   <a href="#Catalog">
-    Catalog
-   </a>
-  </h4>
+  <h2 id="toc_catalog" class="jumptarget"> <a href="#Catalog">
+    Catalog </a> </h2>
   <ul>
    <li>
     <a href="#catalogSummaryGet">
@@ -1237,11 +1223,7 @@ Please view the documentation generated from the Swagger file [here](http://edit
     </a>
    </li>
   </ul>
-  <h4 class="jumptarger">
-   <a href="#Customers">
-    Customers
-   </a>
-  </h4>
+  <h2 id= "toc_customers" class="jumptarget"> <a href="#Customers">Customers</a> </h2>
   <ul>
    <li>
     <a href="#createSubscriber">
@@ -1304,11 +1286,7 @@ Please view the documentation generated from the Swagger file [here](http://edit
     </a>
    </li>
   </ul>
-  <h1 classs="jumptarget">
-   <a name="Catalog">
-    Catalog
-   </a>
-  </h1>
+  <h1 id= "Catalog" class="jumptarget"> Catalog </h1>
   <div class="method">
    <a name="catalogSummaryGet">
    </a>
@@ -12409,11 +12387,7 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </a>
   </div>
   <hr/>
-  <h1 class="jumptarget">
-   <a name="Customers">
-    Customers
-   </a>
-  </h1>
+  <h1 id= "Customers" class="jumptarget"> Customers </h1>
   <div class="method">
    <a name="createSubscriber">
    </a>
@@ -13226,19 +13200,14 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Up
    </a>
   </div>
-  <h3 class="jumptarget">
-   <a name="__Models">
-    Models
-   </a>
-  </h3>
+  <h2 id="__Models" class="jumptarget">
+    Models – Contents
+  </h2>
   [ Jump to
   <a href="#__Methods">
    Methods
   </a>
   ]
-  <h3>
-   Table of Contents
-  </h3>
   <ol>
    <li>
     <a href="#Adjuster">
