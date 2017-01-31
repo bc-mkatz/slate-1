@@ -1,4 +1,4 @@
-## <span class="jumptarget" id="basiccred"> Creating Basic-Auth Credentials </span>
+# <span class="jumptarget" id="basiccred"> Creating Basic-Auth Credentials </span>
 
 The following sections outline how to create and manage Basic Auth tokens in the BigCommerce control panel.
 
@@ -8,7 +8,7 @@ BigCommerce is gradually deprecating Basic Authentication. Apps must use <a href
 Even within the v2 API, apps relying on Basic Authentication cannot access some features. (For example, the Webhooks resource requires OAuth.) Also, apps intended for sale on the BigCommerce App Marketplace must use OAuth.
 </aside>
 
-### <span class="jumptarget" id="pvt_token"> Obtaining an API Token </span>
+## <span class="jumptarget" id="pvt_token"> Obtaining an API Token </span>
 
 To get an API token, use the following steps:
 
@@ -21,7 +21,7 @@ To get an API token, use the following steps:
 7.  Copy the **API Token** field's value and paste it into a text editor. You will need this value to authenticate your app.
 8.  Select **Save** if you're creating or changing the API account.
 
-### <span class="jumptarget"> Revoking App Access </span>
+## <span class="jumptarget"> Revoking App Access </span>
 
 To revoke app access to a store, use the following steps:
 
@@ -35,7 +35,7 @@ To revoke app access to a store, use the following steps:
 8.  Select the trash-can button.
 9.  Select **OK** in the confirmation prompt.
 
-### <span class="jumptarget"> Regenerating an API Token </span>
+## <span class="jumptarget"> Regenerating an API Token </span>
 
 To change the API token that an app is using to access a store, use the following steps:
 
@@ -46,6 +46,6 @@ To change the API token that an app is using to access a store, use the followin
 5.  Select the **Generate New Token** button.
 6.  Select the **Save** button.
 
-### <span class="jumptarget" id="request_basic"> Basic-Auth API Requests </span>
+## <span class="jumptarget" id="request_basic"> Basic-Auth API Requests </span>
 
 Many tools are available to interact with APIs. For example, to see how to quickly make initial requests using <a href="https://en.wikipedia.org/wiki/CURL" target="_blank">cURL</a> commands, please see our [cURL Quickstart Guide](#curl-quickstart-guide).
