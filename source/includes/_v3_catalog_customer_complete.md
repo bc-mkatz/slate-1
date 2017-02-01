@@ -1286,8 +1286,12 @@ Please view the documentation generated from the Swagger file [here](http://edit
     </a>
    </li>
   </ul>
+<<<<<<< HEAD
   <h1 id= "Catalog" class="jumptarget"> Catalog Methods/Endpoints </h1>
   <h2 id= "Catalog_descrip" class="jumptarget"> Methods – Descriptions </h2>
+=======
+  <h1 id= "Catalog" class="jumptarget"> Catalog </h1>
+>>>>>>> master
   <div class="method">
    <a name="catalogSummaryGet">
    </a>
@@ -12388,8 +12392,12 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </a>
   </div>
   <hr/>
+<<<<<<< HEAD
   <h1 id= "Customers" class="jumptarget"> Customers Methods/Endpoints </h1>
     <h2 id= "Customers_descrip" class="jumptarget"> Methods – Descriptions </h2>
+=======
+  <h1 id= "Customers" class="jumptarget"> Customers </h1>
+>>>>>>> master
   <div class="method">
    <a name="createSubscriber">
    </a>
@@ -13202,9 +13210,15 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Up
    </a>
   </div>
+<<<<<<< HEAD
   <h1 id="__Models" class="jumptarget">
     Models – Contents
   </h1>
+=======
+  <h2 id="__Models" class="jumptarget">
+    Models – Contents
+  </h2>
+>>>>>>> master
   [ Jump to
   <a href="#__Methods">
    Methods
@@ -13660,9 +13674,13 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     </a>
    </li>
   </ol>
+<<<<<<< HEAD
 <h2 id="models_descrip" class="jumptarget"> Models – Descriptions </h2>
   <div class="model">
    </p>
+=======
+  <div class="model">
+>>>>>>> master
    <h3 class="field-label">
     <a name="Adjuster">
      Adjuster
@@ -13671,7 +13689,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      adjuster (optional)
     </div>
@@ -13706,7 +13728,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="BaseError">
      BaseError
@@ -13716,7 +13741,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Error payload for the BigCommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"><b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      status (optional)
     </div>
@@ -13762,7 +13791,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Brand">
      Brand
@@ -13771,7 +13803,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -13852,7 +13888,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="BrandCollectionResponse">
      BrandCollectionResponse
@@ -13862,7 +13901,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -13886,7 +13929,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="BrandResponse">
      BrandResponse
@@ -13896,7 +13942,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -13920,7 +13970,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="BulkPricingRule">
      BulkPricingRule
@@ -13930,7 +13983,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Rules that offer price discounts based on quantity breaks.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -14002,7 +14059,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CatalogSummary">
      CatalogSummary
@@ -14012,7 +14072,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     A BigCommerce Catalog Summary object describes a lightweight summary of the catalog.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      inventory_count (optional)
     </div>
@@ -14061,7 +14125,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CatalogSummaryResponse">
      CatalogSummaryResponse
@@ -14071,7 +14138,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -14095,7 +14166,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Category">
      Category
@@ -14105,7 +14179,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     A BigCommerce category object.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -14303,7 +14381,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CategoryCollectionResponse">
      CategoryCollectionResponse
@@ -14313,7 +14394,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -14337,7 +14422,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CategoryNode">
      CategoryNode
@@ -14347,7 +14435,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     A BigCommerce category node object. Used to reflect parent &lt;&gt; child category relationships.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -14417,7 +14509,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CategoryResponse">
      CategoryResponse
@@ -14427,7 +14522,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -14451,7 +14550,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CategoryTreeCollectionResponse">
      CategoryTreeCollectionResponse
@@ -14461,7 +14563,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -14485,7 +14591,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CollectionMeta">
      CollectionMeta
@@ -14495,7 +14604,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Data about the response, including pagination and collection totals.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      total (optional)
     </div>
@@ -14564,7 +14677,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CollectionMeta_links">
      CollectionMeta_links
@@ -14574,7 +14690,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Pagination links for the previous and next parts of the whole collection.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      previous (optional)
     </div>
@@ -14611,7 +14731,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ComplexRule">
      ComplexRule
@@ -14621,7 +14744,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Apply price, weight, image, or availabilty adjustments to product, based on a set of conditions. A complex rule's condition must either contain more than one modifier value, or else contain a modifier value and a variant id.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -14754,7 +14881,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ComplexRuleCollectionResponse">
      ComplexRuleCollectionResponse
@@ -14764,7 +14894,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -14788,7 +14922,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ComplexRuleCondition">
      ComplexRuleCondition
@@ -14798,7 +14935,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Complex rules may return with conditions that apply to one or more variants, or with a single modifier value (if the rules were created using the v2 API or the control panel). Complex rules created or updated in the v3 API must have conditions that either reference multiple `modifier_value_id`'s, or else reference a `modifier_value_id` and a `variant_id`.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -14868,7 +15009,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ComplexRuleResponse">
      ComplexRuleResponse
@@ -14878,7 +15022,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -14902,7 +15050,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CustomField">
      CustomField
@@ -14912,7 +15063,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Gets custom fields associated with a product. These allow you to specify additional information that will appear on the product's page, such as a book's ISBN or a DVD's release date.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -14960,7 +15115,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="CustomUrl">
      CustomUrl
@@ -14970,7 +15128,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     The custom URL for the product on the storefront.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      url (optional)
     </div>
@@ -14996,7 +15158,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="DetailedErrors">
      DetailedErrors
@@ -15009,7 +15174,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ErrorResponse">
      ErrorResponse
@@ -15018,7 +15186,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      status (optional)
     </div>
@@ -15074,7 +15246,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ImageResponse">
      ImageResponse
@@ -15084,7 +15259,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -15108,7 +15287,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Meta">
      Meta
@@ -15122,7 +15304,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="MetaFieldCollectionResponse">
      MetaFieldCollectionResponse
@@ -15132,7 +15317,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -15156,7 +15345,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Metafield">
      Metafield
@@ -15166,7 +15358,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Allows app partners to write custom data to various resources in the API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -15309,7 +15505,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="MetafieldResponse">
      MetafieldResponse
@@ -15319,7 +15518,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -15343,7 +15546,10 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Modifier">
      Modifier
@@ -15352,7 +15558,11 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -15483,7 +15693,10 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ModifierCollectionResponse">
      ModifierCollectionResponse
@@ -15493,7 +15706,11 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -15517,7 +15734,10 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ModifierResponse">
      ModifierResponse
@@ -15527,7 +15747,11 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -15551,7 +15775,10 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ModifierValue">
      ModifierValue
@@ -15560,7 +15787,11 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -15629,7 +15860,10 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ModifierValue_adjusters">
      ModifierValue_adjusters
@@ -15638,7 +15872,11 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      price (optional)
     </div>
@@ -15683,7 +15921,10 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ModifierValue_adjusters_purchasing_disabled">
      ModifierValue_adjusters_purchasing_disabled
@@ -15692,7 +15933,11 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      status (optional)
     </div>
@@ -15718,7 +15963,10 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="NotFound">
      NotFound
@@ -15728,7 +15976,11 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
     Error payload for the BigCommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      status (optional)
     </div>
@@ -15774,7 +16026,10 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Option">
      Option
@@ -15783,7 +16038,11 @@ RT = rectangles, S = dropdown, P = product_list, PI = product_list_with_images, 
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -15884,7 +16143,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="OptionCollectionResponse">
      OptionCollectionResponse
@@ -15894,7 +16156,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -15918,7 +16184,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="OptionConfig">
      OptionConfig
@@ -15927,7 +16196,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      default_value (optional)
     </div>
@@ -16245,7 +16518,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="OptionResponse">
      OptionResponse
@@ -16255,7 +16531,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -16279,7 +16559,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="OptionValue">
      OptionValue
@@ -16288,7 +16571,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -16347,7 +16634,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="OptionValueShort">
      OptionValueShort
@@ -16356,7 +16646,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -16402,7 +16696,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="OptionValueShortPost">
      OptionValueShortPost
@@ -16411,7 +16708,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      option_display_name (optional)
     </div>
@@ -16437,7 +16738,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Product">
      Product
@@ -16447,7 +16751,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     A BigCommerce Product object describes a single purchasable unit or a collection of purchasable units.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -17118,7 +17426,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductCollectionResponse">
      ProductCollectionResponse
@@ -17128,7 +17439,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -17152,7 +17467,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductImage">
      ProductImage
@@ -17162,7 +17480,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     The full ProductImage model.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      is_thumbnail (optional)
     </div>
@@ -17276,7 +17598,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductImageBase">
      ProductImageBase
@@ -17286,7 +17611,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Common ProductImage properties.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      is_thumbnail (optional)
     </div>
@@ -17323,7 +17652,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductImageCollectionResponse">
      ProductImageCollectionResponse
@@ -17333,7 +17665,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -17357,7 +17693,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductImagePost">
      ProductImagePost
@@ -17367,7 +17706,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     The model for a POST to create an image on a product.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      is_thumbnail (optional)
     </div>
@@ -17426,7 +17769,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductImagePut">
      ProductImagePut
@@ -17436,7 +17782,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     The model for a PUT to update applicable ProductImage fields.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      is_thumbnail (optional)
     </div>
@@ -17473,7 +17823,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductImageResponse">
      ProductImageResponse
@@ -17483,7 +17836,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -17507,7 +17864,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductPost">
      ProductPost
@@ -17516,7 +17876,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -18187,7 +18551,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductPut">
      ProductPut
@@ -18196,7 +18563,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -18867,7 +19238,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductResponse">
      ProductResponse
@@ -18877,7 +19251,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -18901,7 +19279,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductVideo">
      ProductVideo
@@ -18911,7 +19292,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     A product video model.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -18981,7 +19366,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductVideoCollectionResponse">
      ProductVideoCollectionResponse
@@ -18991,7 +19379,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -19015,7 +19407,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ProductVideoResponse">
      ProductVideoResponse
@@ -19025,7 +19420,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -19049,7 +19448,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="ResourceImage">
      ResourceImage
@@ -19059,7 +19461,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     An object containing a publicly accessible image URL, or a form post that contains an image file.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      image_url (optional)
     </div>
@@ -19074,7 +19480,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Subscriber">
      Subscriber
@@ -19083,7 +19492,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -19177,7 +19590,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="SubscriberCollectionResponse">
      SubscriberCollectionResponse
@@ -19187,7 +19603,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -19211,7 +19631,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="SubscriberResponse">
      SubscriberResponse
@@ -19221,7 +19644,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -19245,7 +19672,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="Variant">
      Variant
@@ -19254,7 +19684,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -19420,7 +19854,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="VariantCollectionResponse">
      VariantCollectionResponse
@@ -19430,7 +19867,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Response payload for the Bigcommerce API.
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -19454,7 +19895,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="VariantPost">
      VariantPost
@@ -19463,7 +19907,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    <div class="model-description">
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      id (optional)
     </div>
@@ -19628,7 +20076,10 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
   <div class="model">
+<<<<<<< HEAD
    </p>
+=======
+>>>>>>> master
    <h3 class="field-label">
     <a name="VariantResponse">
      VariantResponse
@@ -19638,7 +20089,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
     Successful response
    </div>
    <br/>
+<<<<<<< HEAD
    <div class="field-items"> <b>Properties:</b>
+=======
+   <div class="field-items">
+>>>>>>> master
     </p><div class="param">
      data (optional)
     </div>
@@ -19662,7 +20117,11 @@ RB = radio_buttons, RT = rectangles, S = dropdown, P = product_list, PI = produc
    </div>
   </div>
 
+<<<<<<< HEAD
 <h2 id="definitions" class="jumptarget"> Definitions </h2>
+=======
+<h2 class="jumptarget"> <a name="definitions"></a> Definitions </h2>
+>>>>>>> master
 
 <div id="integer"> <b>Integer:</b> A whole number. </div>
 
