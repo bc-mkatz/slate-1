@@ -139,7 +139,7 @@
   }
 }
 
-#changelog, #api-documentation, #understanding-themes, #api-v2-documentation, #api-v3-documentation, #blueprint-themes, #blueprint-theme-snippets, #blueprint-theme-layouts, #blueprint-theme-panels {
+#changelog, #api-documentation, #understanding-themes, #api-v2-documentation, #api-v3-documentation, #blueprint-themes, #blueprint-theme-snippets, #blueprint-theme-layouts, #blueprint-theme-panels, #quickstart-guides-for-developing-on-bigcommerce {
   @extend %header-font;
   color: #4f75f8 !important;
   font-size: 1.55556rem !important;
@@ -334,4 +334,14 @@ li.dropdown {
 
 li a, .tocify-wrapper {
   text-align: left;
+}
+
+.api_v3 {
+  pre {
+    width:40%;
+  }
+
+  .content table {
+    width: 55% !important;
+  }
 }

@@ -6,7 +6,7 @@ To get started, you'll need OAuth credentials to supply to Postman. BigCommerce 
 
 ## <span class="jumptarget"> Creating OAuth2.0 Credentials </span>
 
-Create your OAuth 2.0 credentials as described above under [Obtaining OAuth Tokens](#cp_oauth_get). (Depending on what scopes you set, you will be limited in what objects you can request. You can view scope information [here](/api/#oauth-scopes).)
+Create your OAuth 2.0 credentials as described above under [Obtaining OAuth Tokens](/api#cp_oauth_get). (Depending on what scopes you set, you will be limited in what objects you can request. You can view scope information [here](/api#oauth-scopes).)
 
 ## <span class="jumptarget"> Postman Setup </span>
 
@@ -28,8 +28,8 @@ Next, add these two key/value pairs, using the OAuth credentials you obtained in
 
 | Key | Value |
 |---|---|
-| `X-Auth-Client` | The **Client ID** you obtained when you [created your OAuth token](/#cp_oauth_get). |
-| `X-Auth-Token` | The **Access Token** string you obtained when you [created your OAuth token](#cp_oauth_get). |
+| `X-Auth-Client` | The **Client ID** you obtained when you [created your OAuth token](/api#cp_oauth_get). |
+| `X-Auth-Token` | The **Access Token** string you obtained when you [created your OAuth token](/api#cp_oauth_get). |
 
 
 ## <span class="jumptarget" id="post_setup"> Sending a Request </span>
@@ -40,12 +40,12 @@ We have created a collection of Postman requests for our v3 API, which you can i
 
 To use this collection, you'll need to enter your OAuth credentials, as explained above under [Postman Setup](#post_setup).
  
-You'll also need to enter your store's API Path, as displayed in the [control panel](#cp_oauth_get). You can do so in either of these days:
+You'll also need to enter your store's API Path, as displayed in the [control panel](/api#cp_oauth_get). You can do so in either of these days:
 
 * Within each endpoint, replace the variable `{{store_hash}}`; or 
 
 * Add a new environment, in which you create a  `store_hash` key, then set its value to the alpahnumeric string from your API Path. (For&#160;details on setting up a Postman environment, see [this Postman documentation](https://www.getpostman.com/docs/environments).)
 
-Now you can send and receive information through an OAuth API connection with BigCommerce. If you'd like to register webhooks through Postman, please see [Creating Webhooks: Sending the POST Request](/api/#creating-webhooks-sending-the-post-request). 
+Now you can send and receive information through an OAuth API connection with BigCommerce. If you'd like to register webhooks through Postman, please see [Creating Webhooks: Sending the POST Request](/api#creating-webhooks-sending-the-post-request). 
 
 
