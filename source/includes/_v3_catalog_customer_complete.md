@@ -13202,9 +13202,9 @@ Values: id, name, sku, price, date_modified, date_last_imported, inventory_level
     Up
    </a>
   </div>
-  <h2 id="__Models" class="jumptarget">
+  <h1 id="__Models" class="jumptarget">
     Models – Contents
-  </h2>
+  </h1>
   [ Jump to
   <a href="#__Methods">
    Methods

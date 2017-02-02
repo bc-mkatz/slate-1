@@ -61,6 +61,7 @@ There is no undo, so be sure before you delete an account. You can also use the 
 
 <img src="../assets/store-api-accounts.png" alt="Creating an API account" height=100% width=100%>
 
+
 ## <span class="jumptarget" id="request_oauth"> OAuth API Requests </span>
 
 To see how to quickly make initial OAuth requests using the <a href="https://www.getpostman.com/" target="_blank">Postman app</a>, please see our [Postman/OAuth Quickstart Guide](#postman_qs).
