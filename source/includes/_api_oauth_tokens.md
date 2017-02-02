@@ -2,9 +2,9 @@
 
 You have two options for obtaining and managing credentials that will connect your app with your BigCommerce store:
 
-* [Obtaining OAuth Tokens](#cp_oauth_get): We recommend OAuth, because this authentication method is compatible with all current and planned BigCommerce APIs. Also, OAuth is required for apps intended to be [sold on the BigCommerce App Marketplace](#).
+* [Obtaining OAuth Tokens](#cp_oauth_get): We recommend OAuth, because this authentication method is compatible with all current and planned BigCommerce APIs. Also, OAuth is required for apps intended to be <a href="https://www.bigcommerce.com/apps/" target="_blank">sold on the BigCommerce App Marketplace</a>.
 
-* [Creating Basic Auth Credentials](#basiccred): Basic Auth is still supported as a legacy option for [private apps](##building-basic-auth-apps) (apps developed for a single BigCommerce store). However, although Basic Auth is compatible with most of our v2 API, it is inccompatible with [webhooks](##webhooks-overview), and incompatible with our <a href="https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md" target="_blank">v3 API</a>.
+* [Creating Basic-Auth Credentials](#basiccred): Basic Auth is still supported as a legacy option for connecting with most of our v2 API. (You can find details about the Basic-Auth workflow [here](#building-apps-with-basic-auth).) However, Basic Auth is not compatible with [webhooks](#webhooks-overview), and is not compatible with our <a href="https://github.com/bigcommerce/api/blob/master/docs/v3-catalog.md" target="_blank">v3 API</a>.
 
 
 # <span class="jumptarget" id="cp_oauth_manage"> Authenticating with OAuth </span>
@@ -60,6 +60,7 @@ There is no undo, so be sure before you delete an account. You can also use the 
 </aside>
 
 <img src="../assets/store-api-accounts.png" alt="Creating an API account" height=100% width=100%>
+
 
 ## <span class="jumptarget" id="request_oauth"> OAuth API Requests </span>
 
