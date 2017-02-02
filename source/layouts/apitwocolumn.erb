@@ -93,13 +93,7 @@ under the License.
       <% end %>
       <div id="toc">
       </div>
-      <% if current_page.data.toc_footers %>
-        <ul class="toc-footer">
-          <% current_page.data.toc_footers.each do |footer| %>
-            <li><%= footer %></li>
-          <% end %>
-        </ul>
-      <% end %>
+      <%= partial "layouts/mailchimp" %>
     </div>
     <div class="page-wrapper">
       <div class="content">
