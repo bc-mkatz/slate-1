@@ -23,7 +23,7 @@
   }
 
   .type-large {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   a {
@@ -61,7 +61,7 @@
   }
 
   .type-large {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   a {
@@ -88,7 +88,7 @@
   }
 
   a {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     text-transform: uppercase;
   }
 
@@ -100,7 +100,7 @@
 @media (min-width: 769px) {
   .blocks-home {
     h2 {
-      font-size: 2.2rem;
+      font-size: 2.2rem !important;
     }
   }
 }
@@ -183,7 +183,7 @@ table td:nth-child(3) {
 }
 
 #support-h1 {
-  font-size: 1.55556rem;
+  font-size: 1.55556rem !important;
   @extend %header-font;
   color: $bc-blue;
   position: relative;
@@ -207,7 +207,7 @@ table td:nth-child(3) {
 .nav-label {
   margin-left: 12px;
   margin-bottom: 12px;
-  font-size: 15px;
+  font-size: 15px !important;
   font-weight: normal;
   margin-top: 32px;
 }
