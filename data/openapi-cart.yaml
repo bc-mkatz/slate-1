@@ -1,0 +1,1172 @@
+swagger: '2.0'
+info:
+  version: 2.0.0
+  title: Order API
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /billing:
+    post:
+      description: Add / Update the billing address in quote object
+      parameters:
+        - $ref: '#/parameters/IncludesQuote'
+        - name: billingData
+          in: body
+          schema:
+            $ref: '#/definitions/BillingRequestData'
+      responses:
+        200:
+          description: Billing address has been successfully updated
+          schema:
+            $ref: '#/definitions/ResponseBillingData'
+  /cart:
+    get:
+      summary: Retrieve cart data
+      description: Retrieves a cart, which is the composition of set of items
+      responses:
+        200:
+          description: The cart
+          schema:
+            $ref: '#/definitions/ResponseCartData'
+  /coupon:
+    post:
+      description: Adding coupon or gift certificate code to the cart
+      parameters:
+        - name: couponCode
+          description: coupon or gift certificate code
+          in: body
+          schema:
+            type: string
+      responses:
+        200:
+          description: Cart with coupon or gift certificate added
+          schema:
+            $ref: '#/definitions/ResponseCouponData'
+        422:
+          description: The coupon or gift certificate code cannot be added to the cart e.g. coupon code expired
+  /coupon/{couponCode}:
+    delete:
+      description: Removing coupon or gift certificate code from the cart
+      parameters:
+        - name: couponCode
+          description: coupon or gift certificate code
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Cart with coupon or gift certificate removed
+          schema:
+            $ref: '#/definitions/ResponseCouponData'
+        400:
+          description: The coupon or gift certificate code cannot be removed from the cart
+  /customer:
+    post:
+      description: Associate the quote object to a customer. Parameters are comma separated as values against `includes` key. For example, `/quote?includes=customer,shippingOptions`
+      parameters:
+        - $ref: '#/parameters/IncludesQuote'
+        - $ref: '#/parameters/IncludesCustomer'
+        - $ref: '#/parameters/IncludesShippingAddress'
+        - $ref: '#/parameters/IncludesBillingAddress'
+        - $ref: '#/parameters/IncludesShippingOptions'
+        - $ref: '#/parameters/IncludesCart'
+        - $ref: '#/parameters/IncludesOrder'
+      responses:
+        200:
+          description: Based on existing query parameters a series of data will be added to response
+          schema:
+            $ref: '#/definitions/ResponseCustomerPostData'
+        400:
+          description: If user tries to login but the provided username or password is incorrect
+          examples:
+            status: 400
+            title: Invalid login attempt
+            type: invalid_login
+            detail: Invalid login attempt.
+            instance: /internalapi/v1/checkout/customer?includes=cart,quote,shippingOptions
+        401:
+          description: Unauthorized Acess
+    get:
+      description: currently any GET request to /customer end point will result to a `405` response because `getAction()` method does't exists
+      parameters:
+        - $ref: '#/parameters/IncludesQuote'
+        - $ref: '#/parameters/IncludesCustomer'
+        - $ref: '#/parameters/IncludesShippingAddress'
+        - $ref: '#/parameters/IncludesBillingAddress'
+        - $ref: '#/parameters/IncludesShippingOptions'
+        - $ref: '#/parameters/IncludesCart'
+        - $ref: '#/parameters/IncludesOrder'
+      responses:
+        '405':
+          description: Method not allowed
+          examples:
+            status: 405
+            title: Method Not Allowed
+            type: about:blank
+            detail: The requested HTTP method is invalid for this endpoint.
+            instance: /internalapi/v1/checkout/customer
+    delete:
+      description: Remove customer information from the quote.
+      parameters:
+        - $ref: '#/parameters/IncludesQuote'
+        - $ref: '#/parameters/IncludesCustomer'
+        - $ref: '#/parameters/IncludesShippingAddress'
+        - $ref: '#/parameters/IncludesBillingAddress'
+        - $ref: '#/parameters/IncludesShippingOptions'
+        - $ref: '#/parameters/IncludesCart'
+      responses:
+        200:
+          description: Updated customer data, billing address & shipping address; Mostly empty fields.
+          schema:
+            $ref: '#/definitions/ResponseCustomerDeleteData'
+  /order:
+    post:
+      description: Used to create an order (currently we use session to retrieve quote data)
+      parameters:
+        - name: Data
+          in: body
+          description: A collection of data consumed by the order endpoint when creating the order for different payment methods and payment providers.
+          required: true
+          schema:
+            $ref: '#/definitions/RequestOrderData'
+      responses:
+        201:
+          description: Successful response
+          schema:
+            $ref: '#/definitions/ResponseOrderData'
+          headers:
+            token:
+              description: JWT token, combination of cart_id, store_id, amount and currency.
+              type: string
+          examples:
+            application/json:
+              data:
+                customer:
+                  isGuest: true
+                  email: test@gmail.com
+                  name: aaa aaa
+                  customerId: 0
+                  storeCredit: 0
+                  addresses: []
+                order:
+                  orderId: '109,'
+                  paymentMethod: testgateway
+                socialData:
+                  - fb:
+                      'name"': '[Sample] Tomorrow is today, Red printed scarf'
+                      description: How to write product descriptions that sellOne of the best things you can do to make your store successful is invest some time in writing great product descriptions. You want to provide detailed ye...
+                      image: 'https://cdn.bcapp.dev/bcapp/mh2dbspz/products/32/images/247/in_123__14581.1348449270.190.285.jpg?c=1'
+                      url: 'http://s1447132725.bcapp.dev/sample-tomorrow-is-today-red-printed-scarf/'
+                      shareText: "I just bought '[Sample] Tomorrow is today, Red printed scarf' on s1447132725"
+                      sharingLink: 'http://www.facebook.com/sharer/sharer.php?s=100&p[title]=I+just+bought+%27%5BSample%5D+Tomorrow+is+today%2C+Red+printed+scarf%27+on+s1447132725&p[summary]=How+to+write+product+descriptions+that+sellOne+of+the+best+things+you+can+do+to+make+your+store+successful+is+invest+some+time+in+writing+great+product+descriptions.+You+want+to+provide+detailed+ye...&p[url]=http%3A%2F%2Fs1447132725.bcapp.dev%2Fsample-tomorrow-is-today-red-printed-scarf%2F&p[images][0]=http%3A%2F%2Fcdn.bcapp.dev%2Fbcapp%2Fmh2dbspz%2Fproducts%2F32%2Fimages%2F247%2Fin_123__14581.1348449270.190.285.jpg%3Fc%3D1'
+                  - tw:
+                      'name"': '[Sample] Tomorrow is today, Red printed scarf'
+                      'description"': How to write product descriptions that sellOne of the best things you can do to make your store successful is invest some time in writing great product descriptions. You want to provide detailed ye...
+                      'image"': 'https://cdn.bcapp.dev/bcapp/mh2dbspz/products/32/images/247/in_123__14581.1348449270.190.285.jpg?c=1'
+                      'url"': 'http://s1447132725.bcapp.dev/sample-tomorrow-is-today-red-printed-scarf/'
+                      'shareText"': "I just bought '[Sample] Tomorrow is today, Red printed scarf' on s1447132725"
+                      'sharingLink"': 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fs1447132725.bcapp.dev%2Fsample-tomorrow-is-today-red-printed-scarf%2F&text=I+just+bought+%27%5BSample%5D+Tomorrow+is+today%2C+Red+printed+scarf%27+on+s1447132725'
+                meta: {}
+        400:
+          description: Invalid input - Happens when request body is not in json or cannot be decoded as json
+        503:
+          description: Shop order token is missing from quote or quote is empty
+        500:
+          description: The requested payment provider is not implemented correctly
+  /order/{orderId}:
+    get:
+      summary: Retrieve order data
+      description: Retrieves an order, which is the composition of set of items
+      parameters:
+        - name: orderId
+          in: path
+          description: Id of the Order
+          required: true
+          type: integer
+      responses:
+        200:
+          description: The order
+          schema:
+            $ref: '#/definitions/ResponseOrderData'
+        404:
+          description: No order matching orderId
+    post:
+      description: Update the order. Finalize in case the order has been set previously in checkout
+      parameters:
+        - name: orderId
+          in: path
+          description: Id of the Order
+          required: true
+          type: integer
+      responses:
+        200:
+          description: The updated Order
+          schema:
+            $ref: '#/definitions/OrderEntity'
+  /order/{orderId}/payment:
+    post:
+      description: Update the payment and order status from payment service (BigPay) & finalize the order. Requires HAWK authentication.
+      parameters:
+        - name: orderId
+          in: path
+          description: Id of the Order to be updated
+          required: true
+          type: integer
+        - name: paymentData
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/PaymentRequestData'
+      responses:
+        200:
+          description: The updated Order
+          schema:
+            $ref: '#/definitions/OrderEntity'
+  /payments:
+    get:
+      description: Retrieve a list of existing payment methods
+      responses:
+        200:
+          description: List of payment methods
+          schema:
+            $ref: '#/definitions/ResponsePaymentsData'
+          examples:
+            data:
+              payments:
+                paymentMethods:
+                  -
+                    id: "testgateway"
+                    logoUrl: ""
+                    method: "zzzblackhole"
+                    supportedCards:
+                      - "VISA"
+                      - "AMEX"
+                      - "MC"
+                    config:
+                      displayName: "Test Gateway"
+                      cardCode: null
+                      helpText: null
+                      enablePaypal: null
+                token: "JWT Example"
+            meta: {}
+  /payments/{providerId}:
+    get:
+      description: Retrieve a single, existing payment method
+      parameters:
+        - name: providerId
+          in: path
+          description: Id of the payment provider
+          required: true
+          type: string
+      responses:
+        200:
+          description: Payment method
+          schema:
+            $ref: '#/definitions/PaymentMethod'
+  /quote:
+    get:
+      description: Parameters are comma separated as values against `includes` key. For example, `/quote?includes=customer,shippingOptions`
+      parameters:
+        - $ref: '#/parameters/IncludesQuote'
+        - $ref: '#/parameters/IncludesCustomer'
+        - $ref: '#/parameters/IncludesShippingAddress'
+        - $ref: '#/parameters/IncludesBillingAddress'
+        - $ref: '#/parameters/IncludesShippingOptions'
+        - $ref: '#/parameters/IncludesCart'
+        - $ref: '#/parameters/IncludesOrder'
+      responses:
+        200:
+          description: Based on existing query parameters a series of data will be added to response
+          schema:
+            $ref: '#/definitions/ResponseQuoteData'
+  /shipping:
+    post:
+      description: Add / Update the shipping address in quote object
+      parameters:
+        - $ref: '#/parameters/IncludesCart'
+        - $ref: '#/parameters/IncludesQuote'
+        - $ref: '#/parameters/IncludesShippingOptions'
+        - name: shippingData
+          in: body
+          schema:
+            $ref: '#/definitions/ShippingRequestData'
+      responses:
+        200:
+          description: Shipping address has been successfully updated
+          schema:
+            $ref: '#/definitions/ResponseShippingData'
+  /shippingOptions:
+    get:
+      summary: Retrieve Shipping Options
+      description: Retrieves a list of all available shipping options for the current quote
+      responses:
+        200:
+          description: List of the shipping options. In case the quote does not have shipping address the response will be an empty array.
+          schema:
+            $ref: '#/definitions/ResponseShippingOptions'
+    put:
+      summary: Set Shipping Option
+      description: Set in the order the selected shipping option
+      parameters:
+        - name: ShippingOptionRequestData
+          in: body
+          schema:
+            $ref: '#/definitions/ShippingOptionRequestData'
+      responses:
+        200:
+          description: ok
+          schema:
+            $ref: '#/definitions/ResponseShippingOptions'
+        400:
+          description: Invalid shipping method
+        409:
+          description: Shipping Option Method has expired
+        422:
+          description: Missing Required Fields
+
+parameters:
+  IncludesQuote:
+    name: quote
+    type: string
+    in: query
+  IncludesCustomer:
+    name: customer
+    type: string
+    in: query
+  IncludesShippingAddress:
+    name: shippingAddress
+    type: string
+    in: query
+  IncludesBillingAddress:
+    name: billingAddress
+    type: string
+    in: query
+  IncludesShippingOptions:
+    name: shippingOptions
+    type: string
+    in: query
+  IncludesCart:
+    name: cart
+    type: string
+    in: query
+  IncludesOrder:
+    name: order
+    type: string
+    in: query
+definitions:
+  CartEntity:
+    properties:
+      id:
+        type: string
+        description: Unique identifier of the cart
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/ItemEntity'
+      currency:
+        type: string
+      subtotal:
+        type: object
+        properties:
+          amount:
+            type: number
+            format: float
+          integerAmount:
+            type: number
+      coupon:
+        type: object
+        properties:
+          discountedAmount:
+            type: number
+          coupons:
+            type: array
+            items:
+              $ref: '#/definitions/CouponEntity'
+      discount:
+        type: object
+        properties:
+          amount:
+            type: number
+      giftCertificate:
+        type: object
+        properties:
+          totalDiscountedAmount:
+            type: number
+          appliedGiftCertificates:
+            type: array
+            items:
+              properties:
+                code:
+                  type: string
+                discountedAmount:
+                  type: number
+                remainingBalance:
+                  type: number
+                giftCertificate:
+                  $ref: '#/definitions/GiftCertificateEntity'
+      shipping:
+        type: object
+        properties:
+          amount:
+            type: number
+            format: float
+          amountBeforeDiscount:
+            type: number
+            format: float
+          integerAmount:
+            type: number
+          integerAmountBeforeDiscount:
+            type: number
+          required:
+            type: boolean
+            description: "True if this cart has one or more products that require shipping."
+      storeCredit:
+        type: object
+        properties:
+          amount:
+            type: number
+      taxSubtotal:
+        description: "The tax applied over the subtotal"
+        type: object
+        properties:
+          amount:
+            type: number
+            format: float
+          integerAmount:
+            type: number
+      taxTotal:
+        description: "The tax applied over the subtotal, shipping, gift wrapping and handling"
+        type: object
+        properties:
+          amount:
+            type: number
+            format: float
+          integerAmount:
+            type: number
+      handling:
+        type: object
+        properties:
+          amount:
+            type: number
+            format: float
+          integerAmount:
+            type: number
+      grandTotal:
+        type: object
+        properties:
+          amount:
+            type: number
+            format: float
+          integerAmount:
+            type: number
+      discountNotifications:
+        type: array
+        items:
+          $ref: '#/definitions/DiscountNotification'
+  ContactEntity:
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+        format: email
+  CouponEntity:
+    properties:
+      code:
+        type: string
+      discount:
+        type: string
+      discountType:
+        type: string
+  GiftCertificateEntity:
+    properties:
+      balance:
+        type: number
+      code:
+        type: string
+      purchaseDate:
+        type: string
+        format: date
+  ItemEntity:
+    discriminator: type
+    required:
+      - id
+      - type
+    properties:
+      id:
+        type: string
+      type:
+        description: Polymorphism for cart items.
+        type: string
+        enum:
+          - ItemPhysicalEntity
+          - ItemDigitalEntity
+          - ItemGiftCertificateEntity
+      name:
+        type: string
+      imageUrl:
+        type: string
+      quantity:
+        type: number
+      amount:
+        description: The total base price for this line item before any discount
+        type: number
+        format: float
+      integerAmount:
+        description: The total base price for this line item before any discount in its smallest currency unit
+        type: number
+      discount:
+        description: The total discount for this line item
+        type: number
+      amountAfterDiscount:
+        description: The line item total after any product-level discount
+        type: number
+      attributes:
+        type: array
+        items:
+          type: string
+      giftWrapping:
+        $ref: '#/definitions/GiftWrapEntity'
+  ItemPhysicalEntity:
+    description: A physical product with dimensions that requires shipping
+    allOf:
+      - $ref: '#/definitions/ItemEntity'
+  ItemDigitalEntity:
+    description: "A non-physical product delivered by download; In an OrderEntity this will contain download link info. These fields can be omitted if no download is ready yet."
+    allOf:
+      - $ref: '#/definitions/ItemEntity'
+      - type: object
+        properties:
+          downloadFileUrls:
+            description: "Download URLs for all product files."
+            type: array
+            items:
+              type: string
+              format: url
+          downloadsPageUrl:
+            description: "The combined downloads page URL."
+            type: string
+            format: url
+          downloadSize:
+            description: "Combined download size in human-readable style, e.g. '30MB'."
+            type: string
+  ItemGiftCertificateEntity:
+    description: A gift certificate being purchased for a recipient
+    allOf:
+      - $ref: '#/definitions/ItemEntity'
+      - type: object
+        required:
+          - sender
+          - recipient
+        properties:
+          sender:
+            $ref: '#/definitions/ContactEntity'
+          recipient:
+            $ref: '#/definitions/ContactEntity'
+  CustomerEntity:
+    properties:
+      isGuest:
+        type: boolean
+        format: string
+      email:
+        type: string
+      name:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      customerId:
+        type: number
+      storeCredit:
+        type: number
+      addresses:
+        type: array
+        items:
+          type: object
+      phoneNumber:
+        type: string
+      remote:
+        description: "Describes any remote data that the customer has access to via a third party authentication, and what method should be used to obtain the remote data."
+        type: object
+        items:
+          properties:
+            billing:
+              type: string
+              enum:
+               - REMOTE_METHOD_FIXED
+               - REMOTE_METHOD_STANDARD
+               - REMOTE_METHOD_WIDGET
+            billingMessage:
+              description: "Optional. The remote provider may present a billing message to the shopper describing where the billing address data is being loaded from."
+              type: string
+            customer:
+              type: string
+              enum:
+               - REMOTE_METHOD_FIXED
+               - REMOTE_METHOD_STANDARD
+               - REMOTE_METHOD_WIDGET
+            payment:
+              type: string
+              enum:
+               - REMOTE_METHOD_FIXED
+               - REMOTE_METHOD_STANDARD
+               - REMOTE_METHOD_WIDGET
+            provider:
+              description: "Optional. The name of the remote provider."
+              type: string
+            shipping:
+              type: string
+              enum:
+               - REMOTE_METHOD_FIXED
+               - REMOTE_METHOD_STANDARD
+               - REMOTE_METHOD_WIDGET
+  QuoteEntity:
+    properties:
+      created_at:
+        type: string
+        format: ISO-8601
+      updated_at:
+        type: string
+        format: ISO-8601
+      orderComment:
+        type: string
+      shippingOption:
+        $ref: '#/definitions/ShippingOptionEntity'
+      shippingAddress:
+        $ref: '#/definitions/ShippingAddressEntity'
+      billingAddress:
+        type: array
+        items:
+          type: string
+  ShippingAddressEntity:
+    properties:
+      id:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      company:
+        type: string
+      addressLine1:
+        type: string
+      addressLine2:
+        type: string
+      city:
+        type: string
+      province:
+        type: string
+      provinceCode:
+        type: string
+      postCode:
+        type: string
+      country:
+        type: string
+      countryCode:
+        type: string
+      phone:
+        type: string
+      type:
+        type: string
+      customFields:
+        type: array
+        items:
+          properties:
+            fieldId:
+              type: string
+            fieldValue:
+              type: string
+              description: This can also be an array for fields that need to support list of values (eg. A set of Checkboxes)
+  ShippingOptionEntity:
+    properties:
+      description:
+        type: string
+      formattedPrice:
+        type: number
+        format: string
+      id:
+        type: string
+      imageUrl:
+        type: string
+      method:
+        type: number
+      module:
+        type: string
+      price:
+        type: number
+      selected:
+        type: boolean
+  BillingAddressEntity:
+    allOf:
+    - $ref: '#/definitions/ShippingAddressEntity'
+  DiscountNotification:
+    properties:
+      discountType:
+        type: string
+      message:
+        type: string
+      messageHtml:
+        type: string
+      placeholders:
+        type: array
+        items:
+          type: string
+  GiftWrapEntity:
+    properties:
+      name:
+        type: string
+      message:
+        type: string
+      amount:
+        type: number
+        format: float
+      integerAmount:
+        type: number
+# --------------  common   -----------
+  SimpleResponse:
+    properties:
+      meta:
+        type: object
+      data:
+        type: object
+# -------------- /cart     ------------
+  ResponseCartData:
+    allOf:
+      - $ref: '#/definitions/SimpleResponse'
+      - type: object
+        properties:
+          data:
+            properties:
+              cart:
+                $ref: '#/definitions/CartEntity'
+
+# -------------- /customer ------------
+  ResponseCustomerPostData:
+    properties:
+      meta:
+        type: object
+      data:
+        properties:
+          cart:
+            $ref: '#/definitions/CartEntity'
+          customer:
+            $ref: '#/definitions/CustomerEntity'
+          quote:
+            $ref: '#/definitions/QuoteEntity'
+          shippingOptions:
+            $ref: '#/definitions/ShippingOptionEntity'
+  ResponseCustomerDeleteData:
+    allOf:
+      - $ref: '#/definitions/ResponseCustomerPostData'
+# -------------- /shipping ------------
+  ResponseShippingData:
+    allOf:
+      - $ref: '#/definitions/ResponseQuoteData'
+# -------------- /shippingoptions -----
+  ResponseShippingOptions:
+    allOf:
+      - $ref: '#/definitions/SimpleResponse'
+      - type: object
+        properties:
+          data:
+            type: object
+            properties:
+              shippingOptions:
+                description: A document with a combination of Address ID and the collection of shipping options for that address.
+                type: object
+                properties:
+                  addressId:
+                    description: The addressId (the key in the document) is the dynamically generated id for the given address
+                    type: array
+                    items:
+                      $ref: '#/definitions/ShippingOptionEntity'
+# -------------- /billing -------------
+  ResponseBillingData:
+    allOf:
+      - $ref: '#/definitions/ResponseQuoteData'
+# -------------- /quote ---------------
+  ResponseQuoteData:
+    properties:
+      meta:
+        type: object
+        properties:
+          request:
+            type: object
+            properties:
+              geoCountryCode:
+                type: string
+                description: Country code of the customer derived from the request IP
+              sessionHash:
+                type: string
+                description: Hash of the Session ID associated to the current user & session. To be sent to payment gateways to detect fraud activities.
+              deviceSessionId:
+                type: string
+                description: Unique ID assigned by the payment provider for the current shopper. This should be used along with Payment Nonce to authenticate that the transaction belongs to the same shopper who requested the nonce.
+      data:
+        properties:
+          quote:
+            $ref: '#/definitions/QuoteEntity'
+          customer:
+            $ref: '#/definitions/CustomerEntity'
+          billingAddress:
+            # definitions: If billing address is not set the return value is an empty array
+            $ref: '#/definitions/BillingAddressEntity'
+          shippingAddress:
+            $ref: '#/definitions/ShippingAddressEntity'
+          cart:
+            $ref: '#/definitions/CartEntity'
+          order:
+            $ref: '#/definitions/OrderEntity'
+          shippingOptions:
+              properties:
+                shippingOptionId:
+                  description: This is the actual ID of selected shipping address
+                  type: array
+                  items:
+                    $ref: '#/definitions/ShippingOptionEntity'
+# -------------- /coupon --------------
+  ResponseCouponData:
+    properties:
+      meta:
+        type: object
+      data:
+        type: object
+        properties:
+          cart:
+            $ref: '#/definitions/CartEntity'
+# -------------- /payments ------------
+  ResponsePaymentsData:
+    properties:
+      meta:
+        type: object
+      data:
+        description: Response data container for existing payment providers end-point (GET /payments)
+        properties:
+          paymentMethods:
+            type: array
+            items:
+              $ref: '#/definitions/PaymentMethod'
+  PaymentMethod:
+    required:
+      - id
+      - method
+    properties:
+      id:
+        type: string
+        description: The name of the payment module in the BC app
+      logoUrl:
+        type: string
+      method:
+        type: string
+      supportedCards:
+        type: array
+        items:
+          type: string
+      type:
+        description: Type of the payment provider. This should be used to determine whether payment should be made via BigPay or BC App.
+        type: string
+        enum:
+          - PAYMENT_TYPE_OFFLINE
+          - PAYMENT_TYPE_HOSTED
+          - PAYMENT_TYPE_API
+      config:
+        $ref: '#/definitions/PaymentMethodConfig'
+      nonce:
+        type: string
+        description: Payment Nonce obtained from the payment provider (Eg. PayPal) after the shopper submits the card details in the payment provider's site. It is used for completing the payment with BigPay.
+      clientToken:
+        type: string
+        description: Client Token that a payment provider can use to initialize their JS library. Eg. For Braintree.js
+  PaymentMethodConfig:
+    required:
+      - displayName
+    properties:
+      displayName:
+        type: string
+      cardCode:
+        type: number
+      helpText:
+        type: string
+      enablePaypal:
+        type: boolean
+      redirectUrl:
+        description: In case of hosted payment providers like PayPalExpress this is the URL that PPE will redirect to when shopper confirms payment on PayPal side.
+        type: string
+      merchantId:
+        type: string
+        description: This is required for PayPalExpress in-context
+# -------------- /order ---------------
+  ResponseOrderData:
+    properties:
+      meta:
+        type: object
+      data:
+        description: Response data container for order end-point (POST /order & POST /order/{orderId})
+        properties:
+          customer:
+            $ref: '#/definitions/CustomerEntity'
+          order:
+            $ref: '#/definitions/OrderEntity'
+  OrderEntity:
+    allOf:
+      - $ref: '#/definitions/CartEntity'
+      - type: object
+        properties:
+          orderId:
+            type: number
+          token:
+            type: string
+          payment:
+            $ref: '#/definitions/OrderPayment'
+          socialData:
+            type: array
+            items:
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                image:
+                  type: string
+                url:
+                  type: string
+                shareText:
+                  type: string
+                sharingLink:
+                  type: string
+          status:
+            type: string
+            description: "An order's possible statuses"
+            enum:
+             - ORDER_STATUS_INCOMPLETE
+             - ORDER_STATUS_PENDING
+             - ORDER_STATUS_SHIPPED
+             - ORDER_STATUS_PARTIALLY_SHIPPED
+             - ORDER_STATUS_REFUNDED
+             - ORDER_STATUS_CANCELLED
+             - ORDER_STATUS_DECLINED
+             - ORDER_STATUS_AWAITING_PAYMENT
+             - ORDER_STATUS_AWAITING_PICKUP
+             - ORDER_STATUS_AWAITING_SHIPMENT
+             - ORDER_STATUS_COMPLETED
+             - ORDER_STATUS_AWAITING_FULFILLMENT
+             - ORDER_STATUS_HELD_REVIEW
+             - ORDER_STATUS_DISPUTED
+          customerCreated:
+            type: boolean
+            description: For guest checkouts, this flag will identify whether the billing email was already an existing one or a new customer account was created for this order
+          hasDigitaItems:
+            type: boolean
+            description: Specifies if this order has at-least one digital item
+          isDownloadable:
+            type: boolean
+            description: Specifies if this order is fully paid, so digital items can be downloaded
+          isComplete:
+            type: boolean
+            description: Specifies if this order is complete and ready to be taken to the 'Thank You' page
+          callbackUrl:
+            type: string
+            description: The URL the payments service should call after the payment is complete
+            format: URL
+  OrderPayment:
+    properties:
+      id:
+        type: string
+        description: The name of the payment module in the BC app
+      redirectUrl:
+        type: string
+        description: The URL used to redirect to the hosted payment provider website.
+      returnUrl:
+        type: string
+        description: The URL used to return back from the hosted payment provider website.
+      status:
+        type: string
+        description: Possible statuses hosted payment can have
+        enum:
+         - PAYMENT_STATUS_INITIALIZE
+         - PAYMENT_STATUS_ACKNOWLEDGE
+         - PAYMENT_STATUS_FINALIZE
+      helpText:
+        type: string
+        description: Any message that needs to be shown to the user on 'Thank You' page for offline payments.
+  RequestOrderData:
+    properties:
+      customerMessage:
+        type: string
+        description: An optional message the customer may associate with the order
+      useStoreCredit:
+        type: boolean
+        description: An indicator of whether or not the customer wants to apply store credit.
+      payment:
+        description: Necessary information to resolve payment. Varies by provider.
+        type: object
+        required:
+          - name
+        properties:
+          name:
+            type: string
+            description: Name of payment provider
+          paymentData:
+            $ref: '#/definitions/PaymentData'
+      billingAddress:
+        description: Optionally populate a billing address for the quote at order creation time. Given that taxes can be calculated on billing address (by merchants), you should be aware that if you set the billing address here when creating the order, the total amount of the order may change.
+        type: object
+        allOf:
+          - $ref: '#/definitions/AddressRequestData'
+      shippingAddress:
+        description: Update certain shipping address fields on this order. The only fields that can be updated here are those which do not have the ability to impact shipping calculation. This would generally be used if previously when generating shipping quotes you did not have the full address of the shopper to set on the cart/checkout.
+        type: object
+        allOf:
+          - $ref: '#/definitions/IdentifiableAddressRequestData'
+      quoteId:
+        type: integer
+        description: This will be required, at the moment is sent via COOKIES
+  IdentifiableAddressRequestData:
+    type: object
+    properties:
+      addressLine1:
+        type: string
+      addressLine2:
+        type: string
+      company:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      phone:
+        type: string
+  AddressRequestData:
+    type: object
+    allOf:
+      - $ref: '#/definitions/IdentifiableAddressRequestData'
+      - properties:
+          city:
+            type: string
+          country:
+            type: string
+          countryCode:
+            type: string
+          id:
+            type: string
+          postCode:
+            type: string
+          province:
+            type: string
+          type:
+            type: string
+          customFields:
+            type: array
+            items:
+              properties:
+                fieldId:
+                  type: string
+                fieldValue:
+                  type: string
+                  description: This can also be an array for fields that need to support list of values (eg. A set of Checkboxes)
+  ShippingRequestData:
+    description: Shipping address fields are sent via post body
+    allOf:
+      - $ref: '#/definitions/AddressRequestData'
+  PaymentRequestData:
+    description: Updating the payment status of an order via post body
+    type: object
+    properties:
+      gateway:
+        description: Name of the gateway used for the payment. Eg - Authorize.net
+        type: string
+      status:
+        description: Success, Failure or Pending Review status from the Gateway. Order status is derived from this status.
+        type: string
+        enum:
+          - PAYMENT_SUCCESS
+          - PAYMENT_FAILURE
+          - PAYMENT_PENDING_REVIEW
+      transactionType:
+        type: string
+        enum:
+         - TRANSACTION_AUTHORIZATION
+         - TRANSACTION_PURCHASE
+      amount:
+        description: Deprecated - Use amountAsInteger instead. Amount that was authorized or purchased from the payment gateway as integer amount.
+        type: number
+      amountAsInteger:
+        description: Amount that was authorized or purchased from the payment gateway as integer amount
+        type: number
+      cardType:
+        description: Type of card used for the payment. Eg. Visa, Mastercard
+        type: string
+      lastFourDigitsOfCard:
+        description: Last 4 digits of the credit card used for the payment
+        type: number
+      providerTransactionId:
+        description: Any Transaction Id/Token returned by the payment gateway
+        type: string
+      providerAuthorizationCode:
+        description: Some providers (eg. First Data) provide authorization code that needs to be used to authorize captured transactions
+        type: string
+      errors:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentErrorsResponse'
+  BillingRequestData:
+    description: Billing address fields are sent via post body
+    allOf:
+      - $ref: '#/definitions/AddressRequestData'
+  PaymentData:
+    description: Payment details. May be a credit card, an Apple Pay token, etc.
+    type: object
+    properties:
+      applePayToken:
+        type: object
+        description: Opaque Apple Pay payment token. This would normally be "e.token" from the Apple Pay authorization callback. Only pass for Apple Pay transactions.
+      ccNumber:
+        type: number
+        format: string
+        description: The credit card number. Required for credit card payments.
+      ccCvv:
+        type: number
+        format: string
+        description: The credit card CVV code. Required for credit card payments.
+      ccName:
+        type: string
+        description: The credit card name. Required for credit card payments.
+      ccExpiry:
+        $ref: '#/definitions/CreditCardExpiryDate'
+      ccType:
+        type: string
+        description: 'The credit card type such as Visa, MasterCard, etc.'
+  CreditCardExpiryDate:
+    description: The credit card expiry date. Required for credit card payments.
+    type: object
+    required:
+      - month
+      - year
+    properties:
+      month:
+        type: number
+        format: string
+      year:
+        type: number
+        format: string
+  ShippingOptionRequestData:
+    description: The body request to set the shipping option selected for the quote
+    required:
+      - addressId
+      - shippingOptionId
+    properties:
+      addressId:
+        type: string
+      shippingOptionId:
+        type: string
+  PaymentErrorsResponse:
+    properties:
+      code:
+        type: string
+        description: Error code
+      message:
+        type: string
+        description: Error message

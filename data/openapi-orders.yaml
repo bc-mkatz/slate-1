@@ -1,0 +1,388 @@
+swagger: "2.0"
+info:
+  title: BigCommerce Orders API
+  version: 3.0.0
+  description: A Swagger Document for the BigCommmerce API V3.
+  termsOfService: "http://www.bigcommerce.com/terms"
+host: "api.bigcommerce.com"
+basePath: "/stores/{{store_id}}/v3"
+tags:
+  - name: Orders
+    description: BigCommerce Orders API Definition.
+schemes:
+  - https
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /orders/{order_id}/transactions:
+    parameters:
+      - $ref: "#/parameters/OrderIdParam"
+    get:
+      tags:
+        - Orders
+      description: |
+        Returns a paginated collection of `Transaction` objects related to a BigCommerce Order.
+      operationId: getTransactions
+      responses:
+        200:
+          description: |
+            An array of transactions.
+          schema:
+            $ref: "#/definitions/TransactionCollectionResponse"
+        204:
+          description: |
+            No content found to fulfill request.
+          schema:
+            $ref: '#/definitions/NoContent'
+        404:
+          description: |
+            The resource was not found.
+          schema:
+            $ref: '#/definitions/NotFound'
+
+parameters:
+  OrderIdParam:
+    name: order_id
+    in: path
+    description: |
+      The ID of the `Order` to which the transactions belong.
+    required: true
+    type: number
+    format: int
+
+definitions:
+  TransactionCollectionResponse:
+    type: object
+    description: |
+      Response payload for the Bigcommerce Order Transactions API.
+    properties:
+      data:
+        type: array
+        items:
+          $ref: "#/definitions/Transaction"
+      meta:
+        $ref: "#/definitions/CollectionMeta"
+  CollectionMeta:
+    type: object
+    description: |
+      Data about the response, including pagination and collection totals.
+    properties:
+      total:
+        type: integer
+        description: |
+          Total number of items returned in the result set.
+      count:
+        type: integer
+        description: |
+          Total number of items in the collection.
+      per_page:
+        type: integer
+        description: |
+          The number of collection items returned per page, controlled by the limit parameter.
+      current_page:
+        type: integer
+        description: |
+          The page you are currently on within the collection.
+      total_pages:
+        type: integer
+        description: |
+          The total number of pages in the collection.
+      links:
+        type: object
+        description: |
+          Pagination links for the previous and next parts of the whole collection.
+        properties:
+          previous:
+            type: string
+            description: |
+              Link to the previous page returned in the response.
+          current:
+            type: string
+            description: |
+              Link to the current page returned in the response.
+          next:
+            type: string
+            description: |
+              Link to the next page returned in the response.
+
+  Transaction:
+    type: object
+    description: |
+      A BigCommerce Transaction object describes a single transaction.
+    properties:
+      id:
+        type: integer
+        description: |
+          Unique identifier for the transaction.
+      order_id:
+        type: string
+        description: |
+          Identifier for the order with which the transaction is associated.
+      event:
+        type: string
+        description: |
+          Store event that created the transaction.
+        enum:
+          - purchase
+          - authorize
+          - capture
+          - refund
+          - void
+      method:
+        type: string
+        description: |
+          The payment method: credit_card - a credit card transaction; electronic_wallet - an online wallet; store_credit - a transaction using store credit; gift_certificate - a transaction using a gift certificate; custom - manual payment methods; token - payment token; nonce - temporary payment token; offsite - online payment off the site (e.g., PayPal); offline - payment method that takes place offline.
+        enum:
+          - credit_card
+          - electronic_wallet
+          - gift_certificate
+          - store_credit
+          - apple_pay_card
+          - apple_pay_token
+          - token
+          - custom
+          - offsite
+          - offline
+          - nonce
+      amount:
+        type: number
+        format: float
+        description: |
+          Amount of money in the transaction.
+      currency:
+        type: string
+        format: ISO-4217
+        description: |
+          Currency used for the transaction.
+      gateway:
+        type: string
+        description: |
+          The payment gateway, where applicable.
+        enum:
+          - 2checkout
+          - adyen
+          - amazon
+          - authorizenet
+          - bankdeposit
+          - braintree
+          - cheque
+          - cod
+          - custom
+          - firstdatagge4
+          - giftcertificate
+          - hps
+          - instore
+          - klarna
+          - migs
+          - moneyorder
+          - nmi
+          - paypalexpress
+          - paypalpaymentsprous
+          - paypalpaymentsprouk
+          - plugnpay
+          - qbmsv2
+          - securenet
+          - square
+          - storecredit
+          - stripe
+          - testgateway
+          - usaepay
+      gateway_transaction_id:
+        description: |
+          The transaction ID returned by the payment gateway for this transaction item.
+        type: string
+      date_created:
+        description: |
+          The datetime of the transaction.
+        type: string
+        format: data-time
+      test:
+        type: boolean
+        description: |
+          True if the transaction performed was a test, or if the gateway is in test mode.
+      status:
+        type: string
+        description: |
+          Status of the transaction.
+        enum:
+          - ok
+          - error
+      fraud_review:
+        type: boolean
+        description: |
+          Result of gateway fraud review, if any.  Default is false.
+      avs_result:
+        description: |
+          The Address Verification Service result.
+        type: array
+        items:
+          $ref: "#/definitions/AVSResult"
+      cvv_result:
+        description: |
+          The CVV match result.
+        type: array
+        items:
+          $ref: "#/definitions/CVVResult"
+      credit_card:
+        type: array
+        items:
+          $ref: "#/definitions/CreditCard"
+      gift_certificate:
+        type: array
+        items:
+          $ref: "#/definitions/GiftCertificate"
+      store_credit:
+        type: array
+        items:
+          $ref: "#/definitions/StoreCredit"
+      offline:
+        type: array
+        items:
+          $ref: "#/definitions/Offline"
+      custom:
+        type: array
+        items:
+          $ref: "#/definitions/Custom"
+
+  CreditCard:
+    type: object
+    description: |
+      A credit-card model.
+    properties:
+      card_type:
+        description: |
+          The credit-card type: Visa, MasterCard, etc.
+        type: string
+      card_iin:
+        description: |
+          The IIN of a credit-card number.
+        type: string
+      card_last4:
+        description: |
+          The last 4 digits of a credit-card number.
+        type: string
+
+  StoreCredit:
+    type: object
+    description: |
+      A store credit model.
+    properties:
+      remaining_balance:
+        description: |
+          Remaining balance of shopper's store credit.
+        type: string
+
+  Custom:
+    type: object
+    description: |
+      Custom payment from manual order.
+    properties:
+      payment_method:
+        description: |
+          Text entered for payment in the control panel.
+        type: string
+
+  Offline:
+    type: object
+    description: |
+      Offline payment (e.g., check or purchase order).
+    properties:
+      display_name:
+        description: |
+          Display name for the offline payment.
+        type: string
+
+  GiftCertificate:
+    type: object
+    description: |
+      A gift-certificate model.
+    properties:
+      code:
+        description: |
+          The gift-certificate code.
+        type: string
+      original_balance:
+        description: |
+          The balance on a gift certificate when it was purchased.
+        type: string
+      starting_balance:
+        description: |
+          The balance on a gift certificate at the time of this purchase.
+        type: string
+      remaining_balance:
+        description: |
+          The remaining balance on a gift certificate.
+        type: string
+      status:
+        description: |
+          The status of a gift certificate: active - gift certificate is active; pending - gift certificate purchase is pending; disabled - gift certificate is disabled; expired - gift certificate is expired.
+        type: string
+        enum:
+          - active
+          - pending
+          - disabled
+          - expired
+
+  AVSResult:
+    description: Address Verification Service result from payment gateway.
+    type: object
+    properties:
+      code:
+        description: AVS code.
+        type: string
+      message:
+        description: AVS message.
+        type: string
+      street_match:
+        description: AVS Code for street matching result.
+        type: string
+      postal_match:
+        description: AVS Code for postal matching result.
+        type: string
+
+  CVVResult:
+    description: Card Verification Value result from payment gateway.
+    type: object
+    properties:
+      code:
+        description: CVV code.
+        type: string
+      message:
+        description: CVV message.
+        type: string
+
+  NotFound:
+    description: |
+      Error payload for the BigCommerce API.
+    type: object
+    properties:
+      status:
+        description: |
+          404 HTTP status code.
+        type: integer
+      title:
+        description: The error title describing the error.
+        type: string
+      type:
+        type: string
+      instance:
+        type: string
+
+  NoContent:
+    description: |
+      No-content response for the BigCommerce API.
+    type: object
+    properties:
+      status:
+        description: |
+          204 HTTP status code.
+        type: integer
+      title:
+        description: The error title describing the situation.
+        type: string
+      type:
+        type: string
+      instance:
+        type: string
