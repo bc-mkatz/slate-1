@@ -452,7 +452,7 @@ html, body {
 
   h1 {
    @extend %header-font;
-    font-size: 30px;
+    font-size: 30px !important;
   }
  
   h1:first-child, div:first-child + h1 {
