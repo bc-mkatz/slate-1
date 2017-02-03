@@ -1,3 +1,5 @@
+@import 'variables';
+
 .block-container {
   padding-top: 0 !important;
 }
@@ -5,12 +7,12 @@
 .home-block {
   background: url('../images/HomePage.jpg') no-repeat 100%;
   background-size: 100% 100%;
-  color: #fff;
+  color: $white-text;
   text-align: center;
   padding-top: 0;
 
   h1 {
-    color: #fff;
+    color: $white-text;
     font-weight: 600;
   }
 
@@ -25,23 +27,23 @@
   }
 
   a {
-    color: #fff;
+    color: $white-text;
   }
 
   a:hover, a:focus {
-    color: #fff;
+    color: $white-text;
   }
 }
 
 .home-block-bottom {
   background: url('../images/HomePageBottom.jpg') no-repeat 100%;
   background-size: 100% 100%;
-  color: #fff;
+  color: $white-text;
   text-align: center;
   padding-top: 0;
 
   h1 {
-    color: #fff;
+    color: $white-text;
     font-weight: 600;
   }
 
@@ -51,7 +53,7 @@
     vertical-align: top;
 
     h2 {
-      color: #fff;
+      color: $white-text;
       font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -63,12 +65,12 @@
   }
 
   a {
-    color: #fff;
+    color: $white-text;
   }
 
   .button {
-    background-color: #4f75f8;
-    border-color: #fff;
+    background-color: $bc-blue;
+    border-color: $white-text;
   }
 }
 
@@ -79,7 +81,7 @@
   text-align: center;
 
   h2 {
-    color: #4f75f8;
+    color: $bc-blue;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -133,15 +135,12 @@
 
   h3, h4 {
     padding-top: 2%;
-    // Commented out 8/31/16, to removed exaggerated 
-    // spacing below Changelog topic heads: 
-    /* padding-bottom: 2%; */
   }
 }
 
 #changelog, #api-documentation, #understanding-themes, #api-v2-documentation, #api-v3-documentation, #blueprint-themes, #blueprint-theme-snippets, #blueprint-theme-layouts, #blueprint-theme-panels {
   @extend %header-font;
-  color: #4f75f8 !important;
+  color: $bc-blue !important;
   font-size: 1.55556rem !important;
   text-transform: uppercase;
   padding-top: 3%;
@@ -159,7 +158,7 @@ table td:nth-child(3) {
 
   #vtwo-link1, #vtwo-link2, #vtwo-link3 {
     font-size: 14px;
-    color: #595864;
+    color: $bc-light-grey;
   }
 }
 
@@ -186,7 +185,7 @@ table td:nth-child(3) {
 #support-h1 {
   font-size: 1.55556rem;
   @extend %header-font;
-  color: #4f75f8;
+  color: $bc-blue;
   position: relative;
   left: 11%;
   text-transform: uppercase;
@@ -202,12 +201,10 @@ table td:nth-child(3) {
 }
 
 .separator {
-  border-top: 1px solid #595864;
+  border-top: 1px solid $bc-light-grey;
 }
 
 .nav-label {
-  /* margin-left: 36px; */
-    /* ^ Swapped 8/15/16 to left-align whole left nav \/: */
   margin-left: 12px;
   margin-bottom: 12px;
   font-size: 15px;
@@ -299,10 +296,6 @@ li > .dropbtn {
     text-decoration: none;
 }
 
-/*li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}*/
-
 li.dropdown {
     display: inline-block;
 }
@@ -311,7 +304,7 @@ li.dropdown {
     @extend %default-font;
     display: none;
     position: absolute;
-    background-color: #34313F;
+    background-color: $code-bg;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -325,7 +318,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-  background-color: #6D6371;
+  background-color: $bc-light-grey;
 }
 
 .dropdown:hover .dropdown-content {

@@ -33,16 +33,13 @@ $lang-select-border: #292732;
 $lang-select-bg: #292732;
 $lang-select-active-bg: $lang-select-bg; // feel free to change this to blue or something
 $lang-select-pressed-bg: $lang-select-bg; // color of language tab bg when mouse is pressed
-$main-bg: #ffffff;
-$aside-notice-bg: #f0f3fe;     /* Changed blue to tint matching BC 2016 branding */ 
-/* $aside-warning-bg: #F9F2E6;  Changed original salmon to orange; could be more vibrant */
-/* $aside-warning-bg: #fcf8f2;  Stencil orange, tried 7/19/16 */ 
-$aside-warning-bg: #F8F3D5;  /* Dustin's orange, applied 7/19/16 */ 
-$aside-error-bg: #f8e3e3;         /* Dustin's red, dithered twd. Stencil for readability, added 7/19/16 */ 
-/* $aside-success-bg: #e1f5e2;   Slate default shade */
-$aside-success-bg: #e1f5e2;  /* Dustin's green, applied 7/19/16 */
+$main-bg: #f7f7f7;
+$aside-notice-bg: #f0f3fe;    
+$aside-warning-bg: #F8F3D5;  
+$aside-error-bg: #f8e3e3;      
+$aside-success-bg: #e1f5e2;
 $search-notice-bg: #c97a7e;
-
+$bc-light-grey: #6d6e7a;
 
 // TEXT COLORS
 ////////////////////
@@ -52,6 +49,8 @@ $nav-active-text: #595864;
 $lang-select-text: #e3e3e4; // color of unselected language tab text
 $lang-select-active-text: #4b71fc; // color of selected language tab text
 $lang-select-pressed-text: #4b71fc; // color of language tab text when mouse is pressed
+$bc-blue: #4f75f8;
+$white-text: #f7f7f7;
 
 
 // SIZES
