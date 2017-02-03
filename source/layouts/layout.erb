@@ -43,7 +43,6 @@ under the License.
         });
       </script>
     <% end %>
-    <%= partial "layouts/feedbackme_includes" %>
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
@@ -111,7 +110,6 @@ under the License.
         <% end %>
       </div>
     </div>    
-    <%= partial "layouts/feedbackme_script" %>
     <%= partial "layouts/footerscript" %>
   </body>
 </html>
