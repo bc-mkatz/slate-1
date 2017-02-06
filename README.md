@@ -13,6 +13,7 @@ You're going to need:
  - **Linux or OS X** — Windows may work, but is unsupported.
  - **Ruby, version 1.9.3 or newer**
  - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
+- **Node** and **npm** (optional) - used for auto-generating markdown from Swagger API documenation.
 
 ### Getting Set Up
 
@@ -36,3 +37,13 @@ Now that Slate is all set up your machine, you'll probably want to learn more ab
 
 If you'd prefer to use Docker, instructions are available [in the wiki](https://github.com/lord/slate/wiki/Docker).
 
+### Auto-generating markdown from swagger
+
+**Prerequisites** - you must `npm install js-yaml` and `npm install widdershins` (note: tested on widdershins 1.0.8)
+
+1. Make sure the updated swagger file is in `data`
+2. Commit the updated swagger file
+3. Run `node swagger2md.js`
+4. Check the result in `source/api/v3`
+5. Commit the result
+6. Deploy
