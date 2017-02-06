@@ -48,4 +48,4 @@ To change the API token that an app is using to access a store, use the followin
 
 ## <span class="jumptarget" id="request_basic"> Basic-Auth API Requests </span>
 
-Many tools are available to interact with APIs. For example, to see how to quickly make initial requests using <a href="https://en.wikipedia.org/wiki/CURL" target="_blank">cURL</a> commands, please see our [cURL Quickstart Guide](#curl-quickstart-guide).
+Many tools are available to interact with APIs. For example, to see how to quickly make initial requests using <a href="https://en.wikipedia.org/wiki/CURL" target="_blank">cURL</a> commands, please see our [cURL Quickstart Guide](/api/guides#curl-quickstart-guide).
