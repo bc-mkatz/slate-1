@@ -1,12 +1,8 @@
 ---
 title: BigCommerce Catalog API v3.0.0b
-layout: "layout"
+layout: "apitwocolumn"
 language_tabs:
-  - shell
-  - python
-  - java
-  - ruby
-  - javascript
+  - ''
 toc_footers: []
 includes: []
 search: true
@@ -30,67 +26,6 @@ BigCommerce Catalog API Definition.
 ## getProducts
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products`
 
@@ -413,67 +348,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `POST /catalog/products`
 
 Creates a `Product` in the BigCommerce Catalog.
@@ -775,67 +649,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products`
 
 Deletes one or more `Product` objects from the BigCommerce Catalog.
@@ -922,67 +735,6 @@ This operation does not require authentication
 ## getProductById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}`
 
@@ -1177,67 +929,6 @@ This operation does not require authentication
 ## updateProduct
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}`
 
@@ -1549,67 +1240,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}`
 
 Deletes a `Product` object from the BigCommerce Catalog.
@@ -1640,67 +1270,6 @@ This operation does not require authentication
 ## getProductImages
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/images`
 
@@ -1777,67 +1346,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `POST /catalog/products/{product_id}/images`
 
 Creates an image on a product. Publically accessible URLs and files (form post) are valid parameters.
@@ -1913,67 +1421,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `GET /catalog/products/{product_id}/images/{image_id}`
 
 Gets image on a product.
@@ -2037,67 +1484,6 @@ This operation does not require authentication
 ## updateProductImage
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/images/{image_id}`
 
@@ -2176,67 +1562,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}/images/{image_id}`
 
 Deletes a `ProductImage` in the BigCommerce Catalog.
@@ -2271,67 +1596,6 @@ This operation does not require authentication
 ## getProductVideos
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/videos`
 
@@ -2391,67 +1655,6 @@ This operation does not require authentication
 ## createProductVideo
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/videos`
 
@@ -2524,67 +1727,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `GET /catalog/products/{product_id}/videos/{video_id}`
 
 Gets video on a product.
@@ -2644,67 +1786,6 @@ This operation does not require authentication
 ## updateProductVideo
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/videos/{video_id}`
 
@@ -2779,67 +1860,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}/videos/{video_id}`
 
 Deletes a `ProductVideo` in the BigCommerce Catalog.
@@ -2874,67 +1894,6 @@ This operation does not require authentication
 ## getVariantsByProductId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/variants`
 
@@ -3028,67 +1987,6 @@ This operation does not require authentication
 ## createVariant
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/variants`
 
@@ -3189,67 +2087,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `GET /catalog/products/{product_id}/variants/{variant_id}`
 
 Gets a `Variant` object.
@@ -3324,67 +2161,6 @@ This operation does not require authentication
 ## updateVariant
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/variants/{variant_id}`
 
@@ -3482,67 +2258,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}/variants/{variant_id}`
 
 Deletes a `Variant`.
@@ -3577,67 +2292,6 @@ This operation does not require authentication
 ## getVariantMetafieldsByProductIdAndVariantId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/variants/{variant_id}/metafields`
 
@@ -3698,8 +2352,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-07T18:24:53Z",
-      "updated_at": "2017-02-07T18:24:53Z"
+      "created_at": "2017-02-07T19:44:56Z",
+      "updated_at": "2017-02-07T19:44:56Z"
     }
   ],
   "meta": {
@@ -3731,67 +2385,6 @@ This operation does not require authentication
 ## createVariantMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/variants/{variant_id}/metafields`
 
@@ -3853,8 +2446,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -3890,67 +2483,6 @@ This operation does not require authentication
 ## getVariantMetafieldByProductIdAndVariantId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}`
 
@@ -3998,8 +2530,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -4019,67 +2551,6 @@ This operation does not require authentication
 ## updateVariantMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}`
 
@@ -4144,8 +2615,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -4165,67 +2636,6 @@ This operation does not require authentication
 ## deleteVariantMetafieldById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `DELETE /catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}`
 
@@ -4265,67 +2675,6 @@ This operation does not require authentication
 ## createVariantImage
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "multipart/form-data",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/variants/{variant_id}/image`
 
@@ -4396,67 +2745,6 @@ This operation does not require authentication
 ## getOptions
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/options`
 
@@ -4563,67 +2851,6 @@ This operation does not require authentication
 ## createOption
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/options`
 
@@ -4789,67 +3016,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `GET /catalog/products/{product_id}/options/{option_id}`
 
 Gets `Option` object by product ID and option id.
@@ -4946,67 +3112,6 @@ This operation does not require authentication
 ## updateOption
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/options/{option_id}`
 
@@ -5177,67 +3282,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}/options/{option_id}`
 
 Deletes a Product's `Option`, based on the product_id and option_id.
@@ -5272,67 +3316,6 @@ This operation does not require authentication
 ## getModifiers
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/modifiers`
 
@@ -5445,67 +3428,6 @@ This operation does not require authentication
 ## createModifier
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/modifiers`
 
@@ -5701,67 +3623,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `GET /catalog/products/{product_id}/modifiers/{modifier_id}`
 
 Gets a `Modifier` by product_id and modifier_id.
@@ -5875,67 +3736,6 @@ This operation does not require authentication
 ## updateModifier
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/modifiers/{modifier_id}`
 
@@ -6135,67 +3935,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}/modifiers/{modifier_id}`
 
 Deletes a Product's `Modifier` based on the product_id and modifier_id.
@@ -6230,67 +3969,6 @@ This operation does not require authentication
 ## createModifierImage
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "multipart/form-data",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image`
 
@@ -6368,67 +4046,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image`
 
 Deletes the image applied to show when the modifier value is selected
@@ -6465,67 +4082,6 @@ This operation does not require authentication
 ## getComplexRules
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/complex-rules`
 
@@ -6605,67 +4161,6 @@ This operation does not require authentication
 ## createComplexRule
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/complex-rules`
 
@@ -6795,67 +4290,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `GET /catalog/products/{product_id}/complex-rules/{complex_rule_id}`
 
 Gets a `ComplexRule` by product_id.
@@ -6936,67 +4370,6 @@ This operation does not require authentication
 ## updateComplexRule
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/complex-rules/{complex_rule_id}`
 
@@ -7132,67 +4505,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/products/{product_id}/complex-rules/{complex_rule_id}`
 
 Deletes a Product's `ComplexRule`, based on the `product_id` and `complex_rule_id`.
@@ -7227,67 +4539,6 @@ This operation does not require authentication
 ## getProductMetafieldsByProductId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/metafields`
 
@@ -7344,8 +4595,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-07T18:24:53Z",
-      "updated_at": "2017-02-07T18:24:53Z"
+      "created_at": "2017-02-07T19:44:56Z",
+      "updated_at": "2017-02-07T19:44:56Z"
     }
   ],
   "meta": {
@@ -7377,67 +4628,6 @@ This operation does not require authentication
 ## createProductMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/products/{product_id}/metafields`
 
@@ -7495,8 +4685,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -7532,67 +4722,6 @@ This operation does not require authentication
 ## getProductMetafieldByProductId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/products/{product_id}/metafields/{metafield_id}`
 
@@ -7636,8 +4765,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -7657,67 +4786,6 @@ This operation does not require authentication
 ## updateProductMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/products/{product_id}/metafields/{metafield_id}`
 
@@ -7778,8 +4846,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -7799,67 +4867,6 @@ This operation does not require authentication
 ## deleteProductMetafieldById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `DELETE /catalog/products/{product_id}/metafields/{metafield_id}`
 
@@ -7895,67 +4902,6 @@ This operation does not require authentication
 ## getCategories
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/categories`
 
@@ -8053,67 +4999,6 @@ This operation does not require authentication
 ## createCategory
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/categories`
 
@@ -8228,67 +5113,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/categories`
 
 Deletes a product or products from the BigCommerce Catalog.
@@ -8335,67 +5159,6 @@ This operation does not require authentication
 ## getCategoryById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/categories/{category_id}`
 
@@ -8466,67 +5229,6 @@ This operation does not require authentication
 ## updateCategory
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/categories/{category_id}`
 
@@ -8655,67 +5357,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/categories/{category_id}`
 
 Deletes one or more `Category` objects from the BigCommerce catalog.
@@ -8746,67 +5387,6 @@ This operation does not require authentication
 ## getCategoryMetafieldsByCategoryId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/categories/{category_id}/metafields`
 
@@ -8863,8 +5443,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-07T18:24:53Z",
-      "updated_at": "2017-02-07T18:24:53Z"
+      "created_at": "2017-02-07T19:44:56Z",
+      "updated_at": "2017-02-07T19:44:56Z"
     }
   ],
   "meta": {
@@ -8896,67 +5476,6 @@ This operation does not require authentication
 ## createCategoryMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/categories/{category_id}/metafields`
 
@@ -9014,8 +5533,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -9051,67 +5570,6 @@ This operation does not require authentication
 ## getCategoryMetafieldByCategoryId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/categories/{category_id}/metafields/{metafield_id}`
 
@@ -9155,8 +5613,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -9176,67 +5634,6 @@ This operation does not require authentication
 ## updateCategoryMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/categories/{category_id}/metafields/{metafield_id}`
 
@@ -9297,8 +5694,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -9318,67 +5715,6 @@ This operation does not require authentication
 ## deleteCategoryMetafieldById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `DELETE /catalog/categories/{category_id}/metafields/{metafield_id}`
 
@@ -9414,67 +5750,6 @@ This operation does not require authentication
 ## createCategoryImage
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "multipart/form-data",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/categories/{category_id}/image`
 
@@ -9545,67 +5820,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/categories/{category_id}/image`
 
 Deletes a `Category` image from the BigCommerce Catalog.
@@ -9636,67 +5850,6 @@ This operation does not require authentication
 ## getCategoryTree
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/categories/tree`
 
@@ -9738,67 +5891,6 @@ This operation does not require authentication
 ## getBrands
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/brands`
 
@@ -9873,67 +5965,6 @@ This operation does not require authentication
 ## createBrand
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/brands`
 
@@ -10025,67 +6056,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/brands`
 
 Deletes one or more `Brand` objects from the BigCommerce Catalog.
@@ -10120,67 +6090,6 @@ This operation does not require authentication
 ## getBrandById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/brands/{brand_id}`
 
@@ -10239,67 +6148,6 @@ This operation does not require authentication
 ## updateBrand
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/brands/{brand_id}`
 
@@ -10407,67 +6255,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/brands/{brand_id}`
 
 Deletes a `Brand` from the BigCommerce Catalog.
@@ -10498,67 +6285,6 @@ This operation does not require authentication
 ## getBrandMetafieldsByBrandId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/brands/{brand_id}/metafields`
 
@@ -10615,8 +6341,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-07T18:24:53Z",
-      "updated_at": "2017-02-07T18:24:53Z"
+      "created_at": "2017-02-07T19:44:56Z",
+      "updated_at": "2017-02-07T19:44:56Z"
     }
   ],
   "meta": {
@@ -10648,67 +6374,6 @@ This operation does not require authentication
 ## createBrandMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/brands/{brand_id}/metafields`
 
@@ -10766,8 +6431,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -10803,67 +6468,6 @@ This operation does not require authentication
 ## getBrandMetafieldByBrandId
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/brands/{brand_id}/metafields/{metafield_id}`
 
@@ -10907,8 +6511,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -10928,67 +6532,6 @@ This operation does not require authentication
 ## updateBrandMetafield
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /catalog/brands/{brand_id}/metafields/{metafield_id}`
 
@@ -11049,8 +6592,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-07T18:24:53Z",
-    "updated_at": "2017-02-07T18:24:53Z"
+    "created_at": "2017-02-07T19:44:56Z",
+    "updated_at": "2017-02-07T19:44:56Z"
   },
   "meta": {}
 }
@@ -11070,67 +6613,6 @@ This operation does not require authentication
 ## deleteBrandMetafieldById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `DELETE /catalog/brands/{brand_id}/metafields/{metafield_id}`
 
@@ -11166,67 +6648,6 @@ This operation does not require authentication
 ## createBrandImage
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "multipart/form-data",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `POST /catalog/brands/{brand_id}/image`
 
@@ -11297,67 +6718,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /catalog/brands/{brand_id}/image`
 
 Deletes a `Brand` image from the BigCommerce Catalog.
@@ -11387,67 +6747,6 @@ This operation does not require authentication
 ## getVariants
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /catalog/variants`
 
@@ -11546,67 +6845,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 Returns a lightweight inventory summary from the BigCommerce Catalog.
 
 
@@ -11639,67 +6877,6 @@ This operation does not require authentication
 ## getSubscribers
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /customers/subscribers`
 
@@ -11794,67 +6971,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `POST /customers/subscribers`
 
 Creates a `Subscriber` object.
@@ -11943,67 +7059,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 `DELETE /customers/subscribers`
 
 Deletes a Subscriber or Subscribers from BigCommerce Customers.
@@ -12058,67 +7113,6 @@ This operation does not require authentication
 ## getSubscriberById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /customers/subscribers/{subscriber_id}`
 
@@ -12176,67 +7170,6 @@ This operation does not require authentication
 ## updateSubscriber
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `PUT /customers/subscribers/{subscriber_id}`
 
@@ -12339,67 +7272,6 @@ This operation does not require authentication
 ## deleteSubscriberById
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `DELETE /customers/subscribers/{subscriber_id}`
 

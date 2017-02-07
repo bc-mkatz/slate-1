@@ -1,12 +1,8 @@
 ---
 title: Order API v2.0.0
-layout: "layout"
+layout: "apitwocolumn"
 language_tabs:
-  - shell
-  - python
-  - java
-  - ruby
-  - javascript
+  - ''
 toc_footers: []
 includes: []
 search: true
@@ -28,67 +24,6 @@ Base URL = ://undefined/
 ## POST /billing
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post ://undefined/billing
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/billing', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post '://undefined/billing', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('://undefined/billing', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/billing");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Add / Update the billing address in quote object
 
@@ -125,67 +60,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get ://undefined/cart
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/cart', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get '://undefined/cart', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('://undefined/cart', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/cart");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 *Retrieve cart data*
 
 Retrieves a cart, which is the composition of set of items
@@ -211,67 +85,6 @@ This operation does not require authentication
 ## POST /coupon
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post ://undefined/coupon
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/coupon', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post '://undefined/coupon', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('://undefined/coupon', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/coupon");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Adding coupon or gift certificate code to the cart
 
@@ -308,67 +121,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X delete ://undefined/coupon/{couponCode}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/coupon/{couponCode}', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete '://undefined/coupon/{couponCode}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('://undefined/coupon/{couponCode}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/coupon/{couponCode}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 Removing coupon or gift certificate code from the cart
 
 ### Parameters
@@ -398,67 +150,6 @@ This operation does not require authentication
 ## POST /customer
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post ://undefined/customer
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/customer', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post '://undefined/customer', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('://undefined/customer', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/customer");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Associate the quote object to a customer. Parameters are comma separated as values against `includes` key. For example, `/quote?includes=customer,shippingOptions`
 
@@ -497,67 +188,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get ://undefined/customer
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/customer', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get '://undefined/customer', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('://undefined/customer', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/customer");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 currently any GET request to /customer end point will result to a `405` response because `getAction()` method does't exists
 
 ### Parameters
@@ -587,67 +217,6 @@ This operation does not require authentication
 ## DELETE /customer
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X delete ://undefined/customer
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/customer', { method: 'DELETE'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete '://undefined/customer', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.delete('://undefined/customer', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/customer");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("DELETE");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Remove customer information from the quote.
 
@@ -682,67 +251,6 @@ This operation does not require authentication
 ## POST /order
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post ://undefined/order
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/order', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post '://undefined/order', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('://undefined/order', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/order");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Used to create an order (currently we use session to retrieve quote data)
 
@@ -787,67 +295,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get ://undefined/order/{orderId}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/order/{orderId}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get '://undefined/order/{orderId}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('://undefined/order/{orderId}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/order/{orderId}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 *Retrieve order data*
 
 Retrieves an order, which is the composition of set of items
@@ -879,67 +326,6 @@ This operation does not require authentication
 ## POST /order/{orderId}
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post ://undefined/order/{orderId}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/order/{orderId}', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post '://undefined/order/{orderId}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('://undefined/order/{orderId}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/order/{orderId}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Update the order. Finalize in case the order has been set previously in checkout
 
@@ -1035,67 +421,6 @@ This operation does not require authentication
 ## POST /order/{orderId}/payment
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post ://undefined/order/{orderId}/payment
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/order/{orderId}/payment', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post '://undefined/order/{orderId}/payment', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('://undefined/order/{orderId}/payment', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/order/{orderId}/payment");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Update the payment and order status from payment service (BigPay) & finalize the order. Requires HAWK authentication.
 
@@ -1211,67 +536,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get ://undefined/payments
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/payments', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get '://undefined/payments', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('://undefined/payments', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/payments");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 Retrieve a list of existing payment methods
 
 ### Responses
@@ -1292,67 +556,6 @@ This operation does not require authentication
 ## GET /payments/{providerId}
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get ://undefined/payments/{providerId}
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/payments/{providerId}', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get '://undefined/payments/{providerId}', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('://undefined/payments/{providerId}', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/payments/{providerId}");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Retrieve a single, existing payment method
 
@@ -1382,67 +585,6 @@ This operation does not require authentication
 ## GET /quote
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get ://undefined/quote
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/quote', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get '://undefined/quote', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('://undefined/quote', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/quote");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Parameters are comma separated as values against `includes` key. For example, `/quote?includes=customer,shippingOptions`
 
@@ -1478,67 +620,6 @@ This operation does not require authentication
 ## POST /shipping
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X post ://undefined/shipping
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/shipping', { method: 'POST'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post '://undefined/shipping', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.post('://undefined/shipping', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/shipping");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 Add / Update the shipping address in quote object
 
@@ -1577,67 +658,6 @@ This operation does not require authentication
 
 > Code samples
 
-````shell
-
-# You can also use wget
-curl -X get ://undefined/shippingOptions
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/shippingOptions', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get '://undefined/shippingOptions', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('://undefined/shippingOptions', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/shippingOptions");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
-
 *Retrieve Shipping Options*
 
 Retrieves a list of all available shipping options for the current quote
@@ -1669,67 +689,6 @@ This operation does not require authentication
 ## PUT /shippingOptions
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X put ://undefined/shippingOptions
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('://undefined/shippingOptions', { method: 'PUT'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put '://undefined/shippingOptions', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.put('://undefined/shippingOptions', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("://undefined/shippingOptions");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("PUT");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 *Set Shipping Option*
 

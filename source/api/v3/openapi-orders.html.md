@@ -1,12 +1,8 @@
 ---
 title: BigCommerce Orders API v3.0.0
-layout: "layout"
+layout: "apitwocolumn"
 language_tabs:
-  - shell
-  - python
-  - java
-  - ruby
-  - javascript
+  - ''
 toc_footers: []
 includes: []
 search: true
@@ -30,67 +26,6 @@ BigCommerce Orders API Definition.
 ## getTransactions
 
 > Code samples
-
-````shell
-
-# You can also use wget
-curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions
-````
-
-````javascript
-const request = require('node-fetch');
-fetch('https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions', { method: 'GET'})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-````
-
-````ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions', params:
-  {
-    # TODO
-  }
-
-p JSON.parse(result)
-````
-
-````python
-import requests
-
-headers = {
-	'Content-Type': "application/json",
-	'Accept': "application/json",
-	'X-Auth-Client': "SampleClientCode",
-	'X-Auth-Token': "8675309"
-}
-
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions', headers=headers, params={
-  # TODO
-})
-
-print r.json()
-````
-
-````java
-URL obj = new URL("https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-````
 
 `GET /orders/{order_id}/transactions`
 
