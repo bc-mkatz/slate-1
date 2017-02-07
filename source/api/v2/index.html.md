@@ -92,9 +92,6 @@ includes:
   - api_CRUD_tax_classes
   - api_objects_webhook
   - api_CRUD_webhooks
-  - api_browsers
-  - api_status_codes
-  - api_data_types
 
 toc_footers:
   - <a href="/">Home</a>
@@ -109,9 +106,3 @@ search: true
 ---
 
 # API v2 Documentation
-
-<!-- The Bigcommerce Stores API features a RESTful architecture, allowing you to code in the language of your choice. This API supports the JSON media type, and uses UTF-8 character encoding.
-
-All connections require authentication, and are secured by TLS encryption. As of June 30, 2016, all requests must support Server Name Indication (SNI).
-
-With clever use of this API, you can automate various commerce, business, and publishing tasks and integrate all kinds of apps with our platform. -->
