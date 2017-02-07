@@ -1,0 +1,14 @@
+import requests
+
+headers = {
+	'{{?data.consumes.length}}Content-Type': "{{=data.consumes[0]}}{{?}}",
+	'{{?data.produces.length}}Accept': "{{=data.produces[0]}}{{?}}",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.{{=data.method}}('{{=data.url}}', headers=headers, params={
+  # TODO
+})
+
+print r.json()

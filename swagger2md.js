@@ -79,9 +79,9 @@ var endPath = "source/api/v3";
 var options = {}; // defaults shown
 options.codeSamples = true;
 options.yaml = true;
-//options.language_tabs = [];
+options.language_tabs = ['shell', 'python', 'java', 'ruby', 'javascript'];
 //options.loadedFrom = sourceUrl;
-//options.user_templates = './user_templates';
+options.user_templates = './user_templates';
 options.theme = 'darkula';
 
 // Delete all existing .generated.md files

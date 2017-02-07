@@ -2,13 +2,11 @@
 title: BigCommerce Orders API v3.0.0
 layout: "layout"
 language_tabs:
-  - shell: Shell
-  - http: HTTP
-  - html: JavaScript
-  - javascript: Node.JS
-  - python: Python
-  - ruby: Ruby
-  - java: Java
+  - shell
+  - python
+  - java
+  - ruby
+  - javascript
 toc_footers: []
 includes: []
 search: true
@@ -34,27 +32,9 @@ BigCommerce Orders API Definition.
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -82,7 +62,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/orders/{order_id}/transactions', headers=headers, params={
   # TODO
 })
 

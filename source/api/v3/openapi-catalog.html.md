@@ -2,13 +2,11 @@
 title: BigCommerce Catalog API v3.0.0b
 layout: "layout"
 language_tabs:
-  - shell: Shell
-  - http: HTTP
-  - html: JavaScript
-  - javascript: Node.JS
-  - python: Python
-  - ruby: Ruby
-  - java: Java
+  - shell
+  - python
+  - java
+  - ruby
+  - javascript
 toc_footers: []
 includes: []
 search: true
@@ -34,27 +32,9 @@ BigCommerce Catalog API Definition.
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -82,7 +62,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', headers=headers, params={
   # TODO
 })
 
@@ -272,54 +259,65 @@ Status|Meaning|Description
 {
   "data": [
     {
-      "is_price_hidden": true,
-      "view_count": 0,
-      "brand_id": 0,
-      "availability": "available",
-      "is_preorder_only": true,
-      "price": 0,
-      "sort_order": 0,
-      "meta_keywords": [
-        "string"
-      ],
-      "type": "physical",
-      "inventory_tracking": "none",
-      "depth": 0,
-      "is_featured": true,
-      "availability_description": "string",
-      "search_keywords": "string",
-      "tax_class_id": 0,
-      "order_quantity_maximum": 0,
-      "condition": "New",
       "name": "string",
-      "page_title": "string",
+      "type": "physical",
+      "sku": "string",
+      "description": "string",
+      "weight": 0,
+      "width": 0,
+      "depth": 0,
+      "height": 0,
+      "price": 0,
+      "cost_price": 0,
+      "retail_price": 0,
+      "sale_price": 0,
+      "tax_class_id": 0,
+      "product_tax_code": "string",
+      "categories": [
+        0
+      ],
+      "brand_id": 0,
+      "inventory_level": 0,
+      "inventory_warning_level": 0,
+      "inventory_tracking": "none",
+      "fixed_cost_shipping_price": 0,
       "is_free_shipping": true,
+      "is_visible": true,
+      "is_featured": true,
+      "related_products": [
+        0
+      ],
+      "warranty": "string",
+      "bin_picking_number": "string",
+      "layout_file": "string",
+      "upc": "string",
+      "search_keywords": "string",
+      "availability": "available",
+      "availability_description": "string",
+      "gift_wrapping_options_type": "any",
       "gift_wrapping_options_list": [
         0
       ],
+      "sort_order": 0,
+      "condition": "New",
+      "is_condition_shown": true,
+      "order_quantity_minimum": 0,
+      "order_quantity_maximum": 0,
+      "page_title": "string",
+      "meta_keywords": [
+        "string"
+      ],
+      "meta_description": "string",
+      "view_count": 0,
       "preorder_release_date": "string",
-      "sale_price": 0,
-      "height": 0,
-      "product_tax_code": "string",
-      "warranty": "string",
+      "preorder_message": "string",
+      "is_preorder_only": true,
+      "is_price_hidden": true,
+      "price_hidden_label": "string",
       "custom_url": {
         "url": "string",
         "is_customized": true
       },
-      "fixed_cost_shipping_price": 0,
-      "weight": 0,
-      "width": 0,
-      "retail_price": 0,
-      "categories": [
-        0
-      ],
-      "inventory_warning_level": 0,
-      "bin_picking_number": "string",
-      "layout_file": "string",
-      "gift_wrapping_options_type": "any",
-      "is_visible": true,
-      "inventory_level": 0,
-      "description": "string",
       "bulk_pricing_rules": [
         {
           "id": 0,
@@ -329,17 +327,6 @@ Status|Meaning|Description
           "amount": 0
         }
       ],
-      "order_quantity_minimum": 0,
-      "preorder_message": "string",
-      "meta_description": "string",
-      "cost_price": 0,
-      "upc": "string",
-      "price_hidden_label": "string",
-      "related_products": [
-        0
-      ],
-      "sku": "string",
-      "is_condition_shown": true,
       "id": 0,
       "calculated_price": 0,
       "custom_fields": [
@@ -427,27 +414,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -475,7 +444,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', headers=headers, params={
   # TODO
 })
 
@@ -518,54 +494,65 @@ A BigCommerce `Product` object.
 
 ````json
 {
-  "is_price_hidden": true,
-  "view_count": 0,
-  "brand_id": 0,
-  "availability": "available",
-  "is_preorder_only": true,
-  "price": 0,
-  "sort_order": 0,
-  "meta_keywords": [
-    "string"
-  ],
-  "type": "physical",
-  "inventory_tracking": "none",
-  "depth": 0,
-  "is_featured": true,
-  "availability_description": "string",
-  "search_keywords": "string",
-  "tax_class_id": 0,
-  "order_quantity_maximum": 0,
-  "condition": "New",
   "name": "string",
-  "page_title": "string",
+  "type": "physical",
+  "sku": "string",
+  "description": "string",
+  "weight": 0,
+  "width": 0,
+  "depth": 0,
+  "height": 0,
+  "price": 0,
+  "cost_price": 0,
+  "retail_price": 0,
+  "sale_price": 0,
+  "tax_class_id": 0,
+  "product_tax_code": "string",
+  "categories": [
+    0
+  ],
+  "brand_id": 0,
+  "inventory_level": 0,
+  "inventory_warning_level": 0,
+  "inventory_tracking": "none",
+  "fixed_cost_shipping_price": 0,
   "is_free_shipping": true,
+  "is_visible": true,
+  "is_featured": true,
+  "related_products": [
+    0
+  ],
+  "warranty": "string",
+  "bin_picking_number": "string",
+  "layout_file": "string",
+  "upc": "string",
+  "search_keywords": "string",
+  "availability": "available",
+  "availability_description": "string",
+  "gift_wrapping_options_type": "any",
   "gift_wrapping_options_list": [
     0
   ],
+  "sort_order": 0,
+  "condition": "New",
+  "is_condition_shown": true,
+  "order_quantity_minimum": 0,
+  "order_quantity_maximum": 0,
+  "page_title": "string",
+  "meta_keywords": [
+    "string"
+  ],
+  "meta_description": "string",
+  "view_count": 0,
   "preorder_release_date": "string",
-  "sale_price": 0,
-  "height": 0,
-  "product_tax_code": "string",
-  "warranty": "string",
+  "preorder_message": "string",
+  "is_preorder_only": true,
+  "is_price_hidden": true,
+  "price_hidden_label": "string",
   "custom_url": {
     "url": "string",
     "is_customized": true
   },
-  "fixed_cost_shipping_price": 0,
-  "weight": 0,
-  "width": 0,
-  "retail_price": 0,
-  "categories": [
-    0
-  ],
-  "inventory_warning_level": 0,
-  "bin_picking_number": "string",
-  "layout_file": "string",
-  "gift_wrapping_options_type": "any",
-  "is_visible": true,
-  "inventory_level": 0,
-  "description": "string",
   "bulk_pricing_rules": [
     {
       "id": 0,
@@ -575,17 +562,6 @@ A BigCommerce `Product` object.
       "amount": 0
     }
   ],
-  "order_quantity_minimum": 0,
-  "preorder_message": "string",
-  "meta_description": "string",
-  "cost_price": 0,
-  "upc": "string",
-  "price_hidden_label": "string",
-  "related_products": [
-    0
-  ],
-  "sku": "string",
-  "is_condition_shown": true,
   "custom_fields": [
     {
       "id": 1,
@@ -633,54 +609,65 @@ Status|Meaning|Description
 ````json
 {
   "data": {
-    "is_price_hidden": true,
-    "view_count": 0,
-    "brand_id": 0,
-    "availability": "available",
-    "is_preorder_only": true,
-    "price": 0,
-    "sort_order": 0,
-    "meta_keywords": [
-      "string"
-    ],
-    "type": "physical",
-    "inventory_tracking": "none",
-    "depth": 0,
-    "is_featured": true,
-    "availability_description": "string",
-    "search_keywords": "string",
-    "tax_class_id": 0,
-    "order_quantity_maximum": 0,
-    "condition": "New",
     "name": "string",
-    "page_title": "string",
+    "type": "physical",
+    "sku": "string",
+    "description": "string",
+    "weight": 0,
+    "width": 0,
+    "depth": 0,
+    "height": 0,
+    "price": 0,
+    "cost_price": 0,
+    "retail_price": 0,
+    "sale_price": 0,
+    "tax_class_id": 0,
+    "product_tax_code": "string",
+    "categories": [
+      0
+    ],
+    "brand_id": 0,
+    "inventory_level": 0,
+    "inventory_warning_level": 0,
+    "inventory_tracking": "none",
+    "fixed_cost_shipping_price": 0,
     "is_free_shipping": true,
+    "is_visible": true,
+    "is_featured": true,
+    "related_products": [
+      0
+    ],
+    "warranty": "string",
+    "bin_picking_number": "string",
+    "layout_file": "string",
+    "upc": "string",
+    "search_keywords": "string",
+    "availability": "available",
+    "availability_description": "string",
+    "gift_wrapping_options_type": "any",
     "gift_wrapping_options_list": [
       0
     ],
+    "sort_order": 0,
+    "condition": "New",
+    "is_condition_shown": true,
+    "order_quantity_minimum": 0,
+    "order_quantity_maximum": 0,
+    "page_title": "string",
+    "meta_keywords": [
+      "string"
+    ],
+    "meta_description": "string",
+    "view_count": 0,
     "preorder_release_date": "string",
-    "sale_price": 0,
-    "height": 0,
-    "product_tax_code": "string",
-    "warranty": "string",
+    "preorder_message": "string",
+    "is_preorder_only": true,
+    "is_price_hidden": true,
+    "price_hidden_label": "string",
     "custom_url": {
       "url": "string",
       "is_customized": true
     },
-    "fixed_cost_shipping_price": 0,
-    "weight": 0,
-    "width": 0,
-    "retail_price": 0,
-    "categories": [
-      0
-    ],
-    "inventory_warning_level": 0,
-    "bin_picking_number": "string",
-    "layout_file": "string",
-    "gift_wrapping_options_type": "any",
-    "is_visible": true,
-    "inventory_level": 0,
-    "description": "string",
     "bulk_pricing_rules": [
       {
         "id": 0,
@@ -690,17 +677,6 @@ Status|Meaning|Description
         "amount": 0
       }
     ],
-    "order_quantity_minimum": 0,
-    "preorder_message": "string",
-    "meta_description": "string",
-    "cost_price": 0,
-    "upc": "string",
-    "price_hidden_label": "string",
-    "related_products": [
-      0
-    ],
-    "sku": "string",
-    "is_condition_shown": true,
     "id": 0,
     "calculated_price": 0,
     "custom_fields": [
@@ -800,27 +776,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -848,7 +806,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products', headers=headers, params={
   # TODO
 })
 
@@ -959,27 +924,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1007,7 +954,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', headers=headers, params={
   # TODO
 })
 
@@ -1074,54 +1028,65 @@ Status|Meaning|Description
 ````json
 {
   "data": {
-    "is_price_hidden": true,
-    "view_count": 0,
-    "brand_id": 0,
-    "availability": "available",
-    "is_preorder_only": true,
-    "price": 0,
-    "sort_order": 0,
-    "meta_keywords": [
-      "string"
-    ],
-    "type": "physical",
-    "inventory_tracking": "none",
-    "depth": 0,
-    "is_featured": true,
-    "availability_description": "string",
-    "search_keywords": "string",
-    "tax_class_id": 0,
-    "order_quantity_maximum": 0,
-    "condition": "New",
     "name": "string",
-    "page_title": "string",
+    "type": "physical",
+    "sku": "string",
+    "description": "string",
+    "weight": 0,
+    "width": 0,
+    "depth": 0,
+    "height": 0,
+    "price": 0,
+    "cost_price": 0,
+    "retail_price": 0,
+    "sale_price": 0,
+    "tax_class_id": 0,
+    "product_tax_code": "string",
+    "categories": [
+      0
+    ],
+    "brand_id": 0,
+    "inventory_level": 0,
+    "inventory_warning_level": 0,
+    "inventory_tracking": "none",
+    "fixed_cost_shipping_price": 0,
     "is_free_shipping": true,
+    "is_visible": true,
+    "is_featured": true,
+    "related_products": [
+      0
+    ],
+    "warranty": "string",
+    "bin_picking_number": "string",
+    "layout_file": "string",
+    "upc": "string",
+    "search_keywords": "string",
+    "availability": "available",
+    "availability_description": "string",
+    "gift_wrapping_options_type": "any",
     "gift_wrapping_options_list": [
       0
     ],
+    "sort_order": 0,
+    "condition": "New",
+    "is_condition_shown": true,
+    "order_quantity_minimum": 0,
+    "order_quantity_maximum": 0,
+    "page_title": "string",
+    "meta_keywords": [
+      "string"
+    ],
+    "meta_description": "string",
+    "view_count": 0,
     "preorder_release_date": "string",
-    "sale_price": 0,
-    "height": 0,
-    "product_tax_code": "string",
-    "warranty": "string",
+    "preorder_message": "string",
+    "is_preorder_only": true,
+    "is_price_hidden": true,
+    "price_hidden_label": "string",
     "custom_url": {
       "url": "string",
       "is_customized": true
     },
-    "fixed_cost_shipping_price": 0,
-    "weight": 0,
-    "width": 0,
-    "retail_price": 0,
-    "categories": [
-      0
-    ],
-    "inventory_warning_level": 0,
-    "bin_picking_number": "string",
-    "layout_file": "string",
-    "gift_wrapping_options_type": "any",
-    "is_visible": true,
-    "inventory_level": 0,
-    "description": "string",
     "bulk_pricing_rules": [
       {
         "id": 0,
@@ -1131,17 +1096,6 @@ Status|Meaning|Description
         "amount": 0
       }
     ],
-    "order_quantity_minimum": 0,
-    "preorder_message": "string",
-    "meta_description": "string",
-    "cost_price": 0,
-    "upc": "string",
-    "price_hidden_label": "string",
-    "related_products": [
-      0
-    ],
-    "sku": "string",
-    "is_condition_shown": true,
     "id": 0,
     "calculated_price": 0,
     "custom_fields": [
@@ -1225,27 +1179,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1273,7 +1209,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', headers=headers, params={
   # TODO
 })
 
@@ -1320,54 +1263,65 @@ A BigCommerce `Product` object.
 
 ````json
 {
-  "is_price_hidden": true,
-  "view_count": 0,
-  "brand_id": 0,
-  "availability": "available",
-  "is_preorder_only": true,
-  "price": 0,
-  "sort_order": 0,
-  "meta_keywords": [
-    "string"
-  ],
-  "type": "physical",
-  "inventory_tracking": "none",
-  "depth": 0,
-  "is_featured": true,
-  "availability_description": "string",
-  "search_keywords": "string",
-  "tax_class_id": 0,
-  "order_quantity_maximum": 0,
-  "condition": "New",
   "name": "string",
-  "page_title": "string",
+  "type": "physical",
+  "sku": "string",
+  "description": "string",
+  "weight": 0,
+  "width": 0,
+  "depth": 0,
+  "height": 0,
+  "price": 0,
+  "cost_price": 0,
+  "retail_price": 0,
+  "sale_price": 0,
+  "tax_class_id": 0,
+  "product_tax_code": "string",
+  "categories": [
+    0
+  ],
+  "brand_id": 0,
+  "inventory_level": 0,
+  "inventory_warning_level": 0,
+  "inventory_tracking": "none",
+  "fixed_cost_shipping_price": 0,
   "is_free_shipping": true,
+  "is_visible": true,
+  "is_featured": true,
+  "related_products": [
+    0
+  ],
+  "warranty": "string",
+  "bin_picking_number": "string",
+  "layout_file": "string",
+  "upc": "string",
+  "search_keywords": "string",
+  "availability": "available",
+  "availability_description": "string",
+  "gift_wrapping_options_type": "any",
   "gift_wrapping_options_list": [
     0
   ],
+  "sort_order": 0,
+  "condition": "New",
+  "is_condition_shown": true,
+  "order_quantity_minimum": 0,
+  "order_quantity_maximum": 0,
+  "page_title": "string",
+  "meta_keywords": [
+    "string"
+  ],
+  "meta_description": "string",
+  "view_count": 0,
   "preorder_release_date": "string",
-  "sale_price": 0,
-  "height": 0,
-  "product_tax_code": "string",
-  "warranty": "string",
+  "preorder_message": "string",
+  "is_preorder_only": true,
+  "is_price_hidden": true,
+  "price_hidden_label": "string",
   "custom_url": {
     "url": "string",
     "is_customized": true
   },
-  "fixed_cost_shipping_price": 0,
-  "weight": 0,
-  "width": 0,
-  "retail_price": 0,
-  "categories": [
-    0
-  ],
-  "inventory_warning_level": 0,
-  "bin_picking_number": "string",
-  "layout_file": "string",
-  "gift_wrapping_options_type": "any",
-  "is_visible": true,
-  "inventory_level": 0,
-  "description": "string",
   "bulk_pricing_rules": [
     {
       "id": 0,
@@ -1377,17 +1331,6 @@ A BigCommerce `Product` object.
       "amount": 0
     }
   ],
-  "order_quantity_minimum": 0,
-  "preorder_message": "string",
-  "meta_description": "string",
-  "cost_price": 0,
-  "upc": "string",
-  "price_hidden_label": "string",
-  "related_products": [
-    0
-  ],
-  "sku": "string",
-  "is_condition_shown": true,
   "id": 0,
   "custom_fields": [
     {
@@ -1432,54 +1375,65 @@ Status|Meaning|Description
 ````json
 {
   "data": {
-    "is_price_hidden": true,
-    "view_count": 0,
-    "brand_id": 0,
-    "availability": "available",
-    "is_preorder_only": true,
-    "price": 0,
-    "sort_order": 0,
-    "meta_keywords": [
-      "string"
-    ],
-    "type": "physical",
-    "inventory_tracking": "none",
-    "depth": 0,
-    "is_featured": true,
-    "availability_description": "string",
-    "search_keywords": "string",
-    "tax_class_id": 0,
-    "order_quantity_maximum": 0,
-    "condition": "New",
     "name": "string",
-    "page_title": "string",
+    "type": "physical",
+    "sku": "string",
+    "description": "string",
+    "weight": 0,
+    "width": 0,
+    "depth": 0,
+    "height": 0,
+    "price": 0,
+    "cost_price": 0,
+    "retail_price": 0,
+    "sale_price": 0,
+    "tax_class_id": 0,
+    "product_tax_code": "string",
+    "categories": [
+      0
+    ],
+    "brand_id": 0,
+    "inventory_level": 0,
+    "inventory_warning_level": 0,
+    "inventory_tracking": "none",
+    "fixed_cost_shipping_price": 0,
     "is_free_shipping": true,
+    "is_visible": true,
+    "is_featured": true,
+    "related_products": [
+      0
+    ],
+    "warranty": "string",
+    "bin_picking_number": "string",
+    "layout_file": "string",
+    "upc": "string",
+    "search_keywords": "string",
+    "availability": "available",
+    "availability_description": "string",
+    "gift_wrapping_options_type": "any",
     "gift_wrapping_options_list": [
       0
     ],
+    "sort_order": 0,
+    "condition": "New",
+    "is_condition_shown": true,
+    "order_quantity_minimum": 0,
+    "order_quantity_maximum": 0,
+    "page_title": "string",
+    "meta_keywords": [
+      "string"
+    ],
+    "meta_description": "string",
+    "view_count": 0,
     "preorder_release_date": "string",
-    "sale_price": 0,
-    "height": 0,
-    "product_tax_code": "string",
-    "warranty": "string",
+    "preorder_message": "string",
+    "is_preorder_only": true,
+    "is_price_hidden": true,
+    "price_hidden_label": "string",
     "custom_url": {
       "url": "string",
       "is_customized": true
     },
-    "fixed_cost_shipping_price": 0,
-    "weight": 0,
-    "width": 0,
-    "retail_price": 0,
-    "categories": [
-      0
-    ],
-    "inventory_warning_level": 0,
-    "bin_picking_number": "string",
-    "layout_file": "string",
-    "gift_wrapping_options_type": "any",
-    "is_visible": true,
-    "inventory_level": 0,
-    "description": "string",
     "bulk_pricing_rules": [
       {
         "id": 0,
@@ -1489,17 +1443,6 @@ Status|Meaning|Description
         "amount": 0
       }
     ],
-    "order_quantity_minimum": 0,
-    "preorder_message": "string",
-    "meta_description": "string",
-    "cost_price": 0,
-    "upc": "string",
-    "price_hidden_label": "string",
-    "related_products": [
-      0
-    ],
-    "sku": "string",
-    "is_condition_shown": true,
     "id": 0,
     "calculated_price": 0,
     "custom_fields": [
@@ -1607,27 +1550,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1655,7 +1580,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}', headers=headers, params={
   # TODO
 })
 
@@ -1710,27 +1642,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1758,7 +1672,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', headers=headers, params={
   # TODO
 })
 
@@ -1857,27 +1778,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1905,7 +1808,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images', headers=headers, params={
   # TODO
 })
 
@@ -2004,27 +1914,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2052,7 +1944,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', headers=headers, params={
   # TODO
 })
 
@@ -2140,27 +2039,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2188,7 +2069,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', headers=headers, params={
   # TODO
 })
 
@@ -2289,27 +2177,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2337,7 +2207,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/images/{image_id}', headers=headers, params={
   # TODO
 })
 
@@ -2396,27 +2273,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2444,7 +2303,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', headers=headers, params={
   # TODO
 })
 
@@ -2527,27 +2393,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2575,7 +2423,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos', headers=headers, params={
   # TODO
 })
 
@@ -2670,27 +2525,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2718,7 +2555,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', headers=headers, params={
   # TODO
 })
 
@@ -2802,27 +2646,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2850,7 +2676,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', headers=headers, params={
   # TODO
 })
 
@@ -2947,27 +2780,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -2995,7 +2810,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/videos/{video_id}', headers=headers, params={
   # TODO
 })
 
@@ -3054,27 +2876,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -3102,7 +2906,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', headers=headers, params={
   # TODO
 })
 
@@ -3219,27 +3030,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -3267,7 +3060,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants', headers=headers, params={
   # TODO
 })
 
@@ -3390,27 +3190,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -3438,7 +3220,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', headers=headers, params={
   # TODO
 })
 
@@ -3537,27 +3326,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -3585,7 +3356,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', headers=headers, params={
   # TODO
 })
 
@@ -3705,27 +3483,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -3753,7 +3513,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}', headers=headers, params={
   # TODO
 })
 
@@ -3812,27 +3579,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -3860,7 +3609,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -3942,8 +3698,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-06T23:34:51Z",
-      "updated_at": "2017-02-06T23:34:51Z"
+      "created_at": "2017-02-07T18:24:53Z",
+      "updated_at": "2017-02-07T18:24:53Z"
     }
   ],
   "meta": {
@@ -3977,27 +3733,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -4025,7 +3763,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -4108,8 +3853,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -4147,27 +3892,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -4195,7 +3922,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -4264,8 +3998,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -4287,27 +4021,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -4335,7 +4051,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -4421,8 +4144,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -4444,27 +4167,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -4492,7 +4197,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -4555,27 +4267,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: multipart/form-data
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -4603,7 +4297,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image', params={
+headers = {
+	'Content-Type': "multipart/form-data",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/variants/{variant_id}/image', headers=headers, params={
   # TODO
 })
 
@@ -4697,27 +4398,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -4745,7 +4428,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', headers=headers, params={
   # TODO
 })
 
@@ -4808,8 +4498,8 @@ Status|Meaning|Description
         "checkbox_label": "string",
         "date_limited": true,
         "date_limit_mode": "earliest",
-        "date_earliest_value": "2017-02-06",
-        "date_latest_value": "2017-02-06",
+        "date_earliest_value": "2017-02-07",
+        "date_latest_value": "2017-02-07",
         "file_types_mode": "specific",
         "file_types_supported": [
           "string"
@@ -4875,27 +4565,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -4923,7 +4595,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options', headers=headers, params={
   # TODO
 })
 
@@ -4979,8 +4658,8 @@ An `Option` object.
     "checkbox_label": "string",
     "date_limited": true,
     "date_limit_mode": "earliest",
-    "date_earliest_value": "2017-02-06",
-    "date_latest_value": "2017-02-06",
+    "date_earliest_value": "2017-02-07",
+    "date_latest_value": "2017-02-07",
     "file_types_mode": "specific",
     "file_types_supported": [
       "string"
@@ -5040,8 +4719,8 @@ Status|Meaning|Description
       "checkbox_label": "string",
       "date_limited": true,
       "date_limit_mode": "earliest",
-      "date_earliest_value": "2017-02-06",
-      "date_latest_value": "2017-02-06",
+      "date_earliest_value": "2017-02-07",
+      "date_latest_value": "2017-02-07",
       "file_types_mode": "specific",
       "file_types_supported": [
         "string"
@@ -5111,27 +4790,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -5159,7 +4820,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', headers=headers, params={
   # TODO
 })
 
@@ -5225,8 +4893,8 @@ Status|Meaning|Description
       "checkbox_label": "string",
       "date_limited": true,
       "date_limit_mode": "earliest",
-      "date_earliest_value": "2017-02-06",
-      "date_latest_value": "2017-02-06",
+      "date_earliest_value": "2017-02-07",
+      "date_latest_value": "2017-02-07",
       "file_types_mode": "specific",
       "file_types_supported": [
         "string"
@@ -5280,27 +4948,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -5328,7 +4978,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', headers=headers, params={
   # TODO
 })
 
@@ -5389,8 +5046,8 @@ A BigCommerce `Option` object.
     "checkbox_label": "string",
     "date_limited": true,
     "date_limit_mode": "earliest",
-    "date_earliest_value": "2017-02-06",
-    "date_latest_value": "2017-02-06",
+    "date_earliest_value": "2017-02-07",
+    "date_latest_value": "2017-02-07",
     "file_types_mode": "specific",
     "file_types_supported": [
       "string"
@@ -5450,8 +5107,8 @@ Status|Meaning|Description
       "checkbox_label": "string",
       "date_limited": true,
       "date_limit_mode": "earliest",
-      "date_earliest_value": "2017-02-06",
-      "date_latest_value": "2017-02-06",
+      "date_earliest_value": "2017-02-07",
+      "date_latest_value": "2017-02-07",
       "file_types_mode": "specific",
       "file_types_supported": [
         "string"
@@ -5521,27 +5178,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -5569,7 +5208,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/options/{option_id}', headers=headers, params={
   # TODO
 })
 
@@ -5628,27 +5274,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -5676,7 +5304,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', headers=headers, params={
   # TODO
 })
 
@@ -5735,8 +5370,8 @@ Status|Meaning|Description
         "checkbox_label": "string",
         "date_limited": true,
         "date_limit_mode": "earliest",
-        "date_earliest_value": "2017-02-06",
-        "date_latest_value": "2017-02-06",
+        "date_earliest_value": "2017-02-07",
+        "date_latest_value": "2017-02-07",
         "file_types_mode": "specific",
         "file_types_supported": [
           "string"
@@ -5812,27 +5447,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -5860,7 +5477,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers', headers=headers, params={
   # TODO
 })
 
@@ -5914,8 +5538,8 @@ A `Modifier` object.
     "checkbox_label": "string",
     "date_limited": true,
     "date_limit_mode": "earliest",
-    "date_earliest_value": "2017-02-06",
-    "date_latest_value": "2017-02-06",
+    "date_earliest_value": "2017-02-07",
+    "date_latest_value": "2017-02-07",
     "file_types_mode": "specific",
     "file_types_supported": [
       "string"
@@ -5989,8 +5613,8 @@ Status|Meaning|Description
       "checkbox_label": "string",
       "date_limited": true,
       "date_limit_mode": "earliest",
-      "date_earliest_value": "2017-02-06",
-      "date_latest_value": "2017-02-06",
+      "date_earliest_value": "2017-02-07",
+      "date_latest_value": "2017-02-07",
       "file_types_mode": "specific",
       "file_types_supported": [
         "string"
@@ -6078,27 +5702,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -6126,7 +5732,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', headers=headers, params={
   # TODO
 })
 
@@ -6191,8 +5804,8 @@ Status|Meaning|Description
       "checkbox_label": "string",
       "date_limited": true,
       "date_limit_mode": "earliest",
-      "date_earliest_value": "2017-02-06",
-      "date_latest_value": "2017-02-06",
+      "date_earliest_value": "2017-02-07",
+      "date_latest_value": "2017-02-07",
       "file_types_mode": "specific",
       "file_types_supported": [
         "string"
@@ -6264,27 +5877,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -6312,7 +5907,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', headers=headers, params={
   # TODO
 })
 
@@ -6371,8 +5973,8 @@ A BigCommerce `Modifier` object.
     "checkbox_label": "string",
     "date_limited": true,
     "date_limit_mode": "earliest",
-    "date_earliest_value": "2017-02-06",
-    "date_latest_value": "2017-02-06",
+    "date_earliest_value": "2017-02-07",
+    "date_latest_value": "2017-02-07",
     "file_types_mode": "specific",
     "file_types_supported": [
       "string"
@@ -6445,8 +6047,8 @@ Status|Meaning|Description
       "checkbox_label": "string",
       "date_limited": true,
       "date_limit_mode": "earliest",
-      "date_earliest_value": "2017-02-06",
-      "date_latest_value": "2017-02-06",
+      "date_earliest_value": "2017-02-07",
+      "date_latest_value": "2017-02-07",
       "file_types_mode": "specific",
       "file_types_supported": [
         "string"
@@ -6534,27 +6136,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -6582,7 +6166,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}', headers=headers, params={
   # TODO
 })
 
@@ -6641,27 +6232,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: multipart/form-data
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -6689,7 +6262,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', params={
+headers = {
+	'Content-Type': "multipart/form-data",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', headers=headers, params={
   # TODO
 })
 
@@ -6789,27 +6369,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -6837,7 +6399,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/modifiers/{modifier_id}/values/{value_id}/image', headers=headers, params={
   # TODO
 })
 
@@ -6898,27 +6467,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -6946,7 +6497,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', headers=headers, params={
   # TODO
 })
 
@@ -7049,27 +6607,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -7097,7 +6637,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules', headers=headers, params={
   # TODO
 })
 
@@ -7249,27 +6796,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -7297,7 +6826,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', headers=headers, params={
   # TODO
 })
 
@@ -7402,27 +6938,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -7450,7 +6968,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', headers=headers, params={
   # TODO
 })
 
@@ -7608,27 +7133,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -7656,7 +7163,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/complex-rules/{complex_rule_id}', headers=headers, params={
   # TODO
 })
 
@@ -7715,27 +7229,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -7763,7 +7259,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -7841,8 +7344,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-06T23:34:51Z",
-      "updated_at": "2017-02-06T23:34:51Z"
+      "created_at": "2017-02-07T18:24:53Z",
+      "updated_at": "2017-02-07T18:24:53Z"
     }
   ],
   "meta": {
@@ -7876,27 +7379,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -7924,7 +7409,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -8003,8 +7495,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -8042,27 +7534,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -8090,7 +7564,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -8155,8 +7636,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -8178,27 +7659,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -8226,7 +7689,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -8308,8 +7778,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -8331,27 +7801,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -8379,7 +7831,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/products/{product_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -8438,27 +7897,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -8486,7 +7927,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', headers=headers, params={
   # TODO
 })
 
@@ -8607,27 +8055,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -8655,7 +8085,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', headers=headers, params={
   # TODO
 })
 
@@ -8792,27 +8229,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -8840,7 +8259,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories', headers=headers, params={
   # TODO
 })
 
@@ -8911,27 +8337,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -8959,7 +8367,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', headers=headers, params={
   # TODO
 })
 
@@ -9053,27 +8468,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -9101,7 +8498,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', headers=headers, params={
   # TODO
 })
 
@@ -9252,27 +8656,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -9300,7 +8686,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}', headers=headers, params={
   # TODO
 })
 
@@ -9355,27 +8748,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -9403,7 +8778,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -9481,8 +8863,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-06T23:34:51Z",
-      "updated_at": "2017-02-06T23:34:51Z"
+      "created_at": "2017-02-07T18:24:53Z",
+      "updated_at": "2017-02-07T18:24:53Z"
     }
   ],
   "meta": {
@@ -9516,27 +8898,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -9564,7 +8928,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -9643,8 +9014,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -9682,27 +9053,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -9730,7 +9083,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -9795,8 +9155,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -9818,27 +9178,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -9866,7 +9208,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -9948,8 +9297,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -9971,27 +9320,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10019,7 +9350,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -10078,27 +9416,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: multipart/form-data
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10126,7 +9446,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', params={
+headers = {
+	'Content-Type': "multipart/form-data",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', headers=headers, params={
   # TODO
 })
 
@@ -10219,27 +9546,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10267,7 +9576,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/{category_id}/image', headers=headers, params={
   # TODO
 })
 
@@ -10322,27 +9638,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10370,7 +9668,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/categories/tree', headers=headers, params={
   # TODO
 })
 
@@ -10435,27 +9740,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10483,7 +9770,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', headers=headers, params={
   # TODO
 })
 
@@ -10581,27 +9875,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10629,7 +9905,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', headers=headers, params={
   # TODO
 })
 
@@ -10743,27 +10026,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10791,7 +10056,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands', headers=headers, params={
   # TODO
 })
 
@@ -10850,27 +10122,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -10898,7 +10152,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', headers=headers, params={
   # TODO
 })
 
@@ -10980,27 +10241,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -11028,7 +10271,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', headers=headers, params={
   # TODO
 })
 
@@ -11158,27 +10408,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -11206,7 +10438,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}', headers=headers, params={
   # TODO
 })
 
@@ -11261,27 +10500,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -11309,7 +10530,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -11387,8 +10615,8 @@ Status|Meaning|Description
       "resource_type": "category",
       "resource_id": 0,
       "id": 0,
-      "created_at": "2017-02-06T23:34:51Z",
-      "updated_at": "2017-02-06T23:34:51Z"
+      "created_at": "2017-02-07T18:24:53Z",
+      "updated_at": "2017-02-07T18:24:53Z"
     }
   ],
   "meta": {
@@ -11422,27 +10650,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -11470,7 +10680,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields', headers=headers, params={
   # TODO
 })
 
@@ -11549,8 +10766,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -11588,27 +10805,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -11636,7 +10835,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -11701,8 +10907,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -11724,27 +10930,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -11772,7 +10960,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -11854,8 +11049,8 @@ Status|Meaning|Description
     "resource_type": "category",
     "resource_id": 0,
     "id": 0,
-    "created_at": "2017-02-06T23:34:51Z",
-    "updated_at": "2017-02-06T23:34:51Z"
+    "created_at": "2017-02-07T18:24:53Z",
+    "updated_at": "2017-02-07T18:24:53Z"
   },
   "meta": {}
 }
@@ -11877,27 +11072,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -11925,7 +11102,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/metafields/{metafield_id}', headers=headers, params={
   # TODO
 })
 
@@ -11984,27 +11168,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: multipart/form-data
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -12032,7 +11198,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', params={
+headers = {
+	'Content-Type': "multipart/form-data",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', headers=headers, params={
   # TODO
 })
 
@@ -12125,27 +11298,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -12173,7 +11328,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/brands/{brand_id}/image', headers=headers, params={
   # TODO
 })
 
@@ -12227,27 +11389,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -12275,7 +11419,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/variants', headers=headers, params={
   # TODO
 })
 
@@ -12396,27 +11547,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -12444,7 +11577,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/catalog/summary', headers=headers, params={
   # TODO
 })
 
@@ -12501,27 +11641,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -12549,7 +11671,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', headers=headers, params={
   # TODO
 })
 
@@ -12666,27 +11795,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers
-````
-
-````http
-POST https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -12714,7 +11825,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', headers=headers, params={
   # TODO
 })
 
@@ -12826,27 +11944,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -12874,7 +11974,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers', headers=headers, params={
   # TODO
 })
 
@@ -12953,27 +12060,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}
-````
-
-````http
-GET https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -13001,7 +12090,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', headers=headers, params={
   # TODO
 })
 
@@ -13082,27 +12178,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}
-````
-
-````http
-PUT https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -13130,7 +12208,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', headers=headers, params={
   # TODO
 })
 
@@ -13256,27 +12341,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}
-````
-
-````http
-DELETE https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id} HTTP/1.1
-Host: api.bigcommerce.com
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: 'https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -13304,7 +12371,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('https://api.bigcommerce.com/stores/{{store_id}}/v3/customers/subscribers/{subscriber_id}', headers=headers, params={
   # TODO
 })
 

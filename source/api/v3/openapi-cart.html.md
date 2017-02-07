@@ -2,13 +2,11 @@
 title: Order API v2.0.0
 layout: "layout"
 language_tabs:
-  - shell: Shell
-  - http: HTTP
-  - html: JavaScript
-  - javascript: Node.JS
-  - python: Python
-  - ruby: Ruby
-  - java: Java
+  - shell
+  - python
+  - java
+  - ruby
+  - javascript
 toc_footers: []
 includes: []
 search: true
@@ -32,27 +30,9 @@ Base URL = ://undefined/
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post ://undefined/billing
-````
-
-````http
-POST ://undefined/billing HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/billing',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -80,7 +60,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('://undefined/billing', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('://undefined/billing', headers=headers, params={
   # TODO
 })
 
@@ -139,27 +126,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get ://undefined/cart
-````
-
-````http
-GET ://undefined/cart HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/cart',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -187,7 +156,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('://undefined/cart', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('://undefined/cart', headers=headers, params={
   # TODO
 })
 
@@ -237,27 +213,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post ://undefined/coupon
-````
-
-````http
-POST ://undefined/coupon HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/coupon',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -285,7 +243,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('://undefined/coupon', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('://undefined/coupon', headers=headers, params={
   # TODO
 })
 
@@ -344,27 +309,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete ://undefined/coupon/{couponCode}
-````
-
-````http
-DELETE ://undefined/coupon/{couponCode} HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/coupon/{couponCode}',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -392,7 +339,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('://undefined/coupon/{couponCode}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('://undefined/coupon/{couponCode}', headers=headers, params={
   # TODO
 })
 
@@ -446,27 +400,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post ://undefined/customer
-````
-
-````http
-POST ://undefined/customer HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/customer',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -494,7 +430,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('://undefined/customer', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('://undefined/customer', headers=headers, params={
   # TODO
 })
 
@@ -555,27 +498,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get ://undefined/customer
-````
-
-````http
-GET ://undefined/customer HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/customer',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -603,7 +528,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('://undefined/customer', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('://undefined/customer', headers=headers, params={
   # TODO
 })
 
@@ -657,27 +589,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X delete ://undefined/customer
-````
-
-````http
-DELETE ://undefined/customer HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/customer',
-    method: 'delete',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -705,7 +619,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.delete('://undefined/customer', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.delete('://undefined/customer', headers=headers, params={
   # TODO
 })
 
@@ -763,27 +684,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post ://undefined/order
-````
-
-````http
-POST ://undefined/order HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/order',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -811,7 +714,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('://undefined/order', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('://undefined/order', headers=headers, params={
   # TODO
 })
 
@@ -878,27 +788,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get ://undefined/order/{orderId}
-````
-
-````http
-GET ://undefined/order/{orderId} HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/order/{orderId}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -926,7 +818,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('://undefined/order/{orderId}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('://undefined/order/{orderId}', headers=headers, params={
   # TODO
 })
 
@@ -982,27 +881,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post ://undefined/order/{orderId}
-````
-
-````http
-POST ://undefined/order/{orderId} HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/order/{orderId}',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1030,7 +911,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('://undefined/order/{orderId}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('://undefined/order/{orderId}', headers=headers, params={
   # TODO
 })
 
@@ -1149,27 +1037,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post ://undefined/order/{orderId}/payment
-````
-
-````http
-POST ://undefined/order/{orderId}/payment HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/order/{orderId}/payment',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1197,7 +1067,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('://undefined/order/{orderId}/payment', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('://undefined/order/{orderId}/payment', headers=headers, params={
   # TODO
 })
 
@@ -1335,27 +1212,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get ://undefined/payments
-````
-
-````http
-GET ://undefined/payments HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/payments',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1383,7 +1242,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('://undefined/payments', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('://undefined/payments', headers=headers, params={
   # TODO
 })
 
@@ -1428,27 +1294,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get ://undefined/payments/{providerId}
-````
-
-````http
-GET ://undefined/payments/{providerId} HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/payments/{providerId}',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1476,7 +1324,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('://undefined/payments/{providerId}', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('://undefined/payments/{providerId}', headers=headers, params={
   # TODO
 })
 
@@ -1529,27 +1384,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get ://undefined/quote
-````
-
-````http
-GET ://undefined/quote HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/quote',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1577,7 +1414,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('://undefined/quote', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('://undefined/quote', headers=headers, params={
   # TODO
 })
 
@@ -1636,27 +1480,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X post ://undefined/shipping
-````
-
-````http
-POST ://undefined/shipping HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/shipping',
-    method: 'post',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1684,7 +1510,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('://undefined/shipping', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.post('://undefined/shipping', headers=headers, params={
   # TODO
 })
 
@@ -1745,27 +1578,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X get ://undefined/shippingOptions
-````
-
-````http
-GET ://undefined/shippingOptions HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/shippingOptions',
-    method: 'get',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1793,7 +1608,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('://undefined/shippingOptions', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.get('://undefined/shippingOptions', headers=headers, params={
   # TODO
 })
 
@@ -1849,27 +1671,9 @@ This operation does not require authentication
 > Code samples
 
 ````shell
+
 # You can also use wget
 curl -X put ://undefined/shippingOptions
-````
-
-````http
-PUT ://undefined/shippingOptions HTTP/1.1
-Host: undefined
-Content-Type: application/json
-Accept: application/json
-````
-
-````html
-<script>
-  $.ajax({
-    url: '://undefined/shippingOptions',
-    method: 'put',
-    success: function(data) {
-      console.log(JSON.stringify(data));
-    }
-  })
-</script>
 ````
 
 ````javascript
@@ -1897,7 +1701,14 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.put('://undefined/shippingOptions', params={
+headers = {
+	'Content-Type': "application/json",
+	'Accept': "application/json",
+	'X-Auth-Client': "SampleClientCode",
+	'X-Auth-Token': "8675309"
+}
+
+r = requests.put('://undefined/shippingOptions', headers=headers, params={
   # TODO
 })
 
