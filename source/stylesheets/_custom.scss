@@ -337,3 +337,33 @@ li a, .tocify-wrapper {
     width: 55% !important;
   }
 }
+
+#mc-embedded-subscribe:hover {
+  background-color: #3a426e;
+  color: #fff;
+  border-color: #3a426e;
+}
+
+#mc-embedded-subscribe {
+  width: 35%;
+  position: relative;
+  top: -1.5px;
+}
+
+@media (max-width: 768px) {
+  #mc-embedded-subscribe {
+    border-width: 0.5px;
+    border-style: outset;
+    border-color: $bc-light-grey
+  }
+}
+
+#mce-EMAIL {
+  width: 63%;
+  margin-right: 2%;
+  height: 23px;
+}
+
+.mc-header {
+  color: $bc-blue;
+}
