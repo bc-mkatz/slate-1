@@ -60,7 +60,7 @@ function generateMdFromSwagger(startPath, endPath){
             var generated = converter.convert(swagger,options);
 
             // Warning: hacky bullshit
-            generated = generated.replace('language_tabs:', 'layout: "layout"\nlanguage_tabs:');
+            generated = generated.replace('language_tabs:', 'layout: "apitwocolumn"\nlanguage_tabs:');
             // end hacky bullshit
             
             fs.writeFileSync(newFilename, generated, 'utf8')
@@ -79,9 +79,9 @@ var endPath = "source/api/v3";
 var options = {}; // defaults shown
 options.codeSamples = true;
 options.yaml = true;
-//options.language_tabs = [];
+options.language_tabs = [''];
 //options.loadedFrom = sourceUrl;
-//options.user_templates = './user_templates';
+options.user_templates = './user_templates';
 options.theme = 'darkula';
 
 // Delete all existing .generated.md files
