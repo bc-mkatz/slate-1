@@ -41,8 +41,6 @@ includes:
   - api_legacy_basic_auth
   - api_rate_limits_basic
   - api_guides_oauth_transition
-  - api_guides_curl_quickstart
-  - tut_postman_oauth
   - api_storefront_apps_root
   - api_customer_login
   - api_current_customer

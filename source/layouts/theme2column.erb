@@ -43,7 +43,6 @@ under the License.
         });
       </script>
     <% end %>
-    <%= partial "layouts/feedbackme_includes" %>
   </head>
 
   <body class="<%= page_classes %> twocolumn">
@@ -92,13 +91,7 @@ under the License.
       <% end %>
       <div id="toc">
       </div>
-      <% if current_page.data.toc_footers %>
-        <ul class="toc-footer">
-          <% current_page.data.toc_footers.each do |footer| %>
-            <li><%= footer %></li>
-          <% end %>
-        </ul>
-      <% end %>
+      <%= partial "layouts/mailchimp" %>
     </div>
     <div class="page-wrapper">
       <div class="content">
@@ -123,6 +116,5 @@ under the License.
             }
         });
     </script>
-    <%= partial "layouts/feedbackme_script" %>
   </body>
 </html>
