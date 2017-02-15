@@ -4,6 +4,27 @@
 ## <span class="jumptarget"> February </span>
 
 
+### <span class="jumptarget"> Stencil Cornerstone 1.5.2 Theme Released </span>
+
+Version 1.5.2 of Stencil's default Cornerstone theme is now available. (Release notes updated [here](https://stencil.bigcommerce.com/docs/release-notes-cornerstone-15-theme#152).) This release adds a Theme Editor check box to toggle the display of a GeoTrust SSL Seal in the footer. It also corrects carousel display/cropping on wide viewports, clarifies the usage of Theme Editor's `Social Media Icons` controls, and corrects a bug that displayed `Sign Up` links even when store-account creation had been disabled in the control panel.
+
+
+### <span class="jumptarget"> Postman Guide for BigCommerce APIs </span>
+
+For developers who want to exercise BigCommerce APIs without (or prior to) building an app, we have added a [guide](/api/guides/#postman-oauth-quickstart-guide) to using Postman with our APIs.
+
+
+### <span class="jumptarget"> Stencil Repo Adds Onboard Changelog </span>
+
+<b>2017-02-07:</b> The Stencil public repository now maintains its own changelog, at 
+[https://github.com/bigcommerce/stencil/blob/master/CHANGELOG.md](https://github.com/bigcommerce/stencil/blob/master/CHANGELOG.md). (Stencil-3000; PR # 919)
+
+
+### <span class="jumptarget"> Stencil Cornerstone 1.5.1 Theme Released </span>
+
+Version 1.5.1 of Stencil's default Cornerstone theme is now available. (Release notes updated [here](https://stencil.bigcommerce.com/docs/release-notes-cornerstone-15-theme#151).) This maintenance release corrects a duplicate Quick Search close box in mobile viewports, corrects a redundant Theme&#160;Editor horizontal scroll bar in smaller viewports, corrects carousel display/cropping on mobile viewports, and corrects a bug that displayed Gift Certificates options even when gift certificates had been disabled in the control panel. 
+
+
 ### <span class="jumptarget"> Stencil Cornerstone 1.5.0 Theme Released </span>
 
 Version [1.5.0](https://stencil.bigcommerce.com/docs/release-notes-cornerstone-15-theme) of Stencil's default Cornerstone theme is now available. This release adds several new options for store owners to customize their store's appearance via Theme Editor. These options include displaying sale badges, displaying "as low as $x" pricing, and requiring customer logins for pricing and cart access. It also corrects the behavior of hashbang links (`#!`), and corrects the display of product options in Quick View modals. For the PR #'s/commit #'s to cherry-pick the hashbang fix, please see the <a href="https://stencil.bigcommerce.com/docs/release-notes" target="_blank">Stencil framework release notes</a>.
