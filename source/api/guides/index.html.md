@@ -20,6 +20,6 @@ search: true
 
 # <span class="jumptarget"> Quickstart Guides for Developing on BigCommerce </span>
 
-BigCommerce is an ecommerce platform with a flexible API to allow you create technical solutions for businesses in the language of your choice. 
+The BigCommerce ecommerce platform provides a flexible API, enabling you to create technical solutions for businesses in the language of your choice. 
 
-We believe starting development on a project with our platform should be easy, so whether you have built with APIs or used our templating engine before, we want you to have the tools to start your project efficiently.
+We believe starting development on our platform should be easy. Whether or not you have built with APIs or used our templating engine before, we want you to have the tools to start your project efficiently.
