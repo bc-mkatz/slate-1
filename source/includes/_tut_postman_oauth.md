@@ -36,7 +36,7 @@ Next, add these two key/value pairs, using the OAuth credentials you obtained in
 
 We have created a collection of Postman requests for our v3 API, which you can import by clicking the button below:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/0911a7fefbc14ed2e4cb)
+[![Run in Postman](../assets/button.svg)](https://app.getpostman.com/run-collection/0911a7fefbc14ed2e4cb)
 
 To use this collection, you'll need to enter your OAuth credentials, as explained above under [Postman Setup](#post_setup).
  
