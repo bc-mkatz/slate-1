@@ -127,13 +127,20 @@
     margin-bottom: 0 !important;
   }
 
-  h2, h3, h4, h5, h6 {
+  h2 {
+    /* Isolated 2/17/17, needs extra leading: */
+    margin-top: 28px !important;
+    margin-bottom: 22px !important;
+  }
+
+  /* h2,*/  h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 11px;
   }
 
   h3, h4 {
-    padding-top: 2%;
+    /* Removed 2/17/17, exaggerates leading: */
+    /* padding-top: 2%; */
   }
 }
 
