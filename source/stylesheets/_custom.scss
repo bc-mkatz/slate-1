@@ -346,12 +346,20 @@ li a, .tocify-wrapper {
 }
 
 #mc-embedded-subscribe:hover {
-  background-color: #3a426e;
-  color: #fff;
+/*  background-color: #3a426e;
+  color: #fff; */
+/* ^ Conformed to BC colors 2/17/17: */
+  background-color: #4e75f8;
+  color: white;
   border-color: #3a426e;
 }
 
 #mc-embedded-subscribe {
+/* Conformed to BC branding 2/17/17: */
+  background-color: #4e75f8;
+  color: white;
+  padding: 0rem 0.25rem;
+  font-size: 0.9rem;
   width: 35%;
   position: relative;
   top: -1.5px;
