@@ -34,7 +34,7 @@ https://storedomain.com/login/token/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 "jti": "<unique_string>",
 "operation": "customer_login",
 "store_hash": "<store_hash>",
-"customer_id": "<customer_id>",
+"customer_id": <customer_id>,
 "redirect_to": "<relative_path (optional)>",
 "request_ip": "<ipv4_address (optional)>"
 }
