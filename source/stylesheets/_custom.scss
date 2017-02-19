@@ -128,20 +128,15 @@
   }
 
   h2 {
-    /* Isolated 2/17/17, needs extra leading: */
     margin-top: 28px !important;
     margin-bottom: 22px !important;
   }
 
-  /* h2,*/  h3, h4, h5, h6 {
+  h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 11px;
   }
 
-  h3, h4 {
-    /* Removed 2/17/17, exaggerates leading: */
-    /* padding-top: 2%; */
-  }
 }
 
 #changelog, #api-documentation, #understanding-themes, #api-v2-documentation, #api-v3-documentation, #blueprint-themes, #blueprint-theme-snippets, #blueprint-theme-layouts, #blueprint-theme-panels, #quickstart-guides-for-developing-on-bigcommerce {
@@ -346,17 +341,13 @@ li a, .tocify-wrapper {
 }
 
 #mc-embedded-subscribe:hover {
-/*  background-color: #3a426e;
-  color: #fff; */
-/* ^ Conformed to BC colors 2/17/17: */
-  background-color: #4e75f8;
+  background-color: $bc-blue;
   color: white;
   border-color: #3a426e;
 }
 
 #mc-embedded-subscribe {
-/* Conformed to BC branding 2/17/17: */
-  background-color: #4e75f8;
+  background-color: $bc-blue;
   color: white;
   padding: 0rem 0.25rem;
   font-size: 0.9rem;
