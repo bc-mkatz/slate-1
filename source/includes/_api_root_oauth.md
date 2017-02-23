@@ -39,7 +39,7 @@ We recommend that you add BigCommerce's JavaScript SDK to your Single-Click Apps
 Optionally, you can pass a logout callback function within the initialization call:
 
 ```js
-BigCommerce.init({
+Bigcommerce.init({
       onLogout: callback
 });
 ```
