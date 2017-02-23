@@ -16,7 +16,7 @@ For developers who want to exercise BigCommerce APIs without (or prior to) build
 
 ### <span class="jumptarget"> Stencil Repo Adds Onboard Changelog </span>
 
-<b>2017-02-07:</b> The Stencil public repository now maintains its own changelog, at 
+<b>2017-02-07:</b> The Stencil public repository now maintains its own changelog, at:     
 [https://github.com/bigcommerce/stencil/blob/master/CHANGELOG.md](https://github.com/bigcommerce/stencil/blob/master/CHANGELOG.md). (Stencil-3000; PR # 919)
 
 
