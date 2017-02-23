@@ -127,14 +127,16 @@
     margin-bottom: 0 !important;
   }
 
-  h2, h3, h4, h5, h6 {
+  h2 {
+    margin-top: 28px !important;
+    margin-bottom: 22px !important;
+  }
+
+  h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 11px;
   }
 
-  h3, h4 {
-    padding-top: 2%;
-  }
 }
 
 #changelog, #api-documentation, #understanding-themes, #api-v2-documentation, #api-v3-documentation, #blueprint-themes, #blueprint-theme-snippets, #blueprint-theme-layouts, #blueprint-theme-panels, #quickstart-guides-for-developing-on-bigcommerce {
@@ -339,12 +341,16 @@ li a, .tocify-wrapper {
 }
 
 #mc-embedded-subscribe:hover {
-  background-color: #3a426e;
-  color: #fff;
+  background-color: $bc-blue;
+  color: white;
   border-color: #3a426e;
 }
 
 #mc-embedded-subscribe {
+  background-color: $bc-blue;
+  color: white;
+  padding: 0rem 0.25rem;
+  font-size: 0.9rem;
   width: 35%;
   position: relative;
   top: -1.5px;
