@@ -10,7 +10,7 @@ If you only want to develop private apps for a particular BigCommerce store, you
 
 ## <span class="jumptarget"> Apply to the Technology Partner Program </span>
 
-Before you can submit an app to the BigCommerce Marketplace, you must become an official Partner. BigCommerce offers app developers free sandbox stores through its Technology Partner Program. You can <a href="https://www.bigcommerce.com/partners/signup" target="_blank">apply for a technology partnership here</a>. To be approved as a partner, you will need:
+Before you can submit an app to the BigCommerce Marketplace, you must become an official Partner. BigCommerce offers app developers free sandbox stores through its Technology Partner Program. You can <a href="https://partners.bigcommerce.com/English/register_email.aspx" target="_blank">apply for a technology partnership here</a>. To be approved as a partner, you will need:
 
 * A website.
 * Intent to offer your app publicly.
@@ -25,7 +25,7 @@ Before you can submit an app to the BigCommerce Marketplace, you must become an 
   </ul>
 </aside>
 
-Once approved, you will receive one or more emails listing your partner credentials and next steps. Your Partner username and ID will be required to submit your app for <a href="https://developer.bigcommerce.com/" target="_blank">App Store</a> consideration.
+Once approved, you will receive one or more emails listing your partner credentials and next steps. Your Partner username and ID will be required to submit your app for App Store consideration.
 
 <aside class="notice">
 <span class="aside-notice-hd">Note</span>
