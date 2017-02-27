@@ -34,16 +34,8 @@
     searchResults = $('.search-results');
 
     $('#input-search').on('keyup', search);
-  }
 
-  function search(event) {
-    unhighlight();
-    searchResults.addClass('visible');
-
-    // ESC clears the field
-    if (event.keyCode === 27) this.value = '';
-
-    $('.reset-form').click(function() {
+        $('.reset-form').click(function() {
       $('#input-search').val('');
       if (searchResults.hasClass('visible')) {
         searchResults.removeClass('visible');
@@ -52,6 +44,14 @@
         return false;
       }
     });
+  }
+
+  function search(event) {
+    unhighlight();
+    searchResults.addClass('visible');
+
+    // ESC clears the field
+    if (event.keyCode === 27) this.value = '';
 
     if (this.value) {
       var results = index.search(this.value).filter(function(r) {
