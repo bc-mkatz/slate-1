@@ -1,7 +1,34 @@
 # <span class="jumptarget"> 2017 </span>
 
 
+## <span class="jumptarget"> March </span>
+
+
+### <span class="jumptarget"> Customizing Stencil Printable/Email Templates </span>
+
+Our documentation now includes new workarounds for customizing [printable invoices](https://stencil.bigcommerce.com/docs/customizing-printable-invoices), [printable&#160;packing slips](https://stencil.bigcommerce.com/docs/customizing-printable-packing-slips), and [email templates](https://stencil.bigcommerce.com/docs/customizing-email-templates) for Stencil themes.
+
+
+### <span class="jumptarget"> Stencil Cornerstone 1.5.3 Theme Released </span>
+
+Version 1.5.3 of Stencil's default Cornerstone theme is now available. (Release notes updated [here](https://stencil.bigcommerce.com/docs/release-notes-cornerstone-15-theme#153).) For stores that have enabled Optimized One-Page Checkout, this release adds options for customizing discount banners' colors via Theme Editor. It also corrects several bugs affecting review links and other aspects of storefront display and behavior.
+
+
+### <span class="jumptarget"> Stencil Marketplace Themes: Revised Setup Instructions </span>
+
+For Stencil themes, our documentation on [Downloading/Customizing Marketplace Themes](https://stencil.bigcommerce.com/docs/downloading-and-customizing-marketplace-themes) now covers required setup steps for BitBucket SSH keys. We also document a new, streamlined setup option for Marketplace themes versioned `1.10.0` and above. (These newer theme versions replace the jspm JavaScript build system with Webpack, allowing a leaner setup flow.)
+
 ## <span class="jumptarget"> February </span>
+
+
+### <span class="jumptarget"> Stencil Uninstall/Reinstall Instructions Expanded </span>
+
+For Stencil themes, our documentation on [uninstalling/reinstalling Stencil and Node.js](https://stencil.bigcommerce.com/docs/uninstall-reinstall) now includes both Mac OS–specific and Windows-specific instructions.
+
+
+### <span class="jumptarget"> Blueprint Setup Instructions Updated </span>
+
+Our theme setup instructions for [Blueprint and Developer Mode](/themes/blueprint/#blueprint-and-developer-mode) now clarify that these options are available only to stores that purchased or applied at least one Blueprint before November, 2016.
 
 
 ### <span class="jumptarget"> Stencil Cornerstone 1.5.2 Theme Released </span>
