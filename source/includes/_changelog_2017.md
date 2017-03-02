@@ -4,9 +4,19 @@
 ## <span class="jumptarget"> March </span>
 
 
+### <span class="jumptarget"> Stencil Cornerstone Repo (and Local Directory) Renamed </span>
+
+As of March 1, 2017, BigCommerce has renamed the repository for Stencil's base Cornerstone theme from     
+`https://github.com/bigcommerce/stencil` to [`https://github.com/bigcommerce/cornerstone`](). Earlier links referencing    
+`https://github.com/bigcommerce/stencil` (and its subdirectories) should now automatically redirect to    
+[`https://github.com/bigcommerce/cornerstone`]().
+
+Also the Cornerstone theme now installs, by default, to a local directory named `/cornerstone/` rather than `/stencil/`. We have updated the <a href="https://stencil.bigcommerce.com/docs" target="_blank">Stencil developer documentation</a> to reflect both changes.
+
+
 ### <span class="jumptarget"> Customizing Stencil Printable/Email Templates </span>
 
-Our documentation now includes new workarounds for customizing [printable invoices](https://stencil.bigcommerce.com/docs/customizing-printable-invoices), [printable&#160;packing slips](https://stencil.bigcommerce.com/docs/customizing-printable-packing-slips), and [email templates](https://stencil.bigcommerce.com/docs/customizing-email-templates) for Stencil themes.
+Our documentation now includes new workarounds for customizing [printable invoices](https://stencil.bigcommerce.com/docs/customizing-printable-invoices), [printable&#160;packing slips](https://stencil.bigcommerce.com/docs/customizing-printable-packing-slips), and [email templates](https://stencil.bigcommerce.com/docs/customizing-email-templates) for Stencil&#160;themes.
 
 
 ### <span class="jumptarget"> Stencil Cornerstone 1.5.3 Theme Released </span>
@@ -35,7 +45,6 @@ Our theme setup instructions for [Blueprint and Developer Mode](/themes/blueprin
 
 Version 1.5.2 of Stencil's default Cornerstone theme is now available. (Release notes updated [here](https://stencil.bigcommerce.com/docs/release-notes-cornerstone-15-theme#152).) This release adds a Theme Editor check box to toggle the display of a GeoTrust SSL Seal in the footer. It also corrects carousel display/cropping on wide viewports, clarifies the usage of Theme Editor's `Social Media Icons` controls, and corrects a bug that displayed `Sign Up` links even when store-account creation had been disabled in the control panel.
 
-
 ### <span class="jumptarget"> Postman Guide for BigCommerce APIs </span>
 
 For developers who want to exercise BigCommerce APIs without (or prior to) building an app, we have added a [guide](/api/guides/#postman-oauth-quickstart-guide) to using Postman with our APIs.
@@ -44,7 +53,7 @@ For developers who want to exercise BigCommerce APIs without (or prior to) build
 ### <span class="jumptarget"> Stencil Repo Adds Onboard Changelog </span>
 
 <b>2017-02-07:</b> The Stencil public repository now maintains its own changelog, at:     
-[https://github.com/bigcommerce/stencil/blob/master/CHANGELOG.md](https://github.com/bigcommerce/stencil/blob/master/CHANGELOG.md). (Stencil-3000; PR # 919)
+[https://github.com/bigcommerce/cornerstone/blob/master/CHANGELOG.md](https://github.com/bigcommerce/cornerstone/blob/master/CHANGELOG.md). (Stencil-3000; PR # 919)
 
 
 ### <span class="jumptarget"> Stencil Cornerstone 1.5.1 Theme Released </span>
