@@ -1,6 +1,7 @@
 # <span class="jumptarget"> Shipping Methods Reference </span>
 
-The Shipping Methods object and endpoints help manage the shipping of physical items from merchant to shopper.
+The Shipping Methods object and endpoints manage shipping rules within [Shipping Zones](#shipping-zones-reference). These rules determine the shipping rates displayed at checkout, and related parts of the control panel, such as the shipping of manual orders.
+
 
 ## <span class="jumptarget"> Shipping Method Object – Properties </span>
 
@@ -64,8 +65,8 @@ Object model for shipping quotes by weight.
 | Name | Type | Description |
 | --- | --- | --- |
 | default_cost | number | Default shipping cost, applied either as a percentage of the order's total value or as a fixed amount. |
-| default_cost_type | string | How the default shipping cost is calculated. One of: `0:"percentage_of_total"`, or `1:"fixed_amount"`. |
-| range | number | Array of [range](#range) objects. The units for these ranges' `lower_limit` and `upper_limit` properties are ounces. |
+| default_cost_type | string | How the default shipping cost is calculated. One of: `percentage_of_total` or `fixed_amount`. |
+| range | number | Array of [range](#range) objects. The units for these ranges' `lower_limit` and `upper_limit` properties depend on the default units set in the store's control panel. |
 
 
 #### <span class="jumptarget" id="weight-ex"> JSON Example </span>
@@ -100,9 +101,9 @@ Object model for shipping quotes by order's total value.
 | Name | Type | Description |
 | --- | --- | --- |
 | default_cost | number | Default shipping cost, applied either as a percentage of the order's total value or as a fixed amount. |
-| default_cost_type | string | How the default shipping cost is calculated. One of: `0:"percentage_of_total"`, or `1:"fixed_amount"`. |
+| default_cost_type | string | How the default shipping cost is calculated. One of: `percentage_of_total` or `fixed_amount`. |
 | include_order_total_taxes | boolean | Whether or not to include taxes on the order's total value in the shipping-cost calculation. |
-| range | number | Array of [range](#range) objects. The units for these ranges' `lower_limit` and `upper_limit` properties are values in the stores's currency. |
+| range | number | Array of [range](#range) objects. The units for these ranges' `lower_limit` and `upper_limit` properties are values in the store's currency. |
 
 #### <span class="jumptarget" id="total-ex"> JSON Example </span>
 
@@ -149,7 +150,7 @@ This example sets free shipping above a certain order total:
 
 ### <span class="jumptarget" id="range"> Range Object – Properties </span>
 
-Object model to define ranges for shipping quotes. Units are defined in the calling object.
+Object model to define ranges for shipping quotes. Units are defined in the parent object.
 
 | Name | Type | Description |
 | --- | --- | --- |

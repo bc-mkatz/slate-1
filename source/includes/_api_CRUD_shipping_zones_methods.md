@@ -61,19 +61,19 @@ Example JSON returned in the response:
 
 ## <span class="jumptarget"> Get a Shipping Method </span>
 
-Gets a shipping method, specified by `zone_id` and method `id`.
+Gets a shipping method, specified by `zone_id` and `method_id`.
 
 *   OAuth
->`GET /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`GET /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 *   Basic Auth
->`GET /api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`GET /api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * zone_id
-* [method] id
+* method_id
 
 ### <span class="jumptarget"> Response </span>
 
@@ -151,15 +151,16 @@ Example JSON returned in the response:
 Updates an existing shipping method.
 
 *   OAuth
->`PUT /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`PUT /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 *   Basic Auth
->`PUT /api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`PUT /api/v2/shipping/zones/{zone_id}/methods/{method_id}`
+
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * zone_id
-* [method] id
+* method_id
 
 ### <span class="jumptarget"> Request </span>
 
@@ -200,13 +201,13 @@ Example JSON returned in the response:
 Deletes a specified shipping method. (If successful, this will typically return a "204 No Content".)
 
 *   OAuth
->`DELETE /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`DELETE /stores/{store_hash}/api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 *   Basic Auth
->`DELETE }/api/v2/shipping/zones/{zone_id}/methods/{id}`
+>`DELETE /api/v2/shipping/zones/{zone_id}/methods/{method_id}`
 
 ### <span class="jumptarget"> Requirements </span>
 
 The following properties of the shipping zone are required. The request won't be fulfilled unless these properties are valid.
 
 * zone_id
-* [method] id
+* method_id
