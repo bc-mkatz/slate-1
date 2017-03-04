@@ -350,7 +350,7 @@ li a, .tocify-wrapper {
   background-color: $bc-blue;
   color: white;
   padding: 0rem 0.25rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   width: 35%;
   position: relative;
   top: -1.5px;
@@ -368,10 +368,12 @@ li a, .tocify-wrapper {
   width: 63%;
   margin-right: 2%;
   height: 23px;
+  font-size: 0.8rem;
 }
 
 .mc-header {
   color: $bc-blue;
+  font-size: 0.9rem;
 }
 
 .anchor-text {

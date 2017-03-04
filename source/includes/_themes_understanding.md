@@ -12,8 +12,15 @@ You can ask further questions, and seek advice, in the <a href="https://forum.bi
 
 <span class="fake-h3"> <a href="//stencil.bigcommerce.com/docs">Stencil</a> </span>
 
-  Handlebars.js-based theming engine, designed to support  local development, conditional logic, flexible choice of libraries, and responsive layouts.
+  New, Handlebars.js-based theming engine. Supports local development, conditional logic, and responsive layouts.
+
+<span class="type-large"><a class="button button--action" href="//stencil.bigcommerce.com/docs"  style="margin-left: 0rem">
+  View Stencil Docs</a><br></span></p>
+                            
 
 <span class="fake-h3"> [Blueprint](/themes/blueprint) </span>
 
-  Legacy theming framework. Uses a proprietary templating language; offers merchants direct HTML customization.
+  Legacy theming framework. Uses a proprietary templating language, with a comprehensive library of variables.
+
+<span class="type-large"><a class="button button--action" href="/themes/blueprint"  style="margin-left: 0rem">
+  View Blueprint Docs</a><br></span></p>

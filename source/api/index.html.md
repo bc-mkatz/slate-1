@@ -63,8 +63,16 @@ All connections require authentication, and are secured by TLS encryption. As of
 
 <span class="fake-h3"> [API v3 Documentation](//github.com/bigcommerce/api) </span>
 
-  New, more-efficient catalog API, offering a simplified variant/modifier model. OAuth-only, but fully backward-compatible with v2.
+  New Catalog/Customers/Orders API, with more-efficient variant/modifier model. OAuth-only, but fully backward-compatible with v2.
+
+<span class="type-large">
+<a class="button button--action" href="//github.com/bigcommerce/api"  style="margin-left: 0rem">
+  View V3 Docs</a><br></span></p>
 
 <span class="fake-h3"> [API v2 Documentation](/api/v2) </span>
 
-  Core API, supporting all currently exposed resources via Basic Auth or OAuth.
+  Core API. Supports all currently exposed resources via OAuth; supports compatible resources via Basic Auth.
+
+<span class="type-large">
+<a class="button button--action" href="/api/v2"  style="margin-left: 0rem">
+  View V2 Docs</a><br></span></p>
